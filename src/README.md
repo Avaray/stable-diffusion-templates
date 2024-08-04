@@ -1,5 +1,15 @@
 # Stable Diffusion Starters
 
+Informations soon.
+
+# SDXL Checkpoints
+
 | Checkpoint Name  | Vast.ai | Runpod.io |
 | ---------------- | :-----: | :-------: |
-| {{startersList}} |         |           |
+| {{sdxlStarters}} |         |           |
+
+# PDXL Checkpoints
+
+| Checkpoint Name  | Vast.ai | Runpod.io |
+| ---------------- | :-----: | :-------: |
+| {{pdxlStarters}} |         |           |
