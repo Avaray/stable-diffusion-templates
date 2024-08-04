@@ -81,7 +81,7 @@ export const checkpoints: Checkpoint[] = [
   {
     name: "LEOSAM's HelloWorld XL",
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
-    url: `${sdxlUrl}CHECKPOINT/leosamHelloWorldXL_v10.safetensors`,
+    url: `${sdxlUrl}CHECKPOINT/leosamsHelloworldXL_helloworldXL70.safetensors`,
     base: 'sdxl',
     vastaiTemplateId: '',
     runpodioTemplateId: '',
