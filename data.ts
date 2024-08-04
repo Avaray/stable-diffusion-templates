@@ -48,7 +48,7 @@ interface Checkpoint {
 
 export const checkpoints: Checkpoint[] = [
   {
-    name: 'ZavyChromaXL V9',
+    name: 'ZavyChromaXL',
     homepage: 'https://civitai.com/models/119229?modelVersionId=641087',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
     base: 'sdxl',
@@ -57,7 +57,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: '1osvczwrdm',
   },
   {
-    name: 'ZavyChromaXL V7',
+    name: 'ZavyChroma',
     homepage: 'https://civitai.com/models/119229?modelVersionId=490254',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v70.safetensors`,
     base: 'sdxl',
@@ -66,7 +66,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: '5mv7x9lk0p',
   },
   {
-    name: 'WildCardX-XL V4',
+    name: 'WildCardX',
     homepage: 'https://civitai.com/models/239561?modelVersionId=308455',
     url: `${sdxlUrl}CHECKPOINT/wildcardxXL_v4Rundiffusion.safetensors`,
     base: 'sdxl',
@@ -75,7 +75,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: '9qr1azjcad',
   },
   {
-    name: 'CHINOOK V1',
+    name: 'CHINOOK',
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/CHINOOK_v10.safetensors`,
     base: 'sdxl',
@@ -84,7 +84,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'vu1meyunmp',
   },
   {
-    name: "LEOSAM's HelloWorld V7",
+    name: "LEOSAM's HelloWorld",
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/leosamsHelloworldXL_helloworldXL70.safetensors`,
     base: 'sdxl',
@@ -93,7 +93,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: '44x5bc9wrs',
   },
   {
-    name: 'Juggernaut XL',
+    name: 'Juggernaut',
     homepage: 'https://civitai.com/models/133005?modelVersionId=456194',
     url: `${sdxlUrl}CHECKPOINT/Juggernaut_X_RunDiffusion.safetensors`,
     base: 'sdxl',
@@ -102,7 +102,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'ypt3pl6coj',
   },
   {
-    name: 'DreamShaper XL',
+    name: 'DreamShaper',
     homepage: 'https://civitai.com/models/112902?modelVersionId=126688',
     url: `${sdxlUrl}CHECKPOINT/dreamshaperXL_alpha2Xl10.safetensors`,
     base: 'sdxl',
@@ -111,7 +111,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'mgbjraphld',
   },
   {
-    name: 'LUSTIFY! V1',
+    name: 'LUSTIFY!',
     homepage: 'https://civitai.com/models/573152?modelVersionId=638929',
     url: `${sdxlUrl}CHECKPOINT/lustifySDXLNSFWSFW_v10.safetensors`,
     base: 'sdxl',
@@ -120,7 +120,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'ee9t3khq73',
   },
   {
-    name: 'Copax TimeLessXL',
+    name: 'Copax TimeLess',
     homepage: 'https://civitai.com/models/118111?modelVersionId=445348',
     url: `${sdxlUrl}CHECKPOINT/copaxTimelessxlSDXL1_v12.safetensors`,
     base: 'sdxl',
@@ -147,7 +147,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 't43cv2upw0',
   },
   {
-    name: 'Pony Diffusion V6 XL',
+    name: 'Pony Diffusion',
     homepage: 'https://civitai.com/models/257749?modelVersionId=290640',
     url: `${pdxlUrl}CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
     base: 'pdxl',
@@ -156,7 +156,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'mgosofhzoc',
   },
   {
-    name: 'AutismMix PDXL',
+    name: 'AutismMix',
     homepage: 'https://civitai.com/models/288584?modelVersionId=324619',
     url: `${pdxlUrl}CHECKPOINT/autismmixSDXL_autismmixPony.safetensors`,
     base: 'pdxl',
