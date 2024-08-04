@@ -99,7 +99,7 @@ export const checkpoints: Checkpoint[] = [
     base: 'sdxl',
     version: '',
     vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    runpodioTemplateId: 'ypt3pl6coj',
   },
   {
     name: 'DreamShaper XL',
@@ -108,7 +108,7 @@ export const checkpoints: Checkpoint[] = [
     base: 'sdxl',
     version: '',
     vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    runpodioTemplateId: 'mgbjraphld',
   },
   {
     name: 'LUSTIFY! V1',
@@ -117,7 +117,7 @@ export const checkpoints: Checkpoint[] = [
     base: 'sdxl',
     version: '1',
     vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    runpodioTemplateId: 'ee9t3khq73',
   },
   {
     name: 'goddessOfRealism',
