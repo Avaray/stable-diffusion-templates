@@ -23,14 +23,16 @@ const pdxlJson = await pdxlRepoContents.json();
 const sdxlFiles = sdxlJson.siblings.map((x: { rfilename: string }) => x.rfilename);
 const pdxlFiles = pdxlJson.siblings.map((x: { rfilename: string }) => x.rfilename);
 
-export const services: { name: string; ref: string }[] = [
-  {
-    name: 'Runpod.io',
-    ref: 'https://runpod.io?ref=gzvzzzv9',
-  },
+export const services: { name: string; url: string; logo: string }[] = [
   {
     name: 'Vast.ai',
-    ref: 'https://cloud.vast.ai/?ref_id=62878',
+    url: 'https://cloud.vast.ai/create/?ref_id=62878&template_id=',
+    logo: 'images/vastai.svg',
+  },
+  {
+    name: 'Runpod.io',
+    url: 'https://runpod.io/console/deploy?ref=gzvzzzv9&template=',
+    logo: 'images/runpodio.svg',
   },
 ];
 
