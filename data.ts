@@ -52,7 +52,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v70.safetensors`,
     base: 'sdxl',
     vastaiTemplateId: 'c664cf5f1a6b8b5ddc521baa1cdbf05e',
-    runpodioTemplateId: '',
+    runpodioTemplateId: '5mv7x9lk0p',
   },
   {
     name: 'ZavyChromaXL V9',
@@ -60,7 +60,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
     base: 'sdxl',
     vastaiTemplateId: 'de0f26247c1ccf592b624b233c6a7531',
-    runpodioTemplateId: '',
+    runpodioTemplateId: '1osvczwrdm',
   },
   {
     name: 'WildCardX-XL',
@@ -68,7 +68,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/wildcardxXL_v4Rundiffusion.safetensors`,
     base: 'sdxl',
     vastaiTemplateId: 'c87381d3de507cfa88ccf05f8fd990c0',
-    runpodioTemplateId: '',
+    runpodioTemplateId: '9qr1azjcad',
   },
   {
     name: '_CHINOOK_',
@@ -76,7 +76,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/CHINOOK_v10.safetensors`,
     base: 'sdxl',
     vastaiTemplateId: 'd06d11acd907913b24b6a345852d39e3',
-    runpodioTemplateId: '',
+    runpodioTemplateId: 'vu1meyunmp',
   },
   {
     name: 'goddessOfRealism',
@@ -84,7 +84,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
     base: 'pdxl',
     vastaiTemplateId: '12ebd3285bd64e7d225dc6d70a5e05bb',
-    runpodioTemplateId: '',
+    runpodioTemplateId: 't43cv2upw0',
   },
   {
     name: 'Pony Diffusion V6 XL',
@@ -92,7 +92,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${pdxlUrl}CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
     base: 'pdxl',
     vastaiTemplateId: 'dedb7495b1bc8caea7bdbbb5ce002794',
-    runpodioTemplateId: '',
+    runpodioTemplateId: 'mgosofhzoc',
   },
 ];
 
