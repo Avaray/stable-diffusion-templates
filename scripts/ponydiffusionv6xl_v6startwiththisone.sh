@@ -1,8 +1,4 @@
 #!/bin/bash
-# This file will be sourced in init.sh
-# Namespace functions with provisioning_
-
-# https://raw.githubusercontent.com/ai-dock/stable-diffusion-webui/main/config/provisioning/default.sh
 
 DISK_GB_REQUIRED=40
 
@@ -17,7 +13,6 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    # Pony Diffusion V6 XL - 
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors'
 )
 
@@ -31,35 +26,29 @@ LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Anime.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/BoldCAT_P3.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/BoldToon.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Concept Art Twilight Style SDXL_LoRA_Pony Diffusion V6 XL.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Concept_Art_Twilight_Style_SDXL_LoRA_Pony_Diffusion_V6_XL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/CyanVanilla12.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/EnvyPonyPrettyEyes01.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Expressive_H-000001.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GalGadot_v1.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Line Art Style LoRA XL.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Natalie-Portman_token_natport_woman_r64_model_EverClear_v1.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Line_Art_Style_LoRA_XL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/OtherStyle_03-000003.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Piper_Perri.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Real_Dream_Pony_Experimental_3.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/RetroWave_PonyXL.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Sasha_Gray.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Serpieri_for_Pony-000011.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Smooth Anime 2 Style SDXL_LoRA_Pony Diffusion V6 XL.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Smooth Anime Style LoRA XL.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Thigh Size Slider V2_alpha1.0_rank4_noxattn_last.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Smooth_Anime_2_Style_SDXL_LoRA_Pony_Diffusion _V6_XL.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Smooth_Anime_Style_LoRA_XL.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Thigh_Size_Slider_V2_alpha1.0_rank4_noxattn_last.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Zankuro_Style_Pony.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/[GP] somethingweird [Pony XL].safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/[GP]_somethingweird_[Pony_XL].safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/cutesexyrobutts_style_xl_goofy.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/g0th1cPXL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/goth-PN.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/hanging_breasts.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/n30nc4tXLP.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/princess_xl_v2.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/punk-PN.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/retro-neon-style-pony.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/sinfully_stylish_PONY_0.2.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/wreal_consolidated.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/xl_more_art-full_v1.safetensors'
 )
 
 VAE_MODELS=(
@@ -108,8 +97,7 @@ function provisioning_start() {
     fi
     PROVISIONING_ARGS="--skip-python-version-check --no-download-sd-model --do-not-download-clip --port 11404 --exit"
     ARGS_COMBINED="${PLATFORM_ARGS} $(cat /etc/a1111_webui_flags.conf) ${PROVISIONING_ARGS}"
-    
-    # Start and exit because webui will probably require a restart
+
     cd /opt/stable-diffusion-webui && \
     source "$WEBUI_VENV/bin/activate"
     LD_PRELOAD=libtcmalloc.so python launch.py \
@@ -130,12 +118,12 @@ function provisioning_get_extensions() {
         path="/opt/stable-diffusion-webui/extensions/${dir}"
         requirements="${path}/requirements.txt"
         if [[ -d $path ]]; then
-            # Pull only if AUTO_UPDATE
+
             if [[ ${AUTO_UPDATE,,} == "true" ]]; then
                 printf "Updating extension: %s...\n" "${repo}"
                 ( cd "$path" && git pull )
             fi
-            # Always pip install
+
             if [[ -e $requirements ]]; then
                 "$WEBUI_VENV_PIP" install --no-cache-dir -r "$requirements"
             fi
@@ -180,7 +168,6 @@ function provisioning_print_end() {
     printf "\nProvisioning complete:  Web UI will start now\n\n"
 }
 
-# Download from $1 URL to $2 file path
 function provisioning_download() {
     wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
 }

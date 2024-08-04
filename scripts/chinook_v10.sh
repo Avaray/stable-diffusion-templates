@@ -1,8 +1,4 @@
 #!/bin/bash
-# This file will be sourced in init.sh
-# Namespace functions with provisioning_
-
-# https://raw.githubusercontent.com/ai-dock/stable-diffusion-webui/main/config/provisioning/default.sh
 
 DISK_GB_REQUIRED=40
 
@@ -17,7 +13,6 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    # _CHINOOK_ - https://civitai.com/models/400589?modelVersionId=495482
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/CHECKPOINT/CHINOOK_v10.safetensors'
 )
 
@@ -29,14 +24,8 @@ LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/SDXLFaeTastic2400.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/SDXL_black_and_color_Sa_May.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/SDXL_vanta_black_contrast_V3.0.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/biggunsxl_v11.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/looking_at_viewer.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/retro-neon-xl-style.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/sd_xl_dpo_lora_v1.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/tbh150-sdxl.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/tbh154-sdxl.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/tbh160-sdxl.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/xl_more_art-full_v1.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/zavy-rmlght-sdxl.safetensors'
 )
 
@@ -86,8 +75,7 @@ function provisioning_start() {
     fi
     PROVISIONING_ARGS="--skip-python-version-check --no-download-sd-model --do-not-download-clip --port 11404 --exit"
     ARGS_COMBINED="${PLATFORM_ARGS} $(cat /etc/a1111_webui_flags.conf) ${PROVISIONING_ARGS}"
-    
-    # Start and exit because webui will probably require a restart
+
     cd /opt/stable-diffusion-webui && \
     source "$WEBUI_VENV/bin/activate"
     LD_PRELOAD=libtcmalloc.so python launch.py \
@@ -108,12 +96,12 @@ function provisioning_get_extensions() {
         path="/opt/stable-diffusion-webui/extensions/${dir}"
         requirements="${path}/requirements.txt"
         if [[ -d $path ]]; then
-            # Pull only if AUTO_UPDATE
+
             if [[ ${AUTO_UPDATE,,} == "true" ]]; then
                 printf "Updating extension: %s...\n" "${repo}"
                 ( cd "$path" && git pull )
             fi
-            # Always pip install
+
             if [[ -e $requirements ]]; then
                 "$WEBUI_VENV_PIP" install --no-cache-dir -r "$requirements"
             fi
@@ -158,7 +146,6 @@ function provisioning_print_end() {
     printf "\nProvisioning complete:  Web UI will start now\n\n"
 }
 
-# Download from $1 URL to $2 file path
 function provisioning_download() {
     wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
 }
