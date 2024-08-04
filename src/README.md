@@ -27,6 +27,7 @@ Starters with checkpoints based on Pony Diffusion XL.
 - [x] Create Workflows for automatic updates.
 - [ ] Add Embeddings to templates.
 - [ ] Create Lite versions (without Loras).
+- [ ] Create Workflow for detecting changes in original Provisioning script.
 - [ ] Find a way to automate the creation and modification of templates so that Playwright isn't needed.
 
 ## FAQ
