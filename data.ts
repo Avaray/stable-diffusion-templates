@@ -83,8 +83,8 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/leosamsHelloworldXL_helloworldXL70.safetensors`,
     base: 'sdxl',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    vastaiTemplateId: '133b29d546034a67c65c497f76802cb0',
+    runpodioTemplateId: '44x5bc9wrs',
   },
   {
     name: 'goddessOfRealism',
