@@ -41,6 +41,7 @@ interface Checkpoint {
   homepage?: string;
   url: string;
   base: 'sdxl' | 'pdxl';
+  version?: string;
   vastaiTemplateId?: string;
   runpodioTemplateId?: string;
 }
@@ -51,6 +52,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/119229?modelVersionId=641087',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
     base: 'sdxl',
+    version: '9',
     vastaiTemplateId: 'de0f26247c1ccf592b624b233c6a7531',
     runpodioTemplateId: '1osvczwrdm',
   },
@@ -59,6 +61,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/119229?modelVersionId=490254',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v70.safetensors`,
     base: 'sdxl',
+    version: '7',
     vastaiTemplateId: 'c664cf5f1a6b8b5ddc521baa1cdbf05e',
     runpodioTemplateId: '5mv7x9lk0p',
   },
@@ -67,6 +70,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/239561?modelVersionId=308455',
     url: `${sdxlUrl}CHECKPOINT/wildcardxXL_v4Rundiffusion.safetensors`,
     base: 'sdxl',
+    version: '4',
     vastaiTemplateId: 'c87381d3de507cfa88ccf05f8fd990c0',
     runpodioTemplateId: '9qr1azjcad',
   },
@@ -75,6 +79,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/CHINOOK_v10.safetensors`,
     base: 'sdxl',
+    version: '1',
     vastaiTemplateId: 'd06d11acd907913b24b6a345852d39e3',
     runpodioTemplateId: 'vu1meyunmp',
   },
@@ -83,6 +88,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/leosamsHelloworldXL_helloworldXL70.safetensors`,
     base: 'sdxl',
+    version: '7',
     vastaiTemplateId: '133b29d546034a67c65c497f76802cb0',
     runpodioTemplateId: '44x5bc9wrs',
   },
@@ -91,6 +97,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/133005?modelVersionId=456194',
     url: `${sdxlUrl}CHECKPOINT/Juggernaut_X_RunDiffusion.safetensors`,
     base: 'sdxl',
+    version: '',
     vastaiTemplateId: '',
     runpodioTemplateId: '',
   },
@@ -99,22 +106,25 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/112902?modelVersionId=126688',
     url: `${sdxlUrl}CHECKPOINT/dreamshaperXL_alpha2Xl10.safetensors`,
     base: 'sdxl',
+    version: '',
     vastaiTemplateId: '',
     runpodioTemplateId: '',
   },
   {
-    name: 'LUSTIFY!',
+    name: 'LUSTIFY! V1',
     homepage: 'https://civitai.com/models/573152?modelVersionId=638929',
     url: `${sdxlUrl}CHECKPOINT/lustifySDXLNSFWSFW_v10.safetensors`,
     base: 'sdxl',
+    version: '1',
     vastaiTemplateId: '',
     runpodioTemplateId: '',
-  }
+  },
   {
     name: 'goddessOfRealism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
     base: 'pdxl',
+    version: '1',
     vastaiTemplateId: '12ebd3285bd64e7d225dc6d70a5e05bb',
     runpodioTemplateId: 't43cv2upw0',
   },
@@ -123,6 +133,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/257749?modelVersionId=290640',
     url: `${pdxlUrl}CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
     base: 'pdxl',
+    version: '6',
     vastaiTemplateId: 'dedb7495b1bc8caea7bdbbb5ce002794',
     runpodioTemplateId: 'mgosofhzoc',
   },
