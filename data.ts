@@ -120,6 +120,15 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'ee9t3khq73',
   },
   {
+    name: 'Copax TimeLessXL',
+    homepage: 'https://civitai.com/models/118111?modelVersionId=445348',
+    url: `${sdxlUrl}CHECKPOINT/copaxTimelessxlSDXL1_v12.safetensors`,
+    base: 'sdxl',
+    version: '12',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
+  },
+  {
     name: 'goddessOfRealism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
