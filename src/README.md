@@ -2,13 +2,17 @@
 
 Informations soon.
 
-# SDXL Checkpoints
+# SDXL
+
+Starters with checkpoints based on Stable Diffusion XL.
 
 | Checkpoint Name  | Vast.ai | Runpod.io |
 | ---------------- | :-----: | :-------: |
 | {{sdxlStarters}} |         |           |
 
-# PDXL Checkpoints
+# PDXL
+
+Starters with checkpoints based on Pony Diffusion XL.
 
 | Checkpoint Name  | Vast.ai | Runpod.io |
 | ---------------- | :-----: | :-------: |
