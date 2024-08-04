@@ -32,7 +32,7 @@ Starters with checkpoints based on Pony Diffusion XL.
 
 ## TODO's
 
-- [ ] Create Workflows for automatic updates
+- [x] Create Workflows for automatic updates
 - [ ] Add Embeddings to templates
 - [ ] Create Lite versions (without Loras)
 
