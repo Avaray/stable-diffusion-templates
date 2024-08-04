@@ -8,7 +8,7 @@ Additional informations will be added soon.
 
 # SDXL
 
-Starters with checkpoints based on Stable Diffusion XL.
+Templates with checkpoints based on Stable Diffusion XL.
 
 | Checkpoint Name  | Vast.ai | Runpod.io |
 | ---------------- | :-----: | :-------: |
@@ -25,7 +25,7 @@ Starters with checkpoints based on Stable Diffusion XL.
 
 # PDXL
 
-Starters with checkpoints based on Pony Diffusion XL.
+Templates with checkpoints based on Pony Diffusion XL.
 
 | Checkpoint Name  | Vast.ai | Runpod.io |
 | ---------------- | :-----: | :-------: |
