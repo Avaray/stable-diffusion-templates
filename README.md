@@ -4,6 +4,8 @@ This is curated collection of templates for [Vast.ai](https://cloud.vast.ai/crea
 
 Mentioned services give you access to powerful GPUs like [RTX4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) at low cost.
 
+Additional informations will be added soon.
+
 # SDXL
 
 Starters with checkpoints based on Stable Diffusion XL.
