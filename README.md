@@ -1,6 +1,6 @@
 # Stable Diffusion Starters
 
-This is curated collection of templates for [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) and [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) services. Their main purpose is to simplify the process of getting started with Stable Diffusion models. These templates gives ready to use [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) thanks to [AI-Dock](https://github.com/ai-dock/stable-diffusion-webui). Plus they have some nice Lora's and useful Extensions preinstalled.
+This is curated collection of templates for [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) and [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) services. Their main purpose is to simplify the process of getting started with Stable Diffusion. These templates gives ready to use [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) thanks to [AI-Dock](https://github.com/ai-dock/stable-diffusion-webui). Plus they have some nice Lora's and useful Extensions preinstalled.
 
 Mentioned services give you access to powerful GPUs like [RTX4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) at low cost.
 
