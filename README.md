@@ -32,14 +32,15 @@ Starters with checkpoints based on Pony Diffusion XL.
 
 ## TODO's
 
-- [x] Create Workflows for automatic updates
-- [ ] Add Embeddings to templates
-- [ ] Create Lite versions (without Loras)
+- [x] Create Workflows for automatic updates.
+- [ ] Add Embeddings to templates.
+- [ ] Create Lite versions (without Loras).
+- [ ] Find a way to automate the creation and modification of templates so that Playwright isn't needed.
 
 ## FAQ
 
 `Q` Will you add more models?  
-`A` Maybe. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
+`A` Yes. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
 
 `Q` Will you add checkpoint X?  
 `A` If it's a good checkpoint, yes. Please open [an discussion](https://github.com/Avaray/stable-diffusion-starters/discussions/new?category=ideas). But keep in mind that model must be battle tested on [CivitAI](https://civitai.com/models) and have good results.
