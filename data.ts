@@ -146,6 +146,15 @@ export const checkpoints: Checkpoint[] = [
     vastaiTemplateId: 'dedb7495b1bc8caea7bdbbb5ce002794',
     runpodioTemplateId: 'mgosofhzoc',
   },
+  {
+    name: 'AutismMix PDXL',
+    homepage: 'https://civitai.com/models/288584?modelVersionId=324619',
+    url: `${pdxlUrl}CHECKPOINT/autismmixSDXL_autismmixPony.safetensors`,
+    base: 'pdxl',
+    version: '1',
+    vastaiTemplateId: 'a4b369ebca71a4b53e01037239fbd76a',
+    runpodioTemplateId: 'os43pc1362',
+  },
 ];
 
 // interface Lora {
