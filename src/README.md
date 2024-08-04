@@ -22,6 +22,12 @@ Starters with checkpoints based on Pony Diffusion XL.
 | ---------------- | :-----: | :-------: |
 | {{pdxlStarters}} |         |           |
 
+## TODO's
+
+- [ ] Create Workflows for automatic updates
+- [ ] Add Embeddings to templates
+- [ ] Create Lite versions (without Loras)
+
 ## FAQ
 
 `Q` Will you add more models?  
