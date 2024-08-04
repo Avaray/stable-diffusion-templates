@@ -8,8 +8,8 @@ const link = (service: string, templateId: string) => {
 };
 
 const tableRow = (x: (typeof checkpoints)[0]) => {
-  const vastai = x.vastaiTemplateId ? link('vastai', x.vastaiTemplateId) : '';
-  const runpodio = x.runpodioTemplateId ? link('runpodio', x.runpodioTemplateId) : '';
+  const vastai = x.vastaiTemplateId ? link('vastai', x.vastaiTemplateId) : 'todo';
+  const runpodio = x.runpodioTemplateId ? link('runpodio', x.runpodioTemplateId) : 'todo';
   return `| [${x.name}](${x.homepage}) | ${vastai} | ${runpodio} |`;
 };
 
