@@ -79,6 +79,14 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'vu1meyunmp',
   },
   {
+    name: "LEOSAM's HelloWorld XL",
+    homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
+    url: `${sdxlUrl}CHECKPOINT/leosamHelloWorldXL_v10.safetensors`,
+    base: 'sdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
+  },
+  {
     name: 'goddessOfRealism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
