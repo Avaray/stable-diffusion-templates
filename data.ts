@@ -51,7 +51,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/119229?modelVersionId=490254',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v70.safetensors`,
     base: 'sdxl',
-    vastaiTemplateId: '',
+    vastaiTemplateId: 'c664cf5f1a6b8b5ddc521baa1cdbf05e',
     runpodioTemplateId: '',
   },
   {
@@ -59,7 +59,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/119229?modelVersionId=641087',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
     base: 'sdxl',
-    vastaiTemplateId: '',
+    vastaiTemplateId: 'de0f26247c1ccf592b624b233c6a7531',
     runpodioTemplateId: '',
   },
   {
@@ -67,7 +67,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/239561?modelVersionId=308455',
     url: `${sdxlUrl}CHECKPOINT/wildcardxXL_v4Rundiffusion.safetensors`,
     base: 'sdxl',
-    vastaiTemplateId: '',
+    vastaiTemplateId: 'c87381d3de507cfa88ccf05f8fd990c0',
     runpodioTemplateId: '',
   },
   {
@@ -75,7 +75,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/CHINOOK_v10.safetensors`,
     base: 'sdxl',
-    vastaiTemplateId: '',
+    vastaiTemplateId: 'd06d11acd907913b24b6a345852d39e3',
     runpodioTemplateId: '',
   },
   {
@@ -83,7 +83,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
     base: 'pdxl',
-    vastaiTemplateId: '75ad0f8e7420209c039a04d29aa3af7e',
+    vastaiTemplateId: '12ebd3285bd64e7d225dc6d70a5e05bb',
     runpodioTemplateId: '',
   },
   {
@@ -91,7 +91,7 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/257749?modelVersionId=290640',
     url: `${pdxlUrl}CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
     base: 'pdxl',
-    vastaiTemplateId: '',
+    vastaiTemplateId: 'dedb7495b1bc8caea7bdbbb5ce002794',
     runpodioTemplateId: '',
   },
 ];
