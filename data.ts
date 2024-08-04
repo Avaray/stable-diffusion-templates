@@ -23,18 +23,18 @@ const pdxlJson = await pdxlRepoContents.json();
 const sdxlFiles = sdxlJson.siblings.map((x: { rfilename: string }) => x.rfilename);
 const pdxlFiles = pdxlJson.siblings.map((x: { rfilename: string }) => x.rfilename);
 
-export const services: { name: string; url: string; logo: string }[] = [
-  {
+export const services: { [key: string]: { name: string; url: string; logo: string } } = {
+  vastai: {
     name: 'Vast.ai',
     url: 'https://cloud.vast.ai/create/?ref_id=62878&template_id=',
     logo: 'images/vastai.svg',
   },
-  {
+  runpodio: {
     name: 'Runpod.io',
     url: 'https://runpod.io/console/deploy?ref=gzvzzzv9&template=',
     logo: 'images/runpodio.svg',
   },
-];
+};
 
 interface Checkpoint {
   name: string;
