@@ -1,0 +1,37 @@
+name: Update
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  update-docs:
+    name: Build Scripts and Update Docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.1.21
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Generate Scripts
+        run: bun index.ts
+
+      - name: Generate Readme
+        run: bun readme.ts
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Updated docs"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }}
