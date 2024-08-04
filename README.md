@@ -20,6 +20,7 @@ Starters with checkpoints based on Stable Diffusion XL.
 | [Juggernaut XL](https://civitai.com/models/133005?modelVersionId=456194) | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=1d78196b4adc4ea29246a1e58a598a03"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=ypt3pl6coj"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | [DreamShaper XL](https://civitai.com/models/112902?modelVersionId=126688) | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=5dfa95dbd5e2659add8787c422d94df8"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=mgbjraphld"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | [LUSTIFY! V1](https://civitai.com/models/573152?modelVersionId=638929) | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=97678dedcbab1debc247cc46e4e8a261"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=ee9t3khq73"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
+| [Copax TimeLessXL](https://civitai.com/models/118111?modelVersionId=445348) | todo | todo |
 
 # PDXL
 
