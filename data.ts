@@ -63,7 +63,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: '5mv7x9lk0p',
   },
   {
-    name: 'WildCardX-XL',
+    name: 'WildCardX-XL V4',
     homepage: 'https://civitai.com/models/239561?modelVersionId=308455',
     url: `${sdxlUrl}CHECKPOINT/wildcardxXL_v4Rundiffusion.safetensors`,
     base: 'sdxl',
@@ -71,7 +71,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: '9qr1azjcad',
   },
   {
-    name: 'CHINOOK',
+    name: 'CHINOOK V1',
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/CHINOOK_v10.safetensors`,
     base: 'sdxl',
@@ -79,13 +79,37 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'vu1meyunmp',
   },
   {
-    name: "LEOSAM's HelloWorld XL",
+    name: "LEOSAM's HelloWorld V7",
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/leosamsHelloworldXL_helloworldXL70.safetensors`,
     base: 'sdxl',
     vastaiTemplateId: '133b29d546034a67c65c497f76802cb0',
     runpodioTemplateId: '44x5bc9wrs',
   },
+  {
+    name: 'Juggernaut XL',
+    homepage: 'https://civitai.com/models/133005?modelVersionId=456194',
+    url: `${sdxlUrl}CHECKPOINT/Juggernaut_X_RunDiffusion.safetensors`,
+    base: 'sdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
+  },
+  {
+    name: 'DreamShaper XL',
+    homepage: 'https://civitai.com/models/112902?modelVersionId=126688',
+    url: `${sdxlUrl}CHECKPOINT/dreamshaperXL_alpha2Xl10.safetensors`,
+    base: 'sdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
+  },
+  {
+    name: 'LUSTIFY!',
+    homepage: 'https://civitai.com/models/573152?modelVersionId=638929',
+    url: `${sdxlUrl}CHECKPOINT/lustifySDXLNSFWSFW_v10.safetensors`,
+    base: 'sdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
+  }
   {
     name: 'goddessOfRealism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
