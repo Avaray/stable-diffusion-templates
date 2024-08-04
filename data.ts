@@ -47,20 +47,20 @@ interface Checkpoint {
 
 export const checkpoints: Checkpoint[] = [
   {
-    name: 'ZavyChromaXL V7',
-    homepage: 'https://civitai.com/models/119229?modelVersionId=490254',
-    url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v70.safetensors`,
-    base: 'sdxl',
-    vastaiTemplateId: 'c664cf5f1a6b8b5ddc521baa1cdbf05e',
-    runpodioTemplateId: '5mv7x9lk0p',
-  },
-  {
     name: 'ZavyChromaXL V9',
     homepage: 'https://civitai.com/models/119229?modelVersionId=641087',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
     base: 'sdxl',
     vastaiTemplateId: 'de0f26247c1ccf592b624b233c6a7531',
     runpodioTemplateId: '1osvczwrdm',
+  },
+  {
+    name: 'ZavyChromaXL V7',
+    homepage: 'https://civitai.com/models/119229?modelVersionId=490254',
+    url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v70.safetensors`,
+    base: 'sdxl',
+    vastaiTemplateId: 'c664cf5f1a6b8b5ddc521baa1cdbf05e',
+    runpodioTemplateId: '5mv7x9lk0p',
   },
   {
     name: 'WildCardX-XL',
@@ -71,7 +71,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: '9qr1azjcad',
   },
   {
-    name: '_CHINOOK_',
+    name: 'CHINOOK',
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/CHINOOK_v10.safetensors`,
     base: 'sdxl',
