@@ -18,10 +18,10 @@ jobs:
         run: bun install
 
       - name: Generate Scripts
-        run: bun index.ts
+        run: bun run index.ts
 
       - name: Generate Readme
-        run: bun readme.ts
+        run: bun run readme.ts
 
       - name: Commit changes
         run: |
