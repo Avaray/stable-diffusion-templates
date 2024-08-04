@@ -98,7 +98,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/Juggernaut_X_RunDiffusion.safetensors`,
     base: 'sdxl',
     version: '',
-    vastaiTemplateId: '',
+    vastaiTemplateId: '1d78196b4adc4ea29246a1e58a598a03',
     runpodioTemplateId: 'ypt3pl6coj',
   },
   {
@@ -107,7 +107,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/dreamshaperXL_alpha2Xl10.safetensors`,
     base: 'sdxl',
     version: '',
-    vastaiTemplateId: '',
+    vastaiTemplateId: '5dfa95dbd5e2659add8787c422d94df8',
     runpodioTemplateId: 'mgbjraphld',
   },
   {
@@ -116,7 +116,7 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/lustifySDXLNSFWSFW_v10.safetensors`,
     base: 'sdxl',
     version: '1',
-    vastaiTemplateId: '',
+    vastaiTemplateId: '97678dedcbab1debc247cc46e4e8a261',
     runpodioTemplateId: 'ee9t3khq73',
   },
   {
