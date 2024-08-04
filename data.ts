@@ -129,6 +129,15 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'a4hwnbsphp',
   },
   {
+    name: 'epiCRealism',
+    homepage: 'https://civitai.com/models/277058?modelVersionId=646523',
+    url: `${sdxlUrl}CHECKPOINT/epicrealismXL_v8Kiss.safetensors`,
+    base: 'sdxl',
+    version: '8',
+    vastaiTemplateId: '1f7ef35a703ad5a28932680e573eb6cf',
+    runpodioTemplateId: '2cn8li8tof',
+  },
+  {
     name: 'goddessOfRealism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
