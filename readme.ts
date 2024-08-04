@@ -10,7 +10,7 @@ const link = (service: string, templateId: string) => {
 const tableRow = (x: (typeof checkpoints)[0]) => {
   const vastai = x.vastaiTemplateId ? link('vastai', x.vastaiTemplateId) : 'todo';
   const runpodio = x.runpodioTemplateId ? link('runpodio', x.runpodioTemplateId) : 'todo';
-  return `| [${x.name}](${x.homepage}) | ${vastai} | ${runpodio} |`;
+  return `| [${x.name}](${x.homepage}) \`V${x.version}\` | ${vastai} | ${runpodio} |`;
 };
 
 readme = readme.replace(
