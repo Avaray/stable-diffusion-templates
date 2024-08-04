@@ -80,15 +80,15 @@ export const checkpoints: Checkpoint[] = [
   },
   {
     name: 'goddessOfRealism',
-    homepage: '',
+    homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
     base: 'pdxl',
-    vastaiTemplateId: '',
+    vastaiTemplateId: '75ad0f8e7420209c039a04d29aa3af7e',
     runpodioTemplateId: '',
   },
   {
     name: 'Pony Diffusion V6 XL',
-    homepage: '',
+    homepage: 'https://civitai.com/models/257749?modelVersionId=290640',
     url: `${pdxlUrl}CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
     base: 'pdxl',
     vastaiTemplateId: '',
