@@ -30,6 +30,12 @@ Starters with checkpoints based on Pony Diffusion XL.
 | [goddessOfRealism](https://civitai.com/models/212737?modelVersionId=573082) | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=12ebd3285bd64e7d225dc6d70a5e05bb"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=t43cv2upw0"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | [Pony Diffusion V6 XL](https://civitai.com/models/257749?modelVersionId=290640) | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=dedb7495b1bc8caea7bdbbb5ce002794"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=mgosofhzoc"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 
+## TODO's
+
+- [ ] Create Workflows for automatic updates
+- [ ] Add Embeddings to templates
+- [ ] Create Lite versions (without Loras)
+
 ## FAQ
 
 `Q` Will you add more models?  
