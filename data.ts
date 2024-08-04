@@ -36,9 +36,11 @@ export const services: { name: string; ref: string }[] = [
 
 interface Checkpoint {
   name: string;
-  homepage: string;
+  homepage?: string;
   url: string;
   base: 'sdxl' | 'pdxl';
+  vastaiTemplateId?: string;
+  runpodioTemplateId?: string;
 }
 
 export const checkpoints: Checkpoint[] = [
@@ -47,36 +49,48 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/119229?modelVersionId=490254',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v70.safetensors`,
     base: 'sdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
   {
     name: 'ZavyChromaXL V9',
     homepage: 'https://civitai.com/models/119229?modelVersionId=641087',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
     base: 'sdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
   {
     name: 'WildCardX-XL',
     homepage: 'https://civitai.com/models/239561?modelVersionId=308455',
     url: `${sdxlUrl}CHECKPOINT/wildcardxXL_v4Rundiffusion.safetensors`,
     base: 'sdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
   {
     name: '_CHINOOK_',
     homepage: 'https://civitai.com/models/400589?modelVersionId=495482',
     url: `${sdxlUrl}CHECKPOINT/CHINOOK_v10.safetensors`,
     base: 'sdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
   {
     name: 'goddessOfRealism',
     homepage: '',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
     base: 'pdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
   {
     name: 'Pony Diffusion V6 XL',
     homepage: '',
     url: `${pdxlUrl}CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
     base: 'pdxl',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
 ];
 
