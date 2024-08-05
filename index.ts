@@ -44,9 +44,7 @@ if (unknownTuplesToClean) {
 pvs = pvs.replace(/^#\s[\w\W]*?(?=DISK)/m, '\n');
 pvs = pvs.replace(/^\s*?#+\s[\w\W]*?$/gm, '\n');
 pvs = pvs.replace(/^DISK_GB_REQUIRED.*$/gm, 'DISK_GB_REQUIRED=40');
-
 pvs = pvs.replace(/^function provisioning_start/gm, 'EMBEDDINGS=()\n\nfunction provisioning_start');
-
 pvs = pvs.replace(/^\n{2,}/gm, '\n');
 
 import { checkpoints, loras, embeddings, vaes, upscalers, extensions } from './data';
@@ -83,8 +81,6 @@ for (const ckpt of checkpoints) {
 
   await Bun.write(`scripts/${filename}`, pvsTemp);
 }
-
-// Remove old scripts
 
 import { readdir, unlink } from 'node:fs/promises';
 
