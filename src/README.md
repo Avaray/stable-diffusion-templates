@@ -10,25 +10,26 @@ Additional informations will be added soon.
 
 Templates with checkpoints based on Stable Diffusion XL.
 
-| Checkpoint Name  | Vast.ai | Runpod.io |
-| ---------------- | :-----: | :-------: |
-| {{sdxlStarters}} |         |           |
+| Checkpoint Name  | Version | Vast.ai | Runpod.io |
+| ---------------- | :-----: | :-----: | --------- |
+| {{sdxlStarters}} |         |         |           |
 
 # 🦄 PDXL
 
 Templates with checkpoints based on Pony Diffusion XL.
 
-| Checkpoint Name  | Vast.ai | Runpod.io |
-| ---------------- | :-----: | :-------: |
-| {{pdxlStarters}} |         |           |
+| Checkpoint Name  | Version | Vast.ai | Runpod.io |
+| ---------------- | :-----: | :-----: | --------- |
+| {{pdxlStarters}} |         |         | --------- |
 
 ## 👨‍💻 TODO's
 
 - [x] Create Workflows for automatic updates.
-- [ ] Add list of provisioning scripts to README.
+- [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
-- [ ] Create Lite versions (without Loras).
 - [ ] Create Workflow for detecting changes in original Provisioning script.
+- [ ] Add automatic tests.
+- [ ] Create Lite versions (without Loras).
 - [ ] Find a way to automate the creation and modification of templates so that Playwright isn't needed.
 
 ## ⁉️ FAQ

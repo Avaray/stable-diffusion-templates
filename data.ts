@@ -48,7 +48,7 @@ interface Checkpoint {
 
 export const checkpoints: Checkpoint[] = [
   {
-    name: 'ZavyChromaXL',
+    name: 'ZavyChroma',
     homepage: 'https://civitai.com/models/119229?modelVersionId=641087',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
     base: 'sdxl',
