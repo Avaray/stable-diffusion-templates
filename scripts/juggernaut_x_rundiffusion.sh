@@ -2,7 +2,15 @@
 
 DISK_GB_REQUIRED=40
 
-PIP_PACKAGES=()
+APT_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
+
+PIP_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
 
 EXTENSIONS=(
     'https://github.com/Mikubill/sd-webui-controlnet'
@@ -46,6 +54,10 @@ CONTROLNET_MODELS=()
 EMBEDDINGS=()
 
 function provisioning_start() {
+
+    if [[ ! -d /opt/environments/python ]]; then 
+        export MAMBA_BASE=true
+    fi
     source /opt/ai-dock/etc/environment.sh
     source /opt/ai-dock/bin/venv-set.sh webui
 
@@ -53,6 +65,7 @@ function provisioning_start() {
     DISK_GB_USED=$(($(df --output=used -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_ALLOCATED=$(($DISK_GB_AVAILABLE + $DISK_GB_USED))
     provisioning_print_header
+    provisioning_get_apt_packages
     provisioning_get_pip_packages
     provisioning_get_extensions
     provisioning_get_models \
@@ -78,17 +91,36 @@ function provisioning_start() {
     PROVISIONING_ARGS="--skip-python-version-check --no-download-sd-model --do-not-download-clip --port 11404 --exit"
     ARGS_COMBINED="${PLATFORM_ARGS} $(cat /etc/a1111_webui_flags.conf) ${PROVISIONING_ARGS}"
 
-    cd /opt/stable-diffusion-webui && \
-    source "$WEBUI_VENV/bin/activate"
-    LD_PRELOAD=libtcmalloc.so python launch.py \
-        ${ARGS_COMBINED}
-    deactivate
+    cd /opt/stable-diffusion-webui
+    if [[ -z $MAMBA_BASE ]]; then
+        source "$WEBUI_VENV/bin/activate"
+        LD_PRELOAD=libtcmalloc.so python launch.py \
+            ${ARGS_COMBINED}
+        deactivate
+    else 
+        micromamba run -n webui -e LD_PRELOAD=libtcmalloc.so python launch.py \
+            ${ARGS_COMBINED}
+    fi
     provisioning_print_end
+}
+
+function pip_install() {
+    if [[ -z $MAMBA_BASE ]]; then
+            "$WEBUI_VENV_PIP" install --no-cache-dir "$@"
+        else
+            micromamba run -n webui pip install --no-cache-dir "$@"
+        fi
+}
+
+function provisioning_get_apt_packages() {
+    if [[ -n $APT_PACKAGES ]]; then
+            $APT_INSTALL ${APT_PACKAGES[@]}
+    fi
 }
 
 function provisioning_get_pip_packages() {
     if [[ -n $PIP_PACKAGES ]]; then
-        "$WEBUI_VENV_PIP" install --no-cache-dir ${PIP_PACKAGES[@]}
+            pip_install ${PIP_PACKAGES[@]}
     fi
 }
 
@@ -105,13 +137,13 @@ function provisioning_get_extensions() {
             fi
 
             if [[ -e $requirements ]]; then
-                "$WEBUI_VENV_PIP" install --no-cache-dir -r "$requirements"
+                pip_install -r "$requirements"
             fi
         else
             printf "Downloading extension: %s...\n" "${repo}"
             git clone "${repo}" "${path}" --recursive
             if [[ -e $requirements ]]; then
-                "$WEBUI_VENV_PIP" install --no-cache-dir -r "${requirements}"
+                pip_install -r "${requirements}"
             fi
         fi
     done
@@ -149,7 +181,17 @@ function provisioning_print_end() {
 }
 
 function provisioning_download() {
-    wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+        auth_token="$HF_TOKEN"
+    elif 
+        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+        auth_token="$CIVITAI_TOKEN"
+    fi
+    if [[ -n $auth_token ]];then
+        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    else
+        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    fi
 }
 
 provisioning_start
