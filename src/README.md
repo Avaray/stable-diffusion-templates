@@ -27,6 +27,7 @@ Templates with checkpoints based on Pony Diffusion XL.
 - [x] Create Workflows for automatic updates.
 - [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
+- [ ] Add Lists of Embeddings to README file.
 - [ ] Create Workflow for detecting changes in original Provisioning script.
 - [ ] Add automatic tests.
 - [ ] Create Lite versions (without Loras).
