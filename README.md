@@ -67,6 +67,7 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # 📋 TODO's
 
+- [ ] Feature to auto-remove scripts for checkpoints that were removed.
 - [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
 - [ ] Add lists of Embeddings to README file.
