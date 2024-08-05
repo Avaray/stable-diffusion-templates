@@ -67,8 +67,6 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # 📋 TODO's
 
-- [x] Create Workflows for automatic updates.
-- [x] Create Workflow for detecting changes in original Provisioning script.
 - [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
 - [ ] Add lists of Embeddings to README file.
@@ -79,7 +77,7 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # ♻️ FAQ
 
-`Q` Will you add more models?  
+`Q` Will you add more checkpoints?
 `A` Yes. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
 
 `Q` Will you add checkpoint X?  
