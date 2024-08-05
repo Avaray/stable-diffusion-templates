@@ -2,15 +2,9 @@
 
 DISK_GB_REQUIRED=40
 
-APT_PACKAGES=(
-    #"package-1"
-    #"package-2"
-)
+APT_PACKAGES=()
 
-PIP_PACKAGES=(
-    #"package-1"
-    #"package-2"
-)
+PIP_PACKAGES=()
 
 EXTENSIONS=(
     'https://github.com/Mikubill/sd-webui-controlnet'
