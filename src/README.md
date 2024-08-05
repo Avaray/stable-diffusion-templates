@@ -54,8 +54,6 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # 📋 TODO's
 
-- [x] Create Workflows for automatic updates.
-- [x] Create Workflow for detecting changes in original Provisioning script.
 - [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
 - [ ] Add lists of Embeddings to README file.
