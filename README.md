@@ -58,7 +58,7 @@ Provisioning scripts in this Collection are based on official [Provisioning Scri
 In process of creating my provisioning scripts I'm replacing some parts of original script with my own stuff.  
 Currently it includes:
 
-- Each script has just one spedific checkpoint. Does not include stock checkpoints.
+- Each script has just one specific checkpoint. Does not include stock checkpoints.
 - Each script has some useful Lora's that will work with that checkpoint. Basically there are two lists of Lora's - one for checkpoints based on [SDXL](https://github.com/Avaray/stable-diffusion-templates?tab=readme-ov-file#-sdxl) and one for checkpoints based on [PDXL](https://github.com/Avaray/stable-diffusion-templates?tab=readme-ov-file#-pdxl).
 - Each script has some useful Extensions. Basically the same for all scripts. Except `taggers`.
 
