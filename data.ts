@@ -170,6 +170,17 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: '2fy5lo1o5q',
   },
   {
+    name: 'PhotoPedia',
+    homepage: 'https://civitai.com/models/189109?modelVersionId=259323',
+    url: `${sdxlUrl}CHECKPOINT/photopediaXL_45.safetensors`,
+    base: 'sdxl',
+    version: '4.5',
+    rating: '',
+    comment: '',
+    vastaiTemplateId: '395a34f5188daccc14dc12aa1435c105',
+    runpodioTemplateId: 'g6suw85qqm',
+  },
+  {
     name: 'goddessOfRealism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
