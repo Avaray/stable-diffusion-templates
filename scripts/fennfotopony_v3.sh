@@ -13,7 +13,7 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    '${pdxlUrl}CHECKPOINT/fennfotoPONY_v3.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/fennfotoPONY_v3.safetensors'
 )
 
 LORA_MODELS=(
