@@ -205,7 +205,7 @@ export const checkpoints: Checkpoint[] = [
   {
     name: 'fennfoto',
     homepage: 'https://civitai.com/models/503537?modelVersionId=676770',
-    url: '',
+    url: '${pdxlUrl}CHECKPOINT/fennfotoPONY_v3.safetensors',
     base: 'pdxl',
     version: '3',
     rating: '',
