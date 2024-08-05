@@ -38,15 +38,20 @@ if (unknownTuplesToClean) {
   }
 }
 
+// Remove everything between shebang and first variable assignment
 pvs = pvs.replace(/^#\s[\w\W]*?(?=\w+=)/m, '\n');
+// Remove comments
 pvs = pvs.replace(/^\s*?#+\s[\w\W]*?$/gm, '\n');
+// Set DISK_GB_REQUIRED to 40 (default is 30)
 pvs = pvs.replace(/^DISK_GB_REQUIRED.*$/gm, 'DISK_GB_REQUIRED=40');
+// Add EMBEDDINGS=() before provisioning_start function
 pvs = pvs.replace(/^function provisioning_start/gm, 'EMBEDDINGS=()\n\nfunction provisioning_start');
+// Remove multiple empty lines
 pvs = pvs.replace(/^\n{2,}/gm, '\n');
 
 import { checkpoints, loras, embeddings, vaes, upscalers, extensions } from './data';
 
-const scripts = [];
+const scripts = [] as string[];
 
 for (const ckpt of checkpoints) {
   let pvsTemp = pvs;
@@ -72,9 +77,9 @@ for (const ckpt of checkpoints) {
 
   pvsTemp = pvsTemp.replace(/^EXTENSIONS=\(\)/gm, `EXTENSIONS=(\n    ${exts.map((x) => `'${x}'`).join('\n    ')}\n)`);
 
-  const filename = ckpt.url.split('/').pop()?.replace(/\.\w+/, '.sh').toLowerCase();
+  const filename = ckpt.url.split('/').pop()?.replace(/\.\w+/, '.sh').toLowerCase() ?? '';
 
-  scripts.push(filename);
+  filename && scripts.push(filename);
 
   await Bun.write(`scripts/${filename}`, pvsTemp);
 }
