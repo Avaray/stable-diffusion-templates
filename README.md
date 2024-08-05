@@ -1,4 +1,4 @@
-# 🗃 Stable Diffusion Templates
+# 🗃 Collection of Stable Diffusion Templates
 
 This is curated collection of templates for [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) and [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) services.  
 Their main purpose is to simplify the process of getting started with Stable Diffusion.  
@@ -55,10 +55,11 @@ Except [Automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui),
 # 🙈 Provisioning scripts in my Templates
 
 Provisioning scripts in this Collection are based on official [Provisioning Script](https://github.com/ai-dock/stable-diffusion-webui/blob/main/config/provisioning/default.sh).  
-In process of creating my provisioning scripts I'm replacing some parts of original script with my own stuff. Currently it includes:
+In process of creating my provisioning scripts I'm replacing some parts of original script with my own stuff.  
+Currently it includes:
 
 - Each script has just one spedific checkpoint. Does not include stock checkpoints.
-- Each script has some useful Lora's that will work with that checkpoint. Basically there are two lists of Lora's - one for checkpoints based on SDXL and one for checkpoints based on PDXL.
+- Each script has some useful Lora's that will work with that checkpoint. Basically there are two lists of Lora's - one for checkpoints based on [SDXL](https://github.com/Avaray/stable-diffusion-templates?tab=readme-ov-file#-sdxl) and one for checkpoints based on [PDXL](https://github.com/Avaray/stable-diffusion-templates?tab=readme-ov-file#-pdxl).
 - Each script has some useful Extensions. Basically the same for all scripts. Except `taggers`.
 
 In near future I will also add some useful Embeddings (Textual Inversions).
