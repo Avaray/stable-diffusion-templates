@@ -41,11 +41,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          gh variable set PVS_HASH ${{ steps.get-pvs-hash.outputs.new_hash }} --repo ${{ github.repository }}
+          gh variable set PVS_HASH -b ${{ steps.get-pvs-hash.outputs.new_hash }}
 
       - name: Trigger update workflow
         if: steps.get-pvs-hash.outputs.update_needed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          gh workflow run build-after-commit.yml --repo ${{ github.repository }}
+          gh workflow run build-after-commit.yml
