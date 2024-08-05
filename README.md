@@ -1,4 +1,4 @@
-# Stable Diffusion Templates
+# 🌟 Stable Diffusion Templates
 
 This is curated collection of templates for [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) and [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) services. Their main purpose is to simplify the process of getting started with Stable Diffusion. These templates gives ready to use [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) thanks to [AI-Dock](https://github.com/ai-dock/stable-diffusion-webui). Plus they have some nice Lora's and useful Extensions preinstalled.
 
@@ -6,7 +6,7 @@ Mentioned services give you access to powerful GPUs like [RTX4090](https://www.n
 
 Additional informations will be added soon.
 
-# SDXL
+# 🦓 SDXL
 
 Templates with checkpoints based on Stable Diffusion XL.
 
@@ -23,7 +23,7 @@ Templates with checkpoints based on Stable Diffusion XL.
 | [Copax TimeLess](https://civitai.com/models/118111?modelVersionId=445348) `V12` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=2e797e615f9f5d46c2fd5a3fa2beb295"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=a4hwnbsphp"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | [epiCRealism](https://civitai.com/models/277058?modelVersionId=646523) `V8` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=1f7ef35a703ad5a28932680e573eb6cf"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=2cn8li8tof"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 
-# PDXL
+# 🦄 PDXL
 
 Templates with checkpoints based on Pony Diffusion XL.
 
@@ -33,15 +33,15 @@ Templates with checkpoints based on Pony Diffusion XL.
 | [Pony Diffusion](https://civitai.com/models/257749?modelVersionId=290640) `V6` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=dedb7495b1bc8caea7bdbbb5ce002794"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=mgosofhzoc"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | [AutismMix](https://civitai.com/models/288584?modelVersionId=324619) `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=a4b369ebca71a4b53e01037239fbd76a"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=os43pc1362"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 
-## TODO's
+## 👨‍💻 TODO's
 
 - [x] Create Workflows for automatic updates.
 - [ ] Add Embeddings to templates.
 - [ ] Create Lite versions (without Loras).
-- [ ] Create Workflow for detecting changes in original Provisioning script.
+- [] Create Workflow for detecting changes in original Provisioning script.
 - [ ] Find a way to automate the creation and modification of templates so that Playwright isn't needed.
 
-## FAQ
+## ⁉️ FAQ
 
 `Q` Will you add more models?  
 `A` Yes. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
