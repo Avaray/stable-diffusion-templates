@@ -10,8 +10,8 @@ Additional informations will be added soon.
 
 Templates with checkpoints based on [Stable Diffusion XL](https://en.wikipedia.org/wiki/Stable_Diffusion).
 
-|      Rating      | Checkpoint Name | ver. | Vast.ai | Runpod.io |
-| :--------------: | --------------- | :--: | :-----: | :-------: |
+|      Rating      | Checkpoint<br>Name | Version | Vast.ai | Runpod.io |
+| :--------------: | :----------------: | :-----: | :-----: | :-------: |
 | 🔥 | [ZavyChroma](https://civitai.com/models/119229?modelVersionId=641087) | `V9` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=de0f26247c1ccf592b624b233c6a7531"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=1osvczwrdm"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | 👍 | [ZavyChroma](https://civitai.com/models/119229?modelVersionId=490254) | `V7` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=c664cf5f1a6b8b5ddc521baa1cdbf05e"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=5mv7x9lk0p"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | 🔥 | [WildCardX](https://civitai.com/models/239561?modelVersionId=308455) | `V4` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=c87381d3de507cfa88ccf05f8fd990c0"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=9qr1azjcad"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
@@ -28,8 +28,8 @@ Templates with checkpoints based on [Stable Diffusion XL](https://en.wikipedia.o
 
 Templates with checkpoints based on Pony Diffusion XL.
 
-|      Rating      | Checkpoint Name | ver. | Vast.ai | Runpod.io |
-| :--------------: | --------------- | :--: | :-----: | :-------: |
+|      Rating      | Checkpoint<br>Name | Version | Vast.ai | Runpod.io |
+| :--------------: | :----------------: | :-----: | :-----: | :-------: |
 | 🔥 | [goddessOfRealism](https://civitai.com/models/212737?modelVersionId=573082) | `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=12ebd3285bd64e7d225dc6d70a5e05bb"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=t43cv2upw0"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | 👍 | [Pony Diffusion](https://civitai.com/models/257749?modelVersionId=290640) | `V6` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=dedb7495b1bc8caea7bdbbb5ce002794"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=mgosofhzoc"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | - | [AutismMix](https://civitai.com/models/288584?modelVersionId=324619) | `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=a4b369ebca71a4b53e01037239fbd76a"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=os43pc1362"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
