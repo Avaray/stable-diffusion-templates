@@ -33,7 +33,7 @@ if (unknownTuplesToClean) {
         .map((x) => x.trim())
         .filter((x) => x && !x.startsWith('#'));
       pvs = pvs.replace(tuple, `${key}=(${values.length ? `\n    ${values.join('\n    ')}\n` : ''})`);
-      console.log({ key, values });
+      // console.log({ key, values });
     }
   }
 }
