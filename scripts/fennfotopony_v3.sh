@@ -13,7 +13,7 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/autismmixSDXL_autismmixPony.safetensors'
+    '${pdxlUrl}CHECKPOINT/fennfotoPONY_v3.safetensors'
 )
 
 LORA_MODELS=(
