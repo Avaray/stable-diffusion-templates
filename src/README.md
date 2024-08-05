@@ -10,17 +10,17 @@ Additional informations will be added soon.
 
 Templates with checkpoints based on [Stable Diffusion XL](https://en.wikipedia.org/wiki/Stable_Diffusion).
 
-|      Rating      | Checkpoint Name | ver. | Vast.ai | Runpod.io |
-| :--------------: | --------------- | :--: | :-----: | :-------: |
-| {{sdxlStarters}} |                 |      |         |
+|      Rating      | Checkpoint<br>Name | Version | Vast.ai | Runpod.io |
+| :--------------: | :----------------: | :-----: | :-----: | :-------: |
+| {{sdxlStarters}} |                    |         |         |
 
 # 🦄 PDXL
 
 Templates with checkpoints based on Pony Diffusion XL.
 
-|      Rating      | Checkpoint Name | ver. | Vast.ai | Runpod.io |
-| :--------------: | --------------- | :--: | :-----: | :-------: |
-| {{pdxlStarters}} |                 |      |         |
+|      Rating      | Checkpoint<br>Name | Version | Vast.ai | Runpod.io |
+| :--------------: | :----------------: | :-----: | :-----: | :-------: |
+| {{pdxlStarters}} |                    |         |         |
 
 ## 📋 TODO's
 
