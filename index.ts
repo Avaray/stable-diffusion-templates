@@ -62,6 +62,8 @@ pvs = pvs.replace(/^\n{2,}/gm, '\n');
 
 import { checkpoints, loras, embeddings, vaes, upscalers, extensions } from './data';
 
+const scripts = [];
+
 for (const ckpt of checkpoints) {
   let pvsTemp = pvs;
 
@@ -87,5 +89,20 @@ for (const ckpt of checkpoints) {
   pvsTemp = pvsTemp.replace(/^EXTENSIONS=\(\)/gm, `EXTENSIONS=(\n    ${exts.map((x) => `'${x}'`).join('\n    ')}\n)`);
 
   const filename = ckpt.url.split('/').pop()?.replace(/\.\w+/, '.sh').toLowerCase();
+
+  scripts.push(filename);
+
   await Bun.write(`scripts/${filename}`, pvsTemp);
+}
+
+// Remove old scripts
+
+import { readdir, unlink } from 'node:fs/promises';
+
+const allScripts = await readdir('scripts');
+
+for (const script of allScripts) {
+  if (!scripts.includes(script)) {
+    await unlink(`scripts/${script}`);
+  }
 }
