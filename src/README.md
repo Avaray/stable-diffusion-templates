@@ -65,7 +65,7 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # ♻️ FAQ
 
-`Q` Will you add more checkpoints?
+`Q` Will you add more checkpoints?  
 `A` Yes. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
 
 `Q` Will you add checkpoint X?  
