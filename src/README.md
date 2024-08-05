@@ -8,21 +8,21 @@ Additional informations will be added soon.
 
 # 🦓 SDXL
 
-Templates with checkpoints based on Stable Diffusion XL.
+Templates with checkpoints based on [Stable Diffusion XL](https://en.wikipedia.org/wiki/Stable_Diffusion).
 
-| Checkpoint Name  | Version | Vast.ai | Runpod.io |
-| ---------------- | :-----: | :-----: | :-------: |
-| {{sdxlStarters}} |         |         |           |
+|      Rating      | Checkpoint Name | ver. | Vast.ai | Runpod.io |
+| :--------------: | --------------- | :--: | :-----: | :-------: |
+| {{sdxlStarters}} |                 |      |         |
 
 # 🦄 PDXL
 
 Templates with checkpoints based on Pony Diffusion XL.
 
-| Checkpoint Name  | Version | Vast.ai | Runpod.io |
-| ---------------- | :-----: | :-----: | :-------: |
-| {{pdxlStarters}} |         |         | --------- |
+|      Rating      | Checkpoint Name | ver. | Vast.ai | Runpod.io |
+| :--------------: | --------------- | :--: | :-----: | :-------: |
+| {{pdxlStarters}} |                 |      |         |
 
-## 👨‍💻 TODO's
+## 📋 TODO's
 
 - [x] Create Workflows for automatic updates.
 - [ ] Add links to scripts in README file.
@@ -34,7 +34,7 @@ Templates with checkpoints based on Pony Diffusion XL.
 - [ ] Create Lite versions (without Loras).
 - [ ] Find a way to automate the creation and modification of templates so that Playwright isn't needed.
 
-## ⁉️ FAQ
+## 🗃 FAQ
 
 `Q` Will you add more models?  
 `A` Yes. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
