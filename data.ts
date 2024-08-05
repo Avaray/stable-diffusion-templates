@@ -36,12 +36,22 @@ export const services: { [key: string]: { name: string; url: string; logo: strin
   },
 };
 
+export const ratings: { [key: string]: [string, string] } = {
+  u: ['⏳', 'Needs more testing.'],
+  a: ['🔥', "It's fire!"],
+  b: ['👍', "It's OK."],
+  c: ['👎', "It's bad. Will be deleted probably."],
+  d: ['💩', "It's crap"],
+};
+
 interface Checkpoint {
   name: string;
   homepage?: string;
   url: string;
   base: 'sdxl' | 'pdxl';
   version?: string;
+  rating?: string;
+  comment?: string;
   vastaiTemplateId?: string;
   runpodioTemplateId?: string;
 }
@@ -53,6 +63,9 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
     base: 'sdxl',
     version: '9',
+    rating: 'a',
+    comment:
+      "Awesome checkpoint for general use. Great for photography. I think it's less flexible than vversion 7, but it produces higher quality results.",
     vastaiTemplateId: 'de0f26247c1ccf592b624b233c6a7531',
     runpodioTemplateId: '1osvczwrdm',
   },
@@ -62,6 +75,8 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v70.safetensors`,
     base: 'sdxl',
     version: '7',
+    rating: 'b',
+    comment: '',
     vastaiTemplateId: 'c664cf5f1a6b8b5ddc521baa1cdbf05e',
     runpodioTemplateId: '5mv7x9lk0p',
   },
@@ -71,6 +86,8 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/wildcardxXL_v4Rundiffusion.safetensors`,
     base: 'sdxl',
     version: '4',
+    rating: 'a',
+    comment: 'My favorite SDXL checkpoint for realistic photography.',
     vastaiTemplateId: 'c87381d3de507cfa88ccf05f8fd990c0',
     runpodioTemplateId: '9qr1azjcad',
   },
@@ -80,6 +97,8 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/CHINOOK_v10.safetensors`,
     base: 'sdxl',
     version: '1',
+    rating: 'a',
+    comment: 'One of my favorites when it comes to realism and artistic photography.',
     vastaiTemplateId: 'd06d11acd907913b24b6a345852d39e3',
     runpodioTemplateId: 'vu1meyunmp',
   },
@@ -89,6 +108,8 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/leosamsHelloworldXL_helloworldXL70.safetensors`,
     base: 'sdxl',
     version: '7',
+    rating: 'b',
+    comment: '',
     vastaiTemplateId: '133b29d546034a67c65c497f76802cb0',
     runpodioTemplateId: '44x5bc9wrs',
   },
@@ -98,6 +119,8 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/Juggernaut_X_RunDiffusion.safetensors`,
     base: 'sdxl',
     version: '10',
+    rating: 'b',
+    comment: 'Solid checkpoint. Good for general use.',
     vastaiTemplateId: '1d78196b4adc4ea29246a1e58a598a03',
     runpodioTemplateId: 'ypt3pl6coj',
   },
@@ -107,17 +130,10 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/dreamshaperXL_alpha2Xl10.safetensors`,
     base: 'sdxl',
     version: '2a',
+    rating: 'b',
+    comment: 'Solid checkpoint. Good for general use.',
     vastaiTemplateId: '5dfa95dbd5e2659add8787c422d94df8',
     runpodioTemplateId: 'mgbjraphld',
-  },
-  {
-    name: 'LUSTIFY!',
-    homepage: 'https://civitai.com/models/573152?modelVersionId=638929',
-    url: `${sdxlUrl}CHECKPOINT/lustifySDXLNSFWSFW_v10.safetensors`,
-    base: 'sdxl',
-    version: '1',
-    vastaiTemplateId: '97678dedcbab1debc247cc46e4e8a261',
-    runpodioTemplateId: 'ee9t3khq73',
   },
   {
     name: 'Copax TimeLess',
@@ -125,6 +141,8 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/copaxTimelessxlSDXL1_v12.safetensors`,
     base: 'sdxl',
     version: '12',
+    rating: '',
+    comment: '',
     vastaiTemplateId: '2e797e615f9f5d46c2fd5a3fa2beb295',
     runpodioTemplateId: 'a4hwnbsphp',
   },
@@ -134,8 +152,22 @@ export const checkpoints: Checkpoint[] = [
     url: `${sdxlUrl}CHECKPOINT/epicrealismXL_v8Kiss.safetensors`,
     base: 'sdxl',
     version: '8',
+    rating: 'b',
+    comment: 'Solid checkpoint for Realism. Good for general use.',
     vastaiTemplateId: '1f7ef35a703ad5a28932680e573eb6cf',
     runpodioTemplateId: '2cn8li8tof',
+  },
+  {
+    name: 'Halcyon',
+    homepage: 'https://civitai.com/models/299933?modelVersionId=655762',
+    url: `${sdxlUrl}CHECKPOINT/halcyonSDXL_v18.safetensors`,
+    base: 'sdxl',
+    version: '1.8',
+    rating: 'b',
+    comment:
+      'Generated faces are too shiny in my opinion. This checkpoint is not good for photorealism. There are much better checkpoints in this list.',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
   {
     name: 'goddessOfRealism',
@@ -143,6 +175,8 @@ export const checkpoints: Checkpoint[] = [
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
     base: 'pdxl',
     version: '1',
+    rating: 'a',
+    comment: 'Awesome checkpoint. Realistic. Very flexible.',
     vastaiTemplateId: '12ebd3285bd64e7d225dc6d70a5e05bb',
     runpodioTemplateId: 't43cv2upw0',
   },
@@ -152,6 +186,8 @@ export const checkpoints: Checkpoint[] = [
     url: `${pdxlUrl}CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
     base: 'pdxl',
     version: '6',
+    rating: 'b',
+    comment: '',
     vastaiTemplateId: 'dedb7495b1bc8caea7bdbbb5ce002794',
     runpodioTemplateId: 'mgosofhzoc',
   },
@@ -161,8 +197,21 @@ export const checkpoints: Checkpoint[] = [
     url: `${pdxlUrl}CHECKPOINT/autismmixSDXL_autismmixPony.safetensors`,
     base: 'pdxl',
     version: '1',
+    rating: '',
+    comment: '',
     vastaiTemplateId: 'a4b369ebca71a4b53e01037239fbd76a',
     runpodioTemplateId: 'os43pc1362',
+  },
+  {
+    name: 'fennfoto',
+    homepage: 'https://civitai.com/models/503537?modelVersionId=676770',
+    url: '',
+    base: 'pdxl',
+    version: '3',
+    rating: '',
+    comment: '',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
 ];
 
