@@ -38,7 +38,7 @@ Templates with checkpoints based on Pony Diffusion XL.
 `A` Yes. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
 
 `Q` Will you add checkpoint X?  
-`A` Please open [an discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). But keep in mind that model must be battle tested on [CivitAI](https://civitai.com/models).
+`A` Please [open an discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). But keep in mind that model must be battle tested on [CivitAI](https://civitai.com/models).
 
 `Q` Will you add more services?  
 `A` Maybe. Currently I don't know any better or at least as good as current ones.
