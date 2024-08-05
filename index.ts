@@ -23,18 +23,15 @@ const unknownTuplesToClean = pvs.match(/^[\w]+=\([\W\w]*?\)/gm);
 if (unknownTuplesToClean) {
   for (const tuple of unknownTuplesToClean) {
     const key = tuple.split('=')[0];
-
     if (knownTuplesToClean.includes(key)) {
       pvs = pvs.replace(tuple, `${key}=()`);
     } else {
-      console.log(`Unknown tuple: ${key}`);
-      let values = tuple
+      const values = tuple
         .split('=')[1]
         .replace(/[\(\)]/g, '')
         .split('\n')
         .map((x) => x.trim())
-        .filter((x) => x);
-      values = values.filter((x) => !x.startsWith('#'));
+        .filter((x) => x && !x.startsWith('#'));
       pvs = pvs.replace(tuple, `${key}=(${values.length ? `\n    ${values.join('\n    ')}\n` : ''})`);
       console.log({ key, values });
     }
