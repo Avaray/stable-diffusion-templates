@@ -103,6 +103,7 @@ const allScripts = await readdir('scripts');
 
 for (const script of allScripts) {
   if (!scripts.includes(script)) {
+    console.log(`Removing old script: ${script}`);
     await unlink(`scripts/${script}`);
   }
 }
