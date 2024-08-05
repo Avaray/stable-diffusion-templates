@@ -18,9 +18,9 @@ jobs:
       - name: Get remote PVS hash
         id: get-pvs-hash
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          NEW_HASH=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          NEW_HASH=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
             https://api.github.com/repos/ai-dock/stable-diffusion-webui/contents/config/provisioning | \
             jq -r '.[] | select(.name == "default.sh") | .sha')
 
@@ -35,3 +35,17 @@ jobs:
             echo "Hashes are the same. No update needed."
             echo "update_needed=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Update PVS_HASH if different
+        if: steps.get-pvs-hash.outputs.update_needed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh variable set PVS_HASH ${{ steps.get-pvs-hash.outputs.new_hash }} --repo ${{ github.repository }}
+
+      - name: Trigger update workflow
+        if: steps.get-pvs-hash.outputs.update_needed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh workflow run build-after-commit.yml --repo ${{ github.repository }}
