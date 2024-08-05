@@ -67,7 +67,6 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # 📋 TODO's
 
-- [ ] Feature to auto-remove scripts for checkpoints that were removed.
 - [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
 - [ ] Add lists of Embeddings to README file.
@@ -87,5 +86,5 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 `Q` Will you add more services?  
 `A` Maybe. Currently I don't know any better or at least as good as current ones.
 
-`Q` Will you include [ControlNet](https://github.com/lllyasviel/ControlNet) models?
+`Q` Will you include [ControlNet](https://github.com/lllyasviel/ControlNet) models?  
 `A` No. They suck in SDXL and PDXL. You need to find a good ones by yourself.
