@@ -62,6 +62,7 @@ Currently it includes:
 - Each script has some useful Lora's that will work with that checkpoint. Basically there are two lists of Lora's - one for checkpoints based on [SDXL](https://github.com/Avaray/stable-diffusion-templates?tab=readme-ov-file#-sdxl) and one for checkpoints based on [PDXL](https://github.com/Avaray/stable-diffusion-templates?tab=readme-ov-file#-pdxl).
 - Each script has some useful Extensions. Basically the same for all scripts. Except `taggers`.
 
+To see what is included in each script, you can check sripts in [scripts directory](https://github.com/Avaray/stable-diffusion-templates/tree/main/scripts).  
 In near future I will also add some useful Embeddings (Textual Inversions).
 
 # 📋 TODO's
