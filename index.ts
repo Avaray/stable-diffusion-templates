@@ -9,11 +9,41 @@ try {
   process.exit(1);
 }
 
+const knownTuplesToClean = [
+  'CHECKPOINT_MODELS',
+  'EXTENSIONS',
+  'LORA_MODELS',
+  'VAE_MODELS',
+  'ESRGAN_MODELS',
+  'CONTROLNET_MODELS',
+];
+
+const unknownTuplesToClean = pvs.match(/^[\w]+=\([\W\w]*?\)/gm);
+
+if (unknownTuplesToClean) {
+  for (const tuple of unknownTuplesToClean) {
+    const key = tuple.split('=')[0];
+
+    if (knownTuplesToClean.includes(key)) {
+      pvs = pvs.replace(tuple, `${key}=()`);
+    } else {
+      console.log(`Unknown tuple: ${key}`);
+      let values = tuple
+        .split('=')[1]
+        .replace(/[\(\)]/g, '')
+        .split('\n')
+        .map((x) => x.trim())
+        .filter((x) => x);
+      values = values.filter((x) => !x.startsWith('#'));
+      pvs = pvs.replace(tuple, `${key}=(${values.length ? `\n    ${values.join('\n    ')}\n` : ''})`);
+      console.log({ key, values });
+    }
+  }
+}
+
 pvs = pvs.replace(/^#\s[\w\W]*?(?=DISK)/m, '\n');
 pvs = pvs.replace(/^\s*?#+\s[\w\W]*?$/gm, '\n');
 pvs = pvs.replace(/^DISK_GB_REQUIRED.*$/gm, 'DISK_GB_REQUIRED=40');
-pvs = pvs.replace(/^APT_PACKAGES=\([\W\w]*?\)/gm, 'APT_PACKAGES=()');
-pvs = pvs.replace(/^PIP_PACKAGES=\([\W\w]*?\)/gm, 'PIP_PACKAGES=()');
 
 for (const x of [
   'EXTENSIONS',
