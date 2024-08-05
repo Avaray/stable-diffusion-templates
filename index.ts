@@ -38,7 +38,7 @@ if (unknownTuplesToClean) {
   }
 }
 
-pvs = pvs.replace(/^#\s[\w\W]*?(?=DISK)/m, '\n');
+pvs = pvs.replace(/^#\s[\w\W]*?(?=\w+=)/m, '\n');
 pvs = pvs.replace(/^\s*?#+\s[\w\W]*?$/gm, '\n');
 pvs = pvs.replace(/^DISK_GB_REQUIRED.*$/gm, 'DISK_GB_REQUIRED=40');
 pvs = pvs.replace(/^function provisioning_start/gm, 'EMBEDDINGS=()\n\nfunction provisioning_start');
