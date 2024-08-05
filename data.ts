@@ -166,8 +166,8 @@ export const checkpoints: Checkpoint[] = [
     rating: 'b',
     comment:
       'Generated faces are too shiny in my opinion. This checkpoint is not good for photorealism. There are much better checkpoints in this list.',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    vastaiTemplateId: 'cc77d7bda1afe46ca2b23628c1d0ac14',
+    runpodioTemplateId: '2fy5lo1o5q',
   },
   {
     name: 'goddessOfRealism',
@@ -210,8 +210,8 @@ export const checkpoints: Checkpoint[] = [
     version: '3',
     rating: '',
     comment: '',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    vastaiTemplateId: '46f4a5f0eb3a6355aa58acfc66cb95db',
+    runpodioTemplateId: 'rncvdgx8kj',
   },
 ];
 
