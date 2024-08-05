@@ -45,17 +45,6 @@ pvs = pvs.replace(/^#\s[\w\W]*?(?=DISK)/m, '\n');
 pvs = pvs.replace(/^\s*?#+\s[\w\W]*?$/gm, '\n');
 pvs = pvs.replace(/^DISK_GB_REQUIRED.*$/gm, 'DISK_GB_REQUIRED=40');
 
-for (const x of [
-  'EXTENSIONS',
-  'CHECKPOINT_MODELS',
-  'LORA_MODELS',
-  'VAE_MODELS',
-  'ESRGAN_MODELS',
-  'CONTROLNET_MODELS',
-]) {
-  pvs = pvs.replace(new RegExp(`^${x}=\\([\\W\\w]*?\\)`, 'gm'), `${x}=()`);
-}
-
 pvs = pvs.replace(/^function provisioning_start/gm, 'EMBEDDINGS=()\n\nfunction provisioning_start');
 
 pvs = pvs.replace(/^\n{2,}/gm, '\n');
