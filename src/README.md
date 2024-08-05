@@ -25,10 +25,10 @@ Templates with checkpoints based on Pony Diffusion XL.
 ## 📋 TODO's
 
 - [x] Create Workflows for automatic updates.
+- [x] Create Workflow for detecting changes in original Provisioning script.
 - [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
 - [ ] Add lists of Embeddings to README file.
-- [ ] Create Workflow for detecting changes in original Provisioning script.
 - [ ] Add automatic tests.
 - [ ] Add links to Lora models on CivitAI.
 - [ ] Create Lite versions (without Loras).
