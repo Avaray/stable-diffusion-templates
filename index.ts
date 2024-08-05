@@ -12,7 +12,8 @@ try {
 pvs = pvs.replace(/^#\s[\w\W]*?(?=DISK)/m, '\n');
 pvs = pvs.replace(/^\s*?#+\s[\w\W]*?$/gm, '\n');
 pvs = pvs.replace(/^DISK_GB_REQUIRED.*$/gm, 'DISK_GB_REQUIRED=40');
-pvs = pvs.replace(/^PIP_PACKAGES=\(\W*\)/gm, 'PIP_PACKAGES=()');
+pvs = pvs.replace(/^APT_PACKAGES=\([\W\w]*?\)/gm, 'APT_PACKAGES=()');
+pvs = pvs.replace(/^PIP_PACKAGES=\([\W\w]*?\)/gm, 'PIP_PACKAGES=()');
 
 for (const x of [
   'EXTENSIONS',
