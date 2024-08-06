@@ -19,7 +19,7 @@ const newPvsFunctions = allPvsFunctions.filter((x) => !knownPvsFunctions.include
 const newPvsTuples = allPvsTuples.filter((x) => !knownPvsTuples.includes(x));
 
 const functionCode = (x: string) => {
-  const regex = new RegExp(`^function\\s${x}\\(\\)[\\W\\w]*?\\}`, 'm');
+  const regex = new RegExp(`^function\\s${x}\\(\\)[\\W\\w]*?[\\s\\n]\}(?=[\\s\\n])`, 'm');
   const match = pvs.match(regex);
   return match ? `\`\`\`python\n${match[0]}\n\`\`\`` : '';
 };
