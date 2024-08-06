@@ -9,6 +9,46 @@ try {
   process.exit(1);
 }
 
+const knownPvsTuples = JSON.parse(Bun.env.PVS_TUPLES || '[]');
+const knownPvsFunctions = JSON.parse(Bun.env.PVS_FUNCTIONS || '[]');
+const pvsFunctionNameRegex = /(?<=function\s)\w+/gm;
+const pvsTupleNameRegex = /^\w+(?==\()/gm;
+const allPvsFunctions = pvs.match(pvsFunctionNameRegex) || [];
+const allPvsTuples = pvs.match(pvsTupleNameRegex) || [];
+const newPvsFunctions = allPvsFunctions.filter((x) => !knownPvsFunctions.includes(x));
+const newPvsTuples = allPvsTuples.filter((x) => !knownPvsTuples.includes(x));
+
+const functionCode = (x: string) => {
+  const regex = new RegExp(`^function\\s${x}\\(\\)[\\W\\w]*?\\}`, 'm');
+  const match = pvs.match(regex);
+  return match ? `\`\`\`python\n${match[0]}\n\`\`\`` : '';
+};
+
+const tupleCode = (x: string) => {
+  const regex = new RegExp(`^${x}=\\([\\W\\w]*?\\)`, 'm');
+  const match = pvs.match(regex);
+  return match ? `\`\`\`python\n${match[0]}\n\`\`\`` : '';
+};
+
+const title =
+  (newPvsFunctions.length || newPvsTuples.length) &&
+  `Found ${newPvsFunctions.length ? `${newPvsFunctions.length} new functions` : ''} ${
+    newPvsFunctions.length && newPvsTuples.length ? 'and' : ''
+  } ${newPvsTuples.length ? `${newPvsTuples.length} new tuples` : ''} in provisioning script.`;
+
+let description = '';
+
+if (title && newPvsFunctions.length) {
+  description += `## New functions\n\n${newPvsFunctions.map((x) => `${functionCode(x)}\n`).join('\n')}\n`;
+}
+
+if (title && newPvsTuples.length) {
+  description += `## New tuples\n\n${newPvsTuples.map((x) => `${tupleCode(x)}\n`).join('\n')}`;
+}
+
+// TODO: Here I will output the title and description to the console.
+// Workflow will use this output to create a new issue in the repository.
+
 const knownTuplesToClean = [
   'CHECKPOINT_MODELS',
   'EXTENSIONS',
