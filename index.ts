@@ -134,5 +134,3 @@ for (const script of allScripts) {
     await unlink(`scripts/${script}`);
   }
 }
-
-// Just testing something
