@@ -2,7 +2,8 @@
 
 This is curated collection of templates for [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) and [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) services.  
 Their main purpose is to simplify the process of getting started with Stable Diffusion.  
-These templates gives ready to use [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) thanks to [AI-Dock](https://github.com/ai-dock/stable-diffusion-webui). Plus they have some nice Lora's and useful Extensions preinstalled.
+These templates gives ready to use [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) thanks to [AI-Dock](https://github.com/ai-dock/stable-diffusion-webui).  
+Plus they have some nice Lora's and useful Extensions preinstalled.
 
 ### Start generating graphics in minutes with just few clicks 😎
 
@@ -34,6 +35,7 @@ Templates with checkpoints based on Pony Diffusion XL.
 | 🔥 | [goddessOfRealism](https://civitai.com/models/212737?modelVersionId=573082) | `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=12ebd3285bd64e7d225dc6d70a5e05bb"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=t43cv2upw0"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | 🔥 | [Pony Diffusion](https://civitai.com/models/257749?modelVersionId=290640) | `V6` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=dedb7495b1bc8caea7bdbbb5ce002794"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=mgosofhzoc"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | - | [AutismMix](https://civitai.com/models/288584?modelVersionId=324619) | `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=a4b369ebca71a4b53e01037239fbd76a"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=os43pc1362"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
+| - | [fennfoto](https://civitai.com/models/503537?modelVersionId=702110) | `V4` | todo | todo |
 | - | [fennfoto](https://civitai.com/models/503537?modelVersionId=676770) | `V3` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=46f4a5f0eb3a6355aa58acfc66cb95db"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=rncvdgx8kj"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 
 # 🙊 What is [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) and [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) ?
@@ -68,6 +70,7 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # 📋 TODO's
 
+- [ ] Reorganize the file structure in the repository.
 - [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
 - [ ] Add lists of Embeddings to README file.
