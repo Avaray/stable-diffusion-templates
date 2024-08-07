@@ -124,8 +124,8 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/133005?modelVersionId=456194',
     url: `${sdxlUrl}CHECKPOINT/Juggernaut_X_RunDiffusion.safetensors`,
     base: 'sdxl',
-    version: '10'
-    tags: [],,
+    version: '10',
+    tags: [],
     rating: 'b',
     comment: 'Solid checkpoint. Good for general use.',
     vastaiTemplateId: '1d78196b4adc4ea29246a1e58a598a03',
@@ -136,8 +136,8 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/112902?modelVersionId=126688',
     url: `${sdxlUrl}CHECKPOINT/dreamshaperXL_alpha2Xl10.safetensors`,
     base: 'sdxl',
-    version: '2a'
-    tags: [],,
+    version: '2a',
+    tags: [],
     rating: 'b',
     comment: 'Solid checkpoint. Good for general use.',
     vastaiTemplateId: '5dfa95dbd5e2659add8787c422d94df8',
@@ -148,8 +148,8 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/118111?modelVersionId=445348',
     url: `${sdxlUrl}CHECKPOINT/copaxTimelessxlSDXL1_v12.safetensors`,
     base: 'sdxl',
-    version: '12'
-    tags: [],,
+    version: '12',
+    tags: [],
     rating: '',
     comment: '',
     vastaiTemplateId: '2e797e615f9f5d46c2fd5a3fa2beb295',
@@ -172,8 +172,8 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/299933?modelVersionId=655762',
     url: `${sdxlUrl}CHECKPOINT/halcyonSDXL_v18.safetensors`,
     base: 'sdxl',
-    version: '1.8
-    tags: [],',
+    version: '1.8',
+    tags: [],
     rating: 'b',
     comment:
       'Generated faces are too shiny in my opinion. This checkpoint is not good for photorealism. There are much better checkpoints in this list.',
@@ -185,8 +185,8 @@ export const checkpoints: Checkpoint[] = [
     homepage: 'https://civitai.com/models/189109?modelVersionId=259323',
     url: `${sdxlUrl}CHECKPOINT/photopediaXL_45.safetensors`,
     base: 'sdxl',
-    version: '4.5
-    tags: [],',
+    version: '4.5',
+    tags: [],
     rating: '',
     comment: '',
     vastaiTemplateId: '395a34f5188daccc14dc12aa1435c105',
