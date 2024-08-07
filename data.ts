@@ -242,6 +242,18 @@ export const checkpoints: Checkpoint[] = [
   },
   {
     name: 'fennfoto',
+    homepage: 'https://civitai.com/models/503537?modelVersionId=702110',
+    url: `${pdxlUrl}CHECKPOINT/fennfotoPONY_v4.safetensors`,
+    base: 'pdxl',
+    version: '4',
+    tags: [],
+    rating: '',
+    comment: '',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
+  },
+  {
+    name: 'fennfoto',
     homepage: 'https://civitai.com/models/503537?modelVersionId=676770',
     url: `${pdxlUrl}CHECKPOINT/fennfotoPONY_v3.safetensors`,
     base: 'pdxl',
