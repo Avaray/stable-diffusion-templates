@@ -201,8 +201,8 @@ export const checkpoints: Checkpoint[] = [
     tags: [],
     rating: '',
     comment: '',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    vastaiTemplateId: '1214857c19b792218238c1635de44857',
+    runpodioTemplateId: 'o32e68lf4f',
   },
   {
     name: 'goddessOfRealism',
@@ -249,8 +249,8 @@ export const checkpoints: Checkpoint[] = [
     tags: [],
     rating: '',
     comment: '',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    vastaiTemplateId: 'bb0f421f5bfd32cdd8214884ba8c5f07',
+    runpodioTemplateId: 'g2p855h333',
   },
   {
     name: 'fennfoto',
