@@ -176,3 +176,5 @@ dist
 
 # Unwanted
 images/*.ai
+IDEA*
+TODO*
