@@ -259,7 +259,7 @@ export const checkpoints: Checkpoint[] = [
     base: 'pdxl',
     version: '3',
     tags: [],
-    rating: '',
+    rating: 'b',
     comment: 'One of the best Realitic Pony checkpoints. Not perfect. Maybe version 4 will be better. Need to test.',
     vastaiTemplateId: '46f4a5f0eb3a6355aa58acfc66cb95db',
     runpodioTemplateId: 'rncvdgx8kj',
