@@ -30,7 +30,7 @@ They let you run [Docker images](https://docs.docker.com/guides/docker-overview/
 
 If you can't afford to buy a powerful Graphics Card (that is mandatory in graphics generation), these services are for you. In my opinion, services like these are the best way to get started with Stable Diffusion when you have weak graphics card and you don't have money to buy a powerful one. Btw. You can read [my old article](https://dav.one/the-ways-and-costs-of-generating-graphics-using-stable-diffusion) about _"the ways and costs of generating graphics"_.
 
-These two services offer a lot of different machines with different hardware. There are also community machines that are cheaper. Both services have machine browsers where you can find the best machine for your needs. Currently renting community machine with RTX4090 on [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) costs about $0.2 per hour. On [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) it's a little bit more expensive.
+These two services offer a lot of different machines with different hardware. There are also community machines that are cheaper. Both services have machine browsers where you can find the best machine for your needs. Currently renting community machine with RTX4090 on [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) costs about $0.2 per hour. On [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) it's a little bit more expensive. Prices are generally lower on weekends. Global economy and events influence the prices.
 
 When you are registered on these services and logged in, you can use the links above to rent a machine with selected template. **It's super easy.**
 
@@ -56,6 +56,7 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 # 📋 TODO's
 
 - [ ] Reorganize the file structure in the repository.
+- [ ] Remove some Loras and categorize them.
 - [ ] Add links to scripts in README file.
 - [ ] Add Embeddings to templates.
 - [ ] Add lists of Embeddings to README file.
