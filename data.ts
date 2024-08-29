@@ -140,8 +140,8 @@ export const checkpoints: Checkpoint[] = [
     tags: [],
     rating: '',
     comment: '',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    vastaiTemplateId: '16a3bd322b0fde6c71e249a574e300be',
+    runpodioTemplateId: '8g5h4fazmw',
   },
   {
     name: 'DreamShaper',
