@@ -59,6 +59,30 @@ interface Checkpoint {
 
 export const checkpoints: Checkpoint[] = [
   {
+    name: 'RealVis',
+    homepage: 'https://civitai.com/models/139562?modelVersionId=344487',
+    url: `${sdxlUrl}CHECKPOINT/realvisxlV40_v40Bakedvae.safetensors`,
+    base: 'sdxl',
+    version: '4',
+    tags: [],
+    rating: 'a',
+    comment: '',
+    vastaiTemplateId: '1214857c19b792218238c1635de44857',
+    runpodioTemplateId: 'o32e68lf4f',
+  },
+  {
+    name: 'RealVis',
+    homepage: 'https://civitai.com/models/139562?modelVersionId=789646',
+    url: `${sdxlUrl}CHECKPOINT/realvisxlV50_v50Bakedvae.safetensors`,
+    base: 'sdxl',
+    version: '5',
+    tags: [],
+    rating: '',
+    comment: '',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
+  },
+  {
     name: 'ZavyChroma',
     homepage: 'https://civitai.com/models/119229?modelVersionId=641087',
     url: `${sdxlUrl}CHECKPOINT/zavychromaxl_v90.safetensors`,
@@ -205,18 +229,6 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'g6suw85qqm',
   },
   {
-    name: 'RealVis',
-    homepage: 'https://civitai.com/models/139562?modelVersionId=344487',
-    url: `${sdxlUrl}CHECKPOINT/realvisxlV40_v40Bakedvae.safetensors`,
-    base: 'sdxl',
-    version: '4',
-    tags: [],
-    rating: 'a',
-    comment: '',
-    vastaiTemplateId: '1214857c19b792218238c1635de44857',
-    runpodioTemplateId: 'o32e68lf4f',
-  },
-  {
     name: 'goddessOfRealism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
@@ -236,7 +248,8 @@ export const checkpoints: Checkpoint[] = [
     version: '6',
     tags: [],
     rating: 'a',
-    comment: 'Checkpoint for Anime. Trained for NSFW. Very flexible. You can play with many styles.',
+    comment:
+      'Checkpoint for Anime. Trained for NSFW. Very flexible. You can play with many styles.',
     vastaiTemplateId: 'dedb7495b1bc8caea7bdbbb5ce002794',
     runpodioTemplateId: 'mgosofhzoc',
   },
@@ -272,7 +285,8 @@ export const checkpoints: Checkpoint[] = [
     version: '3',
     tags: [],
     rating: 'b',
-    comment: 'One of the best Realitic Pony checkpoints. Not perfect. Maybe version 4 will be better. Need to test.',
+    comment:
+      'One of the best Realitic Pony checkpoints. Not perfect. Maybe version 4 will be better. Need to test.',
     vastaiTemplateId: '46f4a5f0eb3a6355aa58acfc66cb95db',
     runpodioTemplateId: 'rncvdgx8kj',
   },
@@ -308,12 +322,20 @@ interface Embeddings {
 
 export const embeddings: Embeddings = {
   sdxl: {
-    pos: sdxlFiles.filter((x: string) => x.startsWith('EMBEDDINGS/pos')).map((x: string) => `${sdxlUrl}${x}`),
-    neg: sdxlFiles.filter((x: string) => x.startsWith('EMBEDDINGS/neg')).map((x: string) => `${sdxlUrl}${x}`),
+    pos: sdxlFiles
+      .filter((x: string) => x.startsWith('EMBEDDINGS/pos'))
+      .map((x: string) => `${sdxlUrl}${x}`),
+    neg: sdxlFiles
+      .filter((x: string) => x.startsWith('EMBEDDINGS/neg'))
+      .map((x: string) => `${sdxlUrl}${x}`),
   },
   pdxl: {
-    pos: pdxlFiles.filter((x: string) => x.startsWith('EMBEDDINGS/pos')).map((x: string) => `${pdxlUrl}${x}`),
-    neg: pdxlFiles.filter((x: string) => x.startsWith('EMBEDDINGS/neg')).map((x: string) => `${pdxlUrl}${x}`),
+    pos: pdxlFiles
+      .filter((x: string) => x.startsWith('EMBEDDINGS/pos'))
+      .map((x: string) => `${pdxlUrl}${x}`),
+    neg: pdxlFiles
+      .filter((x: string) => x.startsWith('EMBEDDINGS/neg'))
+      .map((x: string) => `${pdxlUrl}${x}`),
   },
 };
 
@@ -333,8 +355,12 @@ interface Upscalers {
 }
 
 export const upscalers: Upscalers = {
-  sdxl: sdxlFiles.filter((x: string) => x.startsWith('ESRGAN/')).map((x: string) => `${sdxlUrl}${x}`),
-  pdxl: pdxlFiles.filter((x: string) => x.startsWith('ESRGAN/')).map((x: string) => `${pdxlUrl}${x}`),
+  sdxl: sdxlFiles
+    .filter((x: string) => x.startsWith('ESRGAN/'))
+    .map((x: string) => `${sdxlUrl}${x}`),
+  pdxl: pdxlFiles
+    .filter((x: string) => x.startsWith('ESRGAN/'))
+    .map((x: string) => `${pdxlUrl}${x}`),
 };
 
 interface Extensions {
