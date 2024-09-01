@@ -79,8 +79,8 @@ export const checkpoints: Checkpoint[] = [
     tags: [],
     rating: '',
     comment: '',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
+    vastaiTemplateId: 'a13746f00e1ebb6084880dc48e79f157',
+    runpodioTemplateId: 'agfapnhy4g',
   },
   {
     name: 'ZavyChroma',
