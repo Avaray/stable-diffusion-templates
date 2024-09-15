@@ -20,11 +20,7 @@ CHECKPOINT_MODELS=(
 
 LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/16mm_film_style.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/AmateurStyle_v1_PONY_REALISM.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/Cinematic_Hollywood_Film_v2.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/CleavageXL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/Desolation.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/Detailed_nipples_xl.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/DreamARTSDXL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/EldritchCandids1.1.2.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/Essenz-BetterPhotography-v1.2-Skynet.safetensors'
@@ -32,8 +28,6 @@ LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/FDXL_BreastFocus.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/MS_Milf_Style_V2_Pony.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/Milking_Table_XL.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/RMSDXL_Darkness_Cinema.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/RMSDXL_Photo.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/SDXLFaeTastic2400.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/SDXL_black_and_color_Sa_May.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/SDXL_vanta_black_contrast_V3.0.safetensors'
@@ -44,8 +38,6 @@ LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/looking_at_viewer.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/m100-style-test.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/retro-neon-xl-style.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/soaked_brand_pfeffi_KB.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/soaked_mundwasser_pee.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/weight_slider-sdxl.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/zavy-rmlght-sdxl.safetensors'
 )
