@@ -80,7 +80,7 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 - [ ] Add automatic tests.
 - [ ] Add links to Lora models on CivitAI.
 - [ ] Create Lite versions (without Loras).
-- [ ] Find a way to automate the creation and modification of templates so that Playwright isn't needed. Vast API currently supports creating new templates, but that's not enough. I already requested API features on Vast and waiting for them.
+- [ ] Find a way to automate the creation and modification of templates so that Playwright isn't needed.
 
 # ♻️ FAQ
 
