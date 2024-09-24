@@ -77,7 +77,7 @@ export const checkpoints: Checkpoint[] = [
     base: 'sdxl',
     version: '5',
     tags: [],
-    rating: '',
+    rating: 'a',
     comment: '',
     vastaiTemplateId: 'a13746f00e1ebb6084880dc48e79f157',
     runpodioTemplateId: 'agfapnhy4g',
