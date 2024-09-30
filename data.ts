@@ -229,7 +229,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 'g6suw85qqm',
   },
   {
-    name: 'goddessOfRealism',
+    name: 'GODDESS of Realism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV10.safetensors`,
     base: 'pdxl',
@@ -241,7 +241,7 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 't43cv2upw0',
   },
   {
-    name: 'goddessOfRealism',
+    name: 'GODDESS of Realism',
     homepage: 'https://civitai.com/models/212737?modelVersionId=905362',
     url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV3VAE.safetensors`,
     base: 'pdxl',
@@ -301,6 +301,19 @@ export const checkpoints: Checkpoint[] = [
       'One of the best Realitic Pony checkpoints. Not perfect. Maybe version 4 will be better. Need to test.',
     vastaiTemplateId: '46f4a5f0eb3a6355aa58acfc66cb95db',
     runpodioTemplateId: 'rncvdgx8kj',
+  },
+  {
+    name: 'TAME',
+    homepage:
+      'https://civitai.com/models/722045/tame-pony-the-authenticity-machine?modelVersionId=807386',
+    url: `${pdxlUrl}CHECKPOINT/tamePonyThe_v10.safetensors`,
+    base: 'pdxl',
+    version: '1',
+    tags: [],
+    rating: '',
+    comment: '',
+    vastaiTemplateId: '',
+    runpodioTemplateId: '',
   },
 ];
 
