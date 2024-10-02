@@ -241,18 +241,6 @@ export const checkpoints: Checkpoint[] = [
     runpodioTemplateId: 't43cv2upw0',
   },
   {
-    name: 'GODDESS of Realism',
-    homepage: 'https://civitai.com/models/212737?modelVersionId=905362',
-    url: `${pdxlUrl}CHECKPOINT/goddessOfRealism_gorPONYV3VAE.safetensors`,
-    base: 'pdxl',
-    version: '3',
-    tags: [],
-    rating: '',
-    comment: '',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
-  },
-  {
     name: 'Pony Diffusion',
     homepage: 'https://civitai.com/models/257749?modelVersionId=290640',
     url: `${pdxlUrl}CHECKPOINT/ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
