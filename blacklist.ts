@@ -14,6 +14,13 @@ const blacklist = [
     version: '1',
     comment: 'Creates deformed bodies. Does not work well above 1024px.',
   },
+  {
+    name: 'TAME',
+    homepage:
+      'https://civitai.com/models/722045/tame-pony-the-authenticity-machine?modelVersionId=807386',
+    version: '1',
+    comment: 'Terrible results. Bad quality. Not recommended.',
+  },
 ];
 
 export default blacklist;

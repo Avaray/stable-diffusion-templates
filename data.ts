@@ -302,19 +302,6 @@ export const checkpoints: Checkpoint[] = [
     vastaiTemplateId: '46f4a5f0eb3a6355aa58acfc66cb95db',
     runpodioTemplateId: 'rncvdgx8kj',
   },
-  {
-    name: 'TAME',
-    homepage:
-      'https://civitai.com/models/722045/tame-pony-the-authenticity-machine?modelVersionId=807386',
-    url: `${pdxlUrl}CHECKPOINT/tamePonyThe_v10.safetensors`,
-    base: 'pdxl',
-    version: '1',
-    tags: [],
-    rating: '',
-    comment: '',
-    vastaiTemplateId: '',
-    runpodioTemplateId: '',
-  },
 ];
 
 // interface Lora {
