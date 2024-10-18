@@ -21,6 +21,7 @@ CHECKPOINT_MODELS=(
 LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/ALICESOFT_Dohna_Dohna_Game_Artstyle_PonyXL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/ALICESOFT_Dohna_Dohna_Game_Artstyle_Revised_PonyXL.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Caught_Masturbating.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/EnvyPonyPrettyEyes01.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/EnvyStarlightPrettyEyes01.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GLSHS_V2-4.safetensors'

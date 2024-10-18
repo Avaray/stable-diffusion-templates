@@ -11,32 +11,29 @@ EXTENSIONS=(
     'https://github.com/adieyal/sd-dynamic-prompts'
     'https://github.com/hako-mikan/sd-webui-regional-prompter'
     'https://github.com/Bing-su/adetailer'
-    'https://github.com/picobyte/stable-diffusion-webui-wd14-tagger'
+    'https://github.com/pharmapsychotic/clip-interrogator'
 )
 
 CHECKPOINT_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/fennfotoPONY_v3.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/CHECKPOINT/albedobaseXL_v3Mini.safetensors'
 )
 
 LORA_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/ALICESOFT_Dohna_Dohna_Game_Artstyle_PonyXL.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/ALICESOFT_Dohna_Dohna_Game_Artstyle_Revised_PonyXL.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Caught_Masturbating.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/EnvyPonyPrettyEyes01.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/EnvyStarlightPrettyEyes01.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GLSHS_V2-4.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Thigh_Size_Slider_V2_alpha1.0_rank4_noxattn_last.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/retro-neon-style-pony.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/EldritchCandids1.1.2.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/MS_Milf_Style_V2_Pony.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/age_slider-sdxl.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/looking_at_viewer.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/weight_slider-sdxl.safetensors'
 )
 
 VAE_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/VAE/sdxl_vae.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/VAE/sdxl_vae.safetensors'
 )
 
 ESRGAN_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/ESRGAN/2xHFA2kOmniSR.pth'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/ESRGAN/4x-UltraSharp.pth'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/ESRGAN/8x_NMKD-Superscale_150000_G.pth'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/ESRGAN/2xHFA2kOmniSR.pth'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/ESRGAN/4x-UltraSharp.pth'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/ESRGAN/8x_NMKD-Superscale_150000_G.pth'
 )
 
 CONTROLNET_MODELS=()
