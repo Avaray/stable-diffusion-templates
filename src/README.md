@@ -67,14 +67,11 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # ♻️ FAQ
 
-`Q` Will you add more checkpoints?  
-`A` Yes. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
+`Q` Will you add model X?  
+`A` Probably not. I'm adding only the good ones (in my opinion). If you think that some checkpoint should be included, please [open an discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). But keep in mind that model must be battle tested on [CivitAI](https://civitai.com/models) or on another platform. Also it needs to be tested by me.
 
-`Q` Will you add checkpoint X?  
-`A` Please [open an discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). But keep in mind that model must be battle tested on [CivitAI](https://civitai.com/models).
+`Q` Will you add more Loras and Extensions?
+`A` Maybe. I'm still looking for useful ones.
 
-`Q` Will you add more services?  
+`Q` Will you add other services than Vast.ai and Runpod.io?
 `A` Maybe. Currently I don't know any better or at least as good as current ones.
-
-`Q` Will you include [ControlNet](https://github.com/lllyasviel/ControlNet) models?  
-`A` No. They suck in SDXL and PDXL. You need to find a good ones by yourself.
