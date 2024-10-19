@@ -259,7 +259,7 @@ export const checkpoints: Checkpoint[] = [
     base: 'sdxl',
     version: '3-mini',
     tags: [],
-    rating: '',
+    rating: 'b',
     comment: '',
     vastaiTemplateId: '',
     runpodioTemplateId: '',
