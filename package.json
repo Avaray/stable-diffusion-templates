@@ -4,12 +4,12 @@
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/node": "^22.1.0"
+    "@types/node": "^22.7.7"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@biomejs/biome": "^1.8.3"
+    "@biomejs/biome": "^1.9.4"
   }
 }
