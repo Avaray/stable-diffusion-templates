@@ -21,15 +21,15 @@ Templates with checkpoints based on [Stable Diffusion XL](https://en.wikipedia.o
 | 🔥 | [WildCardX](https://civitai.com/models/239561?modelVersionId=308455) | `V4` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=c87381d3de507cfa88ccf05f8fd990c0"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=9qr1azjcad"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | 🔥 | [CHINOOK](https://civitai.com/models/400589?modelVersionId=495482) | `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=d06d11acd907913b24b6a345852d39e3"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=vu1meyunmp"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | 👍 | [LEOSAM's HelloWorld](https://civitai.com/models/400589?modelVersionId=495482) | `V7` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=133b29d546034a67c65c497f76802cb0"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=44x5bc9wrs"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [Juggernaut](https://civitai.com/models/133005?modelVersionId=456194) | `V10` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=1d78196b4adc4ea29246a1e58a598a03"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=ypt3pl6coj"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | - | [Juggernaut](https://civitai.com/models/133005?modelVersionId=782002) | `V11` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=16a3bd322b0fde6c71e249a574e300be"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=8g5h4fazmw"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
+| 👍 | [Juggernaut](https://civitai.com/models/133005?modelVersionId=456194) | `V10` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=1d78196b4adc4ea29246a1e58a598a03"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=ypt3pl6coj"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | 👍 | [DreamShaper](https://civitai.com/models/112902?modelVersionId=126688) | `V2a` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=5dfa95dbd5e2659add8787c422d94df8"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=mgbjraphld"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | - | [Copax TimeLess](https://civitai.com/models/118111?modelVersionId=445348) | `V12` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=2e797e615f9f5d46c2fd5a3fa2beb295"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=a4hwnbsphp"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | - | [epiCRealism](https://civitai.com/models/277058?modelVersionId=931522) | `V9-UnFlux` | todo | todo |
 | 👍 | [epiCRealism](https://civitai.com/models/277058?modelVersionId=646523) | `V8` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=1f7ef35a703ad5a28932680e573eb6cf"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=2cn8li8tof"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | 👍 | [Halcyon](https://civitai.com/models/299933?modelVersionId=655762) | `V1.8` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=cc77d7bda1afe46ca2b23628c1d0ac14"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=2fy5lo1o5q"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
 | - | [PhotoPedia](https://civitai.com/models/189109?modelVersionId=259323) | `V4.5` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=395a34f5188daccc14dc12aa1435c105"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=g6suw85qqm"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| - | [AlbedoBase](https://civitai.com/models/140737?modelVersionId=892880) | `V3-mini` | todo | todo |
+| 👍 | [AlbedoBase](https://civitai.com/models/140737?modelVersionId=892880) | `V3-mini` | todo | todo |
 
 # 🦄 PDXL
 
@@ -87,14 +87,11 @@ In near future I will also add some useful Embeddings (Textual Inversions).
 
 # ♻️ FAQ
 
-`Q` Will you add more checkpoints?  
-`A` Yes. Currently I need to create templates manually, because these services does not provide API for managing templates. Believe me, it's a pain.
+`Q` Will you add model X?  
+`A` Probably not. I'm adding only the good ones (in my opinion). If you think that some checkpoint should be included, please [open an discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). But keep in mind that model must be battle tested on [CivitAI](https://civitai.com/models) or on another platform. Also it needs to be tested by me.
 
-`Q` Will you add checkpoint X?  
-`A` Please [open an discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). But keep in mind that model must be battle tested on [CivitAI](https://civitai.com/models).
+`Q` Will you add more Loras and Extensions?
+`A` Maybe. I'm still looking for useful ones.
 
-`Q` Will you add more services?  
+`Q` Will you add other services than Vast.ai and Runpod.io?
 `A` Maybe. Currently I don't know any better or at least as good as current ones.
-
-`Q` Will you include [ControlNet](https://github.com/lllyasviel/ControlNet) models?  
-`A` No. They suck in SDXL and PDXL. You need to find a good ones by yourself.
