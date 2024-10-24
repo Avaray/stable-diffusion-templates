@@ -21,6 +21,12 @@ const blacklist = [
     version: '1',
     comment: 'Terrible results. Bad quality. Not recommended.',
   },
+  {
+    name: 'fennfoto',
+    homepage: 'https://civitai.com/models/503537?modelVersionId=702110',
+    version: '4',
+    comment: 'Produces terrible faces. Ugly, to be honest.',
+  },
 ];
 
 export default blacklist;
