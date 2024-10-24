@@ -4,6 +4,7 @@
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/deno": "^2.0.0",
     "@types/node": "^22.7.7"
   },
   "peerDependencies": {
