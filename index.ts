@@ -2,7 +2,9 @@
 let pvs = '';
 try {
   pvs = await (
-    await fetch('https://raw.githubusercontent.com/ai-dock/stable-diffusion-webui/main/config/provisioning/default.sh')
+    await fetch(
+      'https://raw.githubusercontent.com/ai-dock/stable-diffusion-webui-forge/main/config/provisioning/default.sh',
+    )
   ).text();
 } catch (error) {
   console.error(`Error fetching provisioning script: ${error}`);
@@ -72,7 +74,10 @@ if (unknownTuplesToClean) {
         .split('\n')
         .map((x) => x.trim())
         .filter((x) => x && !x.startsWith('#'));
-      pvs = pvs.replace(tuple, `${key}=(${values.length ? `\n    ${values.join('\n    ')}\n` : ''})`);
+      pvs = pvs.replace(
+        tuple,
+        `${key}=(${values.length ? `\n    ${values.join('\n    ')}\n` : ''})`,
+      );
       // console.log({ key, values });
     }
   }
@@ -96,7 +101,10 @@ const scripts = [] as string[];
 for (const ckpt of checkpoints) {
   let pvsTemp = pvs;
 
-  pvsTemp = pvsTemp.replace(/^CHECKPOINT_MODELS=\(\)/gm, `CHECKPOINT_MODELS=(\n    '${ckpt.url}'\n)`);
+  pvsTemp = pvsTemp.replace(
+    /^CHECKPOINT_MODELS=\(\)/gm,
+    `CHECKPOINT_MODELS=(\n    '${ckpt.url}'\n)`,
+  );
 
   pvsTemp = pvsTemp.replace(
     /^LORA_MODELS=\(\)/gm,
@@ -115,7 +123,10 @@ for (const ckpt of checkpoints) {
 
   const exts = [...extensions.universal, ...extensions[ckpt.base]];
 
-  pvsTemp = pvsTemp.replace(/^EXTENSIONS=\(\)/gm, `EXTENSIONS=(\n    ${exts.map((x) => `'${x}'`).join('\n    ')}\n)`);
+  pvsTemp = pvsTemp.replace(
+    /^EXTENSIONS=\(\)/gm,
+    `EXTENSIONS=(\n    ${exts.map((x) => `'${x}'`).join('\n    ')}\n)`,
+  );
 
   const filename = ckpt.url.split('/').pop()?.replace(/\.\w+/, '.sh').toLowerCase() ?? '';
 
