@@ -6,13 +6,17 @@ export const services: Service = {
   vastai: {
     name: 'Vast.ai',
     ref: '62878',
-    url: 'https://cloud.vast.ai/create/?ref_id=62878&template_id=',
+    get url() {
+      return `https://cloud.vast.ai/create/?ref_id=${this.ref}&template_id=`;
+    },
     logo: 'images/vastai.svg',
   },
   runpodio: {
     name: 'Runpod.io',
     ref: 'gzvzzzv9',
-    url: 'https://runpod.io/console/deploy?ref=gzvzzzv9&template=',
+    get url() {
+      return `https://runpod.io/console/deploy?ref=${this.ref}&template=`;
+    },
     logo: 'images/runpodio.svg',
   },
 };
