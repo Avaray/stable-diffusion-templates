@@ -29,6 +29,13 @@ export const loras = [
     triggerWords: ['milf'],
   },
   {
+    name: 'Milf Style',
+    filename: 'MS_Milf_Style_V3_Pony.safetensors',
+    homepage: 'https://civitai.com/models/681666?modelVersionId=999073',
+    base: ['pdxl'],
+    triggerWords: ['milf'],
+  },
+  {
     name: 'Age Slider',
     filename: 'age_slider-sdxl.safetensors',
     homepage: 'https://civitai.com/models/443279?modelVersionId=493670',
