@@ -84,6 +84,15 @@ export const checkpoints: Checkpoint[] = [
   },
   {
     name: 'epiCRealism',
+    filename: 'epicrealismXL_v10Kiss2.safetensors',
+    homepage: 'https://civitai.com/models/277058?modelVersionId=1013306',
+    base: 'sdxl',
+    version: 'V10-KiSS2',
+    rating: '',
+    comment: '',
+  },
+  {
+    name: 'epiCRealism',
     filename: 'epicrealismXL_v9Unflux.safetensors',
     homepage: 'https://civitai.com/models/277058?modelVersionId=931522',
     base: 'sdxl',
