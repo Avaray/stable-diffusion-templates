@@ -19,6 +19,12 @@ export const extensions: Extension[] = [
     url: 'https://github.com/Bing-su/adetailer',
   },
   {
+    name: 'LoRA Keywords Finder',
+    uis: ['forge'],
+    base: ['sdxl', 'pdxl'],
+    url: 'https://github.com/Avaray/lora-keywords-finder',
+  },
+  {
     name: 'Clip Interrogator',
     uis: ['forge'],
     base: ['sdxl'],
