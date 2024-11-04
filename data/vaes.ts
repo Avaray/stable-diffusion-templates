@@ -8,7 +8,7 @@ export interface VAE {
 export const vaes: VAE[] = [
   {
     name: 'SDXL Default',
-    filename: 'sdxl_default',
+    filename: 'sdxl_vae.safetensors',
     homepage: 'https://huggingface.co/stabilityai/sdxl-vae',
     base: ['sdxl', 'pdxl'],
   },
