@@ -165,17 +165,8 @@ export const checkpoints: Checkpoint[] = [
       'Generated faces are too shiny in my opinion. This checkpoint is not good for photorealism. There are much better checkpoints in this list.',
   },
   {
-    name: 'PhotoPedia',
-    filename: 'photopediaXL_45.safetensors',
-    homepage: 'https://civitai.com/models/189109?modelVersionId=259323',
-    base: 'sdxl',
-    version: '4.5',
-    rating: '',
-    comment: '',
-  },
-  {
     name: 'GODDESS of Realism',
-    filename: 'natvisNaturalVision_v10.safetensors',
+    filename: 'goddessOfRealism_gorPONYV10.safetensors',
     homepage: 'https://civitai.com/models/212737?modelVersionId=573082',
     base: 'pdxl',
     version: '1',
@@ -184,7 +175,7 @@ export const checkpoints: Checkpoint[] = [
   },
   {
     name: 'Pony Diffusion',
-    filename: 'pdxl_v6.safetensors',
+    filename: 'ponyDiffusionV6XL_v6StartWithThisOne.safetensors',
     homepage: 'https://civitai.com/models/257749?modelVersionId=290640',
     base: 'pdxl',
     version: '6',
@@ -194,7 +185,7 @@ export const checkpoints: Checkpoint[] = [
   },
   {
     name: 'AutismMix',
-    filename: 'autismmix_v1.safetensors',
+    filename: 'autismmixSDXL_autismmixPony.safetensors',
     homepage: 'https://civitai.com/models/288584?modelVersionId=324619',
     base: 'pdxl',
     version: '1',
