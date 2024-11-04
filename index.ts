@@ -41,6 +41,7 @@ for (const ui of uis) {
       .map((extension) => extension.url);
 
     // Replace EXTENSIONS list
+    // TODO: Need to change logic here, look at extensions list, it contains uis array
     pvs = pvs.replace(
       /EXTENSIONS=\(.*?\)/gms,
       `EXTENSIONS=(\n${extensionUrls.map((x) => `    '${x}'`).join(',\n')}\n)`,
