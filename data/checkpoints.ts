@@ -192,4 +192,13 @@ export const checkpoints: Checkpoint[] = [
     rating: 'a',
     comment: 'NSFW checkpoint for Anime. Good alternative for Pony Diffusion V6.',
   },
+  {
+    name: 'AlchemistMix',
+    filename: 'alchemistmix_v10.safetensors',
+    homepage: 'https://civitai.com/models/916289/alchemistmixrealhentaiponyv1?modelVersionId=1025594',
+    base: 'pdxl',
+    version: '1',
+    rating: '',
+    comment: '',
+  }
 ];
