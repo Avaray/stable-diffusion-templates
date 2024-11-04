@@ -5,7 +5,7 @@ export interface Controlnet {
   base: string[];
 }
 
-export const controlnet = [
+export const controlnets = [
   {
     name: 'Union',
     filename: 'xinsir_union.safetensors',
