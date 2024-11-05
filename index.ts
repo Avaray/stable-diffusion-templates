@@ -1,3 +1,5 @@
+import { rm } from 'node:fs/promises';
+
 import { uis } from './data/uis';
 import { repositories } from './data/repositories';
 import { checkpoints, type Checkpoint } from './data/checkpoints';
@@ -7,6 +9,8 @@ import { vaes } from './data/vaes';
 import { controlnets } from './data/controlnets';
 import { upscalers } from './data/upscalers';
 import { extensions } from './data/extensions';
+
+await rm('scripts', { recursive: true, force: true });
 
 const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, '/');
 
