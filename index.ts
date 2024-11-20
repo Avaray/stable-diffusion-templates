@@ -14,6 +14,36 @@ await rm('scripts', { recursive: true, force: true });
 
 const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, '/');
 
+// Detect the current runtime
+function detectRuntime(): 'bun' | 'deno' | undefined {
+  if (typeof Bun !== 'undefined') {
+    return 'bun';
+  }
+  if (typeof Deno !== 'undefined') {
+    return 'deno';
+  }
+  return undefined;
+}
+
+// Cross-runtime file saving function
+async function saveFile(path: string, content: string) {
+  const runtime = detectRuntime();
+
+  switch (runtime) {
+    case 'bun':
+      await Bun.write(path, content);
+      break;
+    case 'deno':
+      await Deno.writeTextFile(path, content);
+      break;
+    default:
+      throw new Error('Unsupported runtime');
+  }
+}
+
+const runtime = detectRuntime();
+console.log(`Detected runtime: ${runtime}`);
+
 // Iterate over all UIs
 for (const ui of uis) {
 
@@ -136,6 +166,6 @@ for (const ui of uis) {
     // Remove multiple empty lines
     pvs = pvs.replace(/^\n{2,}/gm, '\n');
 
-    Bun.write(`scripts/${ui.id}/${checkpoint.filename.toLowerCase()}.sh`, pvs);
+    saveFile(`scripts/${ui.id}/${checkpoint.filename.toLowerCase()}.sh`, pvs);
   }
 }
