@@ -48,7 +48,7 @@ for (const ui of uis) {
     // TODO: Need to change logic here, look at extensions list, it contains uis array
     pvs = pvs.replace(
       /EXTENSIONS=\(.*?\)/gms,
-      `EXTENSIONS=(\n${extensionUrls.map((x) => `    '${x}'`).join(',\n')}\n)`,
+      `EXTENSIONS=(\n${extensionUrls.map((x) => `    '${x}'`).join('\n')}\n)`,
     );
 
     // Replace CHECKPOINT_MODELS list
@@ -65,7 +65,7 @@ for (const ui of uis) {
     // Replace VAE_MODELS list
     pvs = pvs.replace(
       /VAE_MODELS=\(.*?\)/gms,
-      `VAE_MODELS=(\n${vaeModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/VAE/${x}`)}'`).join(',\n')}\n)`,
+      `VAE_MODELS=(\n${vaeModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/VAE/${x}`)}'`).join('\n')}\n)`,
     )
 
     // Find all Lora models where base is checkpoint base
@@ -76,7 +76,7 @@ for (const ui of uis) {
     // Replace LORA_MODELS with all Lora models
     pvs = pvs.replace(
       /LORA_MODELS=\(.*?\)/gms,
-      `LORA_MODELS=(\n${loraModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/LORA/${x}`)}'`).join(',\n')}\n)`,
+      `LORA_MODELS=(\n${loraModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/LORA/${x}`)}'`).join('\n')}\n)`,
     );
 
     // Find all ControlNet models where base is checkpoint base
@@ -87,7 +87,7 @@ for (const ui of uis) {
     // Replace CONTROLNET_MODELS with all ControlNet models
     pvs = pvs.replace(
       /CONTROLNET_MODELS=\(.*?\)/gms,
-      `CONTROLNET_MODELS=(\n${controlnetModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/CONTROLNET/${x}`)}'`).join(',\n')}\n)`,
+      `CONTROLNET_MODELS=(\n${controlnetModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/CONTROLNET/${x}`)}'`).join('\n')}\n)`,
     )
 
     // Find all Upscaler models where base is checkpoint base
@@ -98,7 +98,7 @@ for (const ui of uis) {
     // Replace ESRGAN_MODELS (upscalers) with all Upscaler models
     pvs = pvs.replace(
       /ESRGAN_MODELS=\(.*?\)/gms,
-      `ESRGAN_MODELS=(\n${upscalerModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/ESRGAN/${x}`)}'`).join(',\n')}\n)`,
+      `ESRGAN_MODELS=(\n${upscalerModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/ESRGAN/${x}`)}'`).join('\n')}\n)`,
     )
 
     // List all Embeddings that are compatible with the checkpoint and type === 'positive'
@@ -114,11 +114,11 @@ for (const ui of uis) {
     if (ui.id === 'forge' || ui.id === 'comfy') {
       pvs = pvs.replace(
         /^function provisioning_start/m,
-        `EMBEDDINGS_POSITIVE=(\n${embeddingsPositive.map((x) => `    '${url(`${repositories[checkpoint.base]}/EMBEDDINGS/pos/${x}`)}'`).join(',\n')}\n)\n\nfunction provisioning_start`,
+        `EMBEDDINGS_POSITIVE=(\n${embeddingsPositive.map((x) => `    '${url(`${repositories[checkpoint.base]}/EMBEDDINGS/pos/${x}`)}'`).join('\n')}\n)\n\nfunction provisioning_start`,
       );
       pvs = pvs.replace(
         /^function provisioning_start/m,
-        `EMBEDDINGS_NEGATIVE=(\n${embeddingsNegative.map((x) => `    '${url(`${repositories[checkpoint.base]}/EMBEDDINGS/neg/${x}`)}'`).join(',\n')}\n)\n\nfunction provisioning_start`,
+        `EMBEDDINGS_NEGATIVE=(\n${embeddingsNegative.map((x) => `    '${url(`${repositories[checkpoint.base]}/EMBEDDINGS/neg/${x}`)}'`).join('\n')}\n)\n\nfunction provisioning_start`,
       );
     }
 
