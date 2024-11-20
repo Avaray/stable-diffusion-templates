@@ -14,6 +14,8 @@ await rm('scripts', { recursive: true, force: true });
 
 const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, '/');
 
+const runtime = detectRuntime();
+
 // Detect the current runtime
 function detectRuntime(): 'bun' | 'deno' | undefined {
   if (typeof Bun !== 'undefined') {
@@ -27,8 +29,6 @@ function detectRuntime(): 'bun' | 'deno' | undefined {
 
 // Cross-runtime file saving function
 async function saveFile(path: string, content: string) {
-  const runtime = detectRuntime();
-
   switch (runtime) {
     case 'bun':
       await Bun.write(path, content);
@@ -41,8 +41,7 @@ async function saveFile(path: string, content: string) {
   }
 }
 
-const runtime = detectRuntime();
-console.log(`Detected runtime: ${runtime}`);
+console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
 
 // Iterate over all UIs
 for (const ui of uis) {
