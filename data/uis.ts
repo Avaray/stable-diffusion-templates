@@ -1,6 +1,7 @@
 export interface UI {
   id: string;
   name: string;
+  image?: string;
   repository: string;
   pvs: string;
   supports: string[];
@@ -15,6 +16,7 @@ const userInterfaces: UI[] = [
   {
     id: 'forge',
     name: 'Forge',
+    image: 'aidockorg/stable-diffusion-webui-forge-cuda:latest',
     repository: 'https://github.com/ai-dock/stable-diffusion-webui-forge',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
@@ -22,6 +24,7 @@ const userInterfaces: UI[] = [
   {
     id: 'comfy',
     name: 'Comfy',
+    image: 'aidockorg/comfyui-cuda:latest',
     repository: 'https://github.com/ai-dock/comfyui',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
@@ -29,6 +32,7 @@ const userInterfaces: UI[] = [
   {
     id: 'invoke',
     name: 'Invoke',
+    image: '',
     repository: 'https://github.com/ai-dock/invokeai',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
@@ -36,6 +40,7 @@ const userInterfaces: UI[] = [
   {
     id: 'fooocus',
     name: 'Fooocus',
+    image: 'aidockorg/fooocus-cuda:latest',
     repository: 'https://github.com/ai-dock/fooocus',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
