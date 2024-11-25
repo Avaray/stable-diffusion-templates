@@ -14,18 +14,11 @@ await rm('scripts', { recursive: true, force: true });
 
 const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, '/');
 
-const runtime = detectRuntime();
-
 // Detect the current runtime
-function detectRuntime(): 'bun' | 'deno' | undefined {
-  if (typeof Bun !== 'undefined') {
-    return 'bun';
-  }
-  if (typeof Deno !== 'undefined') {
-    return 'deno';
-  }
-  return undefined;
-}
+const runtime: 'bun' | 'deno' | undefined =
+  typeof Bun !== 'undefined' ? 'bun' :
+    typeof Deno !== 'undefined' ? 'deno' :
+      undefined;
 
 // Cross-runtime file saving function
 async function saveFile(path: string, content: string) {
