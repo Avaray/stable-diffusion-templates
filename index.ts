@@ -96,6 +96,13 @@ async function executeCommand(
   }
 }
 
+// Install VastAI
+const vastaiInstall = await executeCommand("pip", [
+  "install",
+  "--upgrade",
+  "vastai",
+]);
+
 // Iterate over all UIs
 for (const ui of uis) {
   // Currently it's just a shebang
