@@ -35,6 +35,16 @@ async function saveFile(path: string, content: string) {
   }
 }
 
+async function getEnvironmentVariable(
+  name: string,
+): Promise<string | undefined> {
+  switch (runtime) {
+    case "bun":
+      return Bun.env[name];
+    case "deno":
+      return Deno.env.get(name);
+    default:
+      throw new Error("Unsupported runtime");
   }
 }
 
