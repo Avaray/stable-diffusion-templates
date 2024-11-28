@@ -107,6 +107,8 @@ vastaiInstall.success
   ? console.log(vastaiInstall.output)
   : console.error(vastaiInstall.error);
 
+const vastaiApiKey = await getEnvironmentVariable("VASTAI_KEY") || "";
+
 // Add API key to VastAI
 const vastaiAddKey = await executeCommand("vastai", [
   "set",
