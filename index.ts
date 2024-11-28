@@ -103,6 +103,10 @@ const vastaiInstall = await executeCommand("pip", [
   "vastai",
 ]);
 
+vastaiInstall.success
+  ? console.log(vastaiInstall.output)
+  : console.error(vastaiInstall.error);
+
 // Add API key to VastAI
 const vastaiAddKey = await executeCommand("vastai", [
   "set",
