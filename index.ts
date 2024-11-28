@@ -119,6 +119,15 @@ async function createVastaiTemplate(name: string, pvs: string) {
   ]);
 }
 
+async function deleteVastaiTemplate(id: number) {
+  const deleteTemplate = await executeCommand("vastai", [
+    "delete",
+    "template",
+    `--template`,
+    id,
+  ]);
+}
+
 // Iterate over all UIs
 for (const ui of uis) {
   // Currently it's just a shebang
