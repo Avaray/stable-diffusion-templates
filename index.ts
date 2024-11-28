@@ -103,6 +103,13 @@ const vastaiInstall = await executeCommand("pip", [
   "vastai",
 ]);
 
+// Add API key to VastAI
+const vastaiAddKey = await executeCommand("vastai", [
+  "set",
+  "api-key",
+  vastaiApiKey,
+]);
+
 // Iterate over all UIs
 for (const ui of uis) {
   // Currently it's just a shebang
