@@ -110,6 +110,15 @@ const vastaiAddKey = await executeCommand("vastai", [
   vastaiApiKey,
 ]);
 
+async function createVastaiTemplate(name: string, pvs: string) {
+  const createTemplate = await executeCommand("vastai", [
+    "create",
+    "template",
+    `--name "${name}"`,
+    `--image "ghcr.io/ai-dock/stable-diffusion-webui-forge:latest"`,
+  ]);
+}
+
 // Iterate over all UIs
 for (const ui of uis) {
   // Currently it's just a shebang
