@@ -178,3 +178,5 @@ dist
 images/*.ai
 IDEA*
 TODO*
+vast*
+gpu*
