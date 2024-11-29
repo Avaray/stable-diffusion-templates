@@ -45,12 +45,8 @@ if (!vastaiApiKey) {
   process.exit(1);
 }
 
-// Add API key to VastAI
-await executeCommand("vastai", [
-  "set",
-  "api-key",
-  vastaiApiKey,
-]);
+// Add API key to VastAI CLI
+await executeCommand("vastai", ["set", "api-key", vastaiApiKey]);
 
 async function createVastaiTemplate(
   name: string,
