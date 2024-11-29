@@ -85,3 +85,15 @@ export async function executeCommand(
     };
   }
 }
+
+// Use regex to get ID and Hash from the output
+// Can't parse JSON just like that because it contains single quotes in it
+export function extractUnique(data: string) {
+  const id = data.match(/(?<=\Wid\W:\s?)\d+/m);
+  const hash = data.match(/(?<=\Whash_id\W:\s?\W)\w+/m);
+  if (id && hash) {
+    return { id: id[0], hash: hash[0] };
+  } else {
+    return { id: null, hash: null };
+  }
+}

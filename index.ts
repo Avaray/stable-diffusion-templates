@@ -5,6 +5,7 @@ import {
   getEnvironmentVariable,
   runtime,
   saveFile,
+  extractUnique,
 } from "./utils";
 
 import { uis } from "./data/uis";
@@ -50,16 +51,6 @@ await executeCommand("vastai", [
   "api-key",
   vastaiApiKey,
 ]);
-
-function extractUnique(data: string) {
-  const id = data.match(/(?<=\Wid\W:\s?)\d+/m);
-  const hash = data.match(/(?<=\Whash_id\W:\s?\W)\w+/m);
-  if (id && hash) {
-    return { id: id[0], hash: hash[0] };
-  } else {
-    return { id: null, hash: null };
-  }
-}
 
 async function createVastaiTemplate(
   name: string,
