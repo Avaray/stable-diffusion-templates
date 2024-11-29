@@ -122,6 +122,11 @@ if (vastaiInstall.success) {
 
 const vastaiApiKey = await getEnvironmentVariable("VASTAI_KEY") || "";
 
+if (!vastaiApiKey) {
+  console.error("VASTAI_KEY environment variable is not set");
+  process.exit(1);
+}
+
 // Add API key to VastAI
 const vastaiAddKey = await executeCommand("vastai", [
   "set",
