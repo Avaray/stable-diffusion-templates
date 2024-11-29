@@ -2,10 +2,10 @@ import { rm } from "node:fs/promises";
 
 import {
   executeCommand,
+  extractUnique,
   getEnvironmentVariable,
   runtime,
   saveFile,
-  extractUnique,
 } from "./utils";
 
 import { uis } from "./data/uis";
