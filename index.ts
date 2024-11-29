@@ -21,10 +21,6 @@ await rm("scripts", { recursive: true, force: true });
 
 const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, "/");
 
-// Get the current branch name
-// const branchName = await executeCommand("git", ["branch", "--show-current"]);
-// console.log(`Branch: ${JSON.stringify(branchName.output.split("\n")[0])}`);
-
 console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
 
 // Install VastAI
