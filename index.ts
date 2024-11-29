@@ -52,6 +52,7 @@ async function createVastaiTemplate(
   name: string,
   pvsUrl: string,
   image: string,
+  flags: string,
 ) {
   const createTemplate = await executeCommand("vastai", [
     "create",
