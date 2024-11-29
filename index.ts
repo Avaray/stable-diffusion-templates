@@ -128,7 +128,7 @@ if (!vastaiApiKey) {
 }
 
 // Add API key to VastAI
-const vastaiAddKey = await executeCommand("vastai", [
+await executeCommand("vastai", [
   "set",
   "api-key",
   vastaiApiKey,
