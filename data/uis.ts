@@ -5,6 +5,7 @@ export interface UI {
   repository: string;
   pvs: string;
   supports: string[];
+  flags?: string;
 };
 
 const defaultPvsUrl = (repository: string) => {
@@ -20,6 +21,7 @@ const userInterfaces: UI[] = [
     repository: 'https://github.com/ai-dock/stable-diffusion-webui-forge',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
+    flags: '',
   },
   {
     id: 'comfy',
@@ -28,6 +30,7 @@ const userInterfaces: UI[] = [
     repository: 'https://github.com/ai-dock/comfyui',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
+    flags: '',
   },
   {
     id: 'invoke',
@@ -36,6 +39,7 @@ const userInterfaces: UI[] = [
     repository: 'https://github.com/ai-dock/invokeai',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
+    flags: '',
   },
   {
     id: 'fooocus',
@@ -44,6 +48,7 @@ const userInterfaces: UI[] = [
     repository: 'https://github.com/ai-dock/fooocus',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
+    flags: '',
   },
 ];
 
