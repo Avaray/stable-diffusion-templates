@@ -51,7 +51,6 @@ await executeCommand("vastai", [
   vastaiApiKey,
 ]);
 
-async function createVastaiTemplate(name: string, pvs: string) {
 function extractUnique(data: string) {
   const id = data.match(/(?<=\Wid\W:\s?)\d+/m);
   const hash = data.match(/(?<=\Whash_id\W:\s?\W)\w+/m);
@@ -62,7 +61,11 @@ function extractUnique(data: string) {
   }
 }
 
-async function createVastaiTemplate(name: string, pvsUrl: string, image: string) {
+async function createVastaiTemplate(
+  name: string,
+  pvsUrl: string,
+  image: string,
+) {
   const createTemplate = await executeCommand("vastai", [
     "create",
     "template",
