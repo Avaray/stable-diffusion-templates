@@ -21,6 +21,10 @@ const runtime: "bun" | "deno" | undefined = typeof Bun !== "undefined"
     ? "deno"
     : undefined;
 
+// Get the current branch name
+// const branchName = await executeCommand("git", ["branch", "--show-current"]);
+// console.log(`Branch: ${JSON.stringify(branchName.output.split("\n")[0])}`);
+
 // Cross-runtime file saving function
 async function saveFile(path: string, content: string) {
   switch (runtime) {
