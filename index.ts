@@ -1,5 +1,7 @@
 import { rm } from "node:fs/promises";
 
+import { runtime, saveFile, getEnvironmentVariable } from "./utils";
+
 import { uis } from "./data/uis";
 import { repositories } from "./data/repositories";
 import { type Checkpoint, checkpoints } from "./data/checkpoints";
@@ -14,43 +16,9 @@ await rm("scripts", { recursive: true, force: true });
 
 const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, "/");
 
-// Detect the current runtime
-const runtime: "bun" | "deno" | undefined = typeof Bun !== "undefined"
-  ? "bun"
-  : typeof Deno !== "undefined"
-    ? "deno"
-    : undefined;
-
 // Get the current branch name
 // const branchName = await executeCommand("git", ["branch", "--show-current"]);
 // console.log(`Branch: ${JSON.stringify(branchName.output.split("\n")[0])}`);
-
-// Cross-runtime file saving function
-async function saveFile(path: string, content: string) {
-  switch (runtime) {
-    case "bun":
-      await Bun.write(path, content);
-      break;
-    case "deno":
-      await Deno.writeTextFile(path, content);
-      break;
-    default:
-      throw new Error("Unsupported runtime");
-  }
-}
-
-async function getEnvironmentVariable(
-  name: string,
-): Promise<string | undefined> {
-  switch (runtime) {
-    case "bun":
-      return Bun.env[name];
-    case "deno":
-      return Deno.env.get(name);
-    default:
-      throw new Error("Unsupported runtime");
-  }
-}
 
 console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
 
