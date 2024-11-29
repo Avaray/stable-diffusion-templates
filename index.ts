@@ -113,9 +113,12 @@ const vastaiInstall = await executeCommand("pip", [
   "vastai",
 ]);
 
-vastaiInstall.success
-  ? console.log(vastaiInstall.output)
-  : console.error(vastaiInstall.error);
+if (vastaiInstall.success) {
+  console.log(`VastAI CLI installed successfully`);
+} else {
+  console.error(`Error installing VastAI: ${vastaiInstall.error}`);
+  process.exit(1);
+}
 
 const vastaiApiKey = await getEnvironmentVariable("VASTAI_KEY") || "";
 
