@@ -1,6 +1,11 @@
 import { rm } from "node:fs/promises";
 
-import { runtime, saveFile, getEnvironmentVariable, executeCommand } from "./utils";
+import {
+  executeCommand,
+  getEnvironmentVariable,
+  runtime,
+  saveFile,
+} from "./utils";
 
 import { uis } from "./data/uis";
 import { repositories } from "./data/repositories";
