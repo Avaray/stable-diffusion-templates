@@ -145,11 +145,24 @@ function extractUnique(data: string) {
   }
 }
 
+async function createVastaiTemplate(name: string, pvsUrl: string, image: string) {
   const createTemplate = await executeCommand("vastai", [
     "create",
     "template",
-    `--name "${name}"`,
-    `--image "ghcr.io/ai-dock/stable-diffusion-webui-forge:latest"`,
+    "--disk_space",
+    40.0,
+    "--name",
+    name,
+    "--image",
+    image,
+    "--image_tag",
+    "latest",
+    "--onstart-cmd",
+    "env | grep _ >> /etc/environment; /opt/ai-dock/bin/init.sh;",
+    "--jupyter",
+    "--direct",
+    "--env",
+    `-e DATA_DIRECTORY=/workspace/ -e WORKSPACE=/workspace/ -e WORKSPACE_MOUNTED=force -e SYNCTHING_TRANSPORT_PORT_HOST=72299 -p 8384:8384 -p 72299:72299 -e JUPYTER_DIR=/ -e WEBUI_BRANCH=master -e WEBUI_FLAGS=\"--xformers --no-half --no-half-vae --enable-insecure-extension-access\" -e JUPYTER_PASSWORD=password -e PROVISIONING_SCRIPT=\"${pvsUrl}\" -p 22:22 -p 1111:1111 -p 7860:7860 -p 8888:8888 -e OPEN_BUTTON_TOKEN=1 -e OPEN_BUTTON_PORT=1111`,
   ]);
 }
 
