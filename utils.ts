@@ -37,7 +37,7 @@ interface CommandResult {
   code?: number;
 }
 
-async function executeCommand(
+export async function executeCommand(
   command: string,
   args: any[] = [],
 ): Promise<CommandResult> {
