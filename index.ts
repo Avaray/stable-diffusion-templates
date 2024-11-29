@@ -1,6 +1,6 @@
 import { rm } from "node:fs/promises";
 
-import { runtime, saveFile, getEnvironmentVariable } from "./utils";
+import { runtime, saveFile, getEnvironmentVariable, executeCommand } from "./utils";
 
 import { uis } from "./data/uis";
 import { repositories } from "./data/repositories";
@@ -21,62 +21,6 @@ const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, "/");
 // console.log(`Branch: ${JSON.stringify(branchName.output.split("\n")[0])}`);
 
 console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
-
-interface CommandResult {
-  success: boolean;
-  output: string;
-  error?: string;
-  code?: number;
-}
-
-async function executeCommand(
-  command: string,
-  args: any[] = [],
-): Promise<CommandResult> {
-  try {
-    if (runtime === "deno") {
-      const process = new Deno.Command(command, {
-        args: args,
-        stdout: "piped",
-        stderr: "piped",
-      });
-
-      const { success, stdout, stderr, code } = await process.output();
-      const decoder = new TextDecoder();
-
-      return {
-        success,
-        output: decoder.decode(stdout),
-        error: decoder.decode(stderr),
-        code,
-      };
-    } else if (runtime === "bun") {
-      const process = Bun.spawn([command, ...args], {
-        stdout: "pipe",
-        stderr: "pipe",
-      });
-
-      const output = await new Response(process.stdout).text();
-      const error = await new Response(process.stderr).text();
-      const exitCode = await process.exited;
-
-      return {
-        success: exitCode === 0,
-        output,
-        error: error || undefined,
-        code: exitCode,
-      };
-    } else {
-      throw new Error(`Unsupported runtime: ${runtime}`);
-    }
-  } catch (error) {
-    return {
-      success: false,
-      output: "",
-      error: error instanceof Error ? error.message : String(error),
-    };
-  }
-}
 
 // Install VastAI
 const vastaiInstall = await executeCommand("pip", [
