@@ -135,6 +135,16 @@ await executeCommand("vastai", [
 ]);
 
 async function createVastaiTemplate(name: string, pvs: string) {
+function extractUnique(data: string) {
+  const id = data.match(/(?<=\Wid\W:\s?)\d+/m);
+  const hash = data.match(/(?<=\Whash_id\W:\s?\W)\w+/m);
+  if (id && hash) {
+    return { id: id[0], hash: hash[0] };
+  } else {
+    return { id: null, hash: null };
+  }
+}
+
   const createTemplate = await executeCommand("vastai", [
     "create",
     "template",
