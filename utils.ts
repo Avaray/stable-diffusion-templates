@@ -101,3 +101,10 @@ export function getIds(data: string) {
 export function normalizeFilename(filename: string) {
   return filename.replace(/[^\w\.]+/g, "_");
 }
+
+// Get branch name
+export async function getBranchName() {
+  const branchName = await executeCommand("git", ["branch", "--show-current"]);
+  // There is a newline at the end, I will use backslash to split the string
+  return branchName.output.split("\\")[0];
+}
