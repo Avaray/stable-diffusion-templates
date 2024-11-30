@@ -8,6 +8,7 @@ import {
   normalizeFilename,
   runtime,
   saveFile,
+  pvsUrl,
 } from "./utils";
 
 import { uis } from "./data/uis";
@@ -19,6 +20,12 @@ import { vaes } from "./data/vaes";
 import { controlnets } from "./data/controlnets";
 import { upscalers } from "./data/upscalers";
 import { extensions } from "./data/extensions";
+
+import t from "./data/templates.json" with { type: "json" };
+
+let templates = t as any;
+
+const branch = await getBranchName();
 
 await rm("scripts", { recursive: true, force: true });
 
@@ -240,8 +247,26 @@ for (const ui of uis) {
     // Remove multiple empty lines
     pvs = pvs.replace(/^\n{2,}/gm, "\n");
 
-    const filename = normalizeFilename(checkpoint.filename).replace('.safetensors', '');
+    await saveFile(`scripts/${ui.id}/${checkpoint.id}.sh`, pvs);
 
-    saveFile(`scripts/${ui.id}/${filename}.sh`, pvs);
+    const template = await createVastaiTemplate(
+      `${ui.name}UI - ${checkpoint.name} ${checkpoint.version.toUpperCase()} - ${checkpoint.base.toUpperCase()}`,
+      pvsUrl(ui, branch, checkpoint.id!),
+      ui.image,
+      ui.flags!
+    );
+
+    if (template.id) {
+      console.log(`Template ${template.id} created successfully`);
+      templates[checkpoint.id!] = {
+        vastai: {
+          [ui.id]: template.id
+        }
+      }
+    }
   }
 }
+
+await saveFile("data/templates.json", JSON.stringify(templates, null, 2));
+
+console.log("Done");
