@@ -227,8 +227,6 @@ for (const ui of uis) {
       ui.flags!,
     );
 
-    console.log();
-
     if (template) {
       console.log(
         `Template for ${ui.name}UI with ${checkpoint.name} created with id ${template}`,
