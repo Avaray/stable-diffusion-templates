@@ -5,7 +5,6 @@ import {
   executeCommand,
   getBranchName,
   getEnvironmentVariable,
-  getIds,
   pvsUrl,
   runtime,
   saveFile,
@@ -228,9 +227,11 @@ for (const ui of uis) {
       ui.flags!,
     );
 
-    if (template.id) {
+    console.log();
+
+    if (template) {
       console.log(
-        `Template for ${ui.name}UI with ${checkpoint.name} created with id ${template.id}`,
+        `Template for ${ui.name}UI with ${checkpoint.name} created with id ${template}`,
       );
       // templates[checkpoint.id!].vastai[ui.id] = template.id;
       if (!templates[checkpoint.id!]) {
@@ -239,7 +240,11 @@ for (const ui of uis) {
       if (!templates[checkpoint.id!].vastai) {
         templates[checkpoint.id!].vastai = {};
       }
-      templates[checkpoint.id!].vastai[ui.id] = template.id;
+      templates[checkpoint.id!].vastai[ui.id] = template;
+    } else {
+      console.error(
+        `Error creating template for ${ui.name}UI with ${checkpoint.name}`,
+      );
     }
   }
 }
