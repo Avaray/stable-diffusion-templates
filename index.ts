@@ -2,12 +2,12 @@ import { rm } from "node:fs/promises";
 
 import {
   executeCommand,
-  getIds,
   getBranchName,
   getEnvironmentVariable,
+  getIds,
+  pvsUrl,
   runtime,
   saveFile,
-  pvsUrl,
 } from "./utils";
 
 import { uis } from "./data/uis";
@@ -97,6 +97,8 @@ async function deleteVastaiTemplate(id: number) {
 
 // Iterate over all UIs
 for (const ui of uis) {
+  console.log(`Processing UI: ${ui.name}`);
+
   // Currently it's just a shebang
   const header: string = [
     "#!/bin/bash",
@@ -252,11 +254,13 @@ for (const ui of uis) {
       `${ui.name}UI - ${checkpoint.name} ${checkpoint.version.toUpperCase()} - ${checkpoint.base.toUpperCase()}`,
       pvsUrl(ui, branch, checkpoint.id!),
       ui.image,
-      ui.flags!
+      ui.flags!,
     );
 
     if (template.id) {
-      console.log(`Template for ${ui.name}UI with ${checkpoint.name} created with id ${template.id}`);
+      console.log(
+        `Template for ${ui.name}UI with ${checkpoint.name} created with id ${template.id}`,
+      );
       // templates[checkpoint.id!].vastai[ui.id] = template.id;
       if (!templates[checkpoint.id!]) {
         templates[checkpoint.id!] = { vastai: {} };
@@ -268,7 +272,6 @@ for (const ui of uis) {
     }
   }
 }
-
 
 await saveFile("data/templates.json", JSON.stringify(templates, null, 2));
 
