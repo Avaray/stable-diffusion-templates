@@ -240,6 +240,8 @@ for (const ui of uis) {
     // Remove multiple empty lines
     pvs = pvs.replace(/^\n{2,}/gm, "\n");
 
-    saveFile(`scripts/${ui.id}/${checkpoint.filename.toLowerCase()}.sh`, pvs);
+    const filename = normalizeFilename(checkpoint.filename).replace('.safetensors', '');
+
+    saveFile(`scripts/${ui.id}/${filename}.sh`, pvs);
   }
 }
