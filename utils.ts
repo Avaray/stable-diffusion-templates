@@ -97,3 +97,7 @@ export function extractUnique(data: string) {
     return { id: null, hash: null };
   }
 }
+
+export function normalizeFilename(filename: string) {
+  return filename.replace(/[^\w\.]+/g, "_");
+}
