@@ -2,7 +2,7 @@ import { rm } from "node:fs/promises";
 
 import {
   executeCommand,
-  extractUnique,
+  getIds,
   getBranchName,
   getEnvironmentVariable,
   normalizeFilename,
@@ -75,9 +75,9 @@ async function createVastaiTemplate(
     `-e DATA_DIRECTORY=/workspace/ -e WORKSPACE=/workspace/ -e WORKSPACE_MOUNTED=force -e SYNCTHING_TRANSPORT_PORT_HOST=72299 -p 8384:8384 -p 72299:72299 -e JUPYTER_DIR=/ -e WEBUI_BRANCH=master -e WEBUI_FLAGS=\"${flags}\" -e JUPYTER_PASSWORD=password -e PROVISIONING_SCRIPT=\"${pvsUrl}\" -p 22:22 -p 1111:1111 -p 7860:7860 -p 8888:8888 -e OPEN_BUTTON_TOKEN=1 -e OPEN_BUTTON_PORT=1111`,
   ]);
 
-  const obtained = extractUnique(createTemplate.output);
+  const ids = getIds(createTemplate.output);
 
-  return obtained;
+  return ids;
 }
 
 async function deleteVastaiTemplate(id: number) {
