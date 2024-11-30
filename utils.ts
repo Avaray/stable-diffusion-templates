@@ -101,7 +101,7 @@ export function getIds(data: string) {
 }
 
 export function normalizeFilename(filename: string) {
-  return filename.replace(/[^\w\.]+/g, "_").toLowerCase();
+  return filename.replace(/[^\w\.]+/g, "_").toLowerCase().replace('.safetensors', '');
 }
 
 // Get branch name
