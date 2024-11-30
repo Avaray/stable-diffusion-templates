@@ -99,7 +99,7 @@ export function getIds(data: string) {
 }
 
 export function normalizeFilename(filename: string) {
-  return filename.replace(/[^\w\.]+/g, "_");
+  return filename.replace(/[^\w\.]+/g, "_").toLowerCase();
 }
 
 // Get branch name
