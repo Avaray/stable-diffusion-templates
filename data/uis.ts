@@ -17,7 +17,7 @@ const userInterfaces: UI[] = [
   {
     id: 'forge',
     name: 'Forge',
-    image: 'aidockorg/stable-diffusion-webui-forge-cuda:latest',
+    image: 'ghcr.io/ai-dock/stable-diffusion-webui-forge',
     repository: 'https://github.com/ai-dock/stable-diffusion-webui-forge',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
@@ -26,7 +26,7 @@ const userInterfaces: UI[] = [
   {
     id: 'comfy',
     name: 'Comfy',
-    image: 'aidockorg/comfyui-cuda:latest',
+    image: 'ghcr.io/ai-dock/comfyui',
     repository: 'https://github.com/ai-dock/comfyui',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
@@ -35,7 +35,7 @@ const userInterfaces: UI[] = [
   {
     id: 'invoke',
     name: 'Invoke',
-    image: '',
+    image: 'ghcr.io/ai-dock/invokeai',
     repository: 'https://github.com/ai-dock/invokeai',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
@@ -44,7 +44,7 @@ const userInterfaces: UI[] = [
   {
     id: 'fooocus',
     name: 'Fooocus',
-    image: 'aidockorg/fooocus-cuda:latest',
+    image: 'ghcr.io/ai-dock/fooocus',
     repository: 'https://github.com/ai-dock/fooocus',
     pvs: '',
     supports: ['sdxl', 'pdxl'],
