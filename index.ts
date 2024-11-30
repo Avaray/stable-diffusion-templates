@@ -24,7 +24,7 @@ const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, "/");
 
 console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
 
-// Install VastAI
+// Install VastAI CLI
 const vastaiInstall = await executeCommand("pip", [
   "install",
   "--upgrade",
