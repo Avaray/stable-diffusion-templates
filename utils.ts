@@ -1,3 +1,5 @@
+import { repoOwner, repoName } from "./constants";
+
 export const runtime: "bun" | "deno" | undefined = typeof Bun !== "undefined"
   ? "bun"
   : typeof Deno !== "undefined"
@@ -107,4 +109,8 @@ export async function getBranchName() {
   const branchName = await executeCommand("git", ["branch", "--show-current"]);
   // There is a newline at the end, I will use backslash to split the string
   return branchName.output.split("\\")[0];
+}
+
+export function pvsUrl(ui: any, branch: string, filename: string) {
+  return `https://raw.githubusercontent.com/${repoOwner}/${repoName}/refs/heads/${branch}/scripts/${ui.id}/${filename}.sh`;
 }
