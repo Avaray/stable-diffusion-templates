@@ -220,16 +220,16 @@ for (const ui of uis) {
 
     await saveFile(`scripts/${ui.id}/${checkpoint.id}.sh`, pvs);
 
-    const template = await createVastaiTemplate(
+    const templateVastai = await createVastaiTemplate(
       `${ui.name}UI - ${checkpoint.name} ${checkpoint.version.toUpperCase()} - ${checkpoint.base.toUpperCase()}`,
       pvsUrl(ui, branch, checkpoint.id!),
       ui.image,
       ui.flags!,
     );
 
-    if (template) {
+    if (templateVastai) {
       console.log(
-        `Template for ${ui.name}UI with ${checkpoint.name} created with id ${template}`,
+        `Template for ${ui.name}UI with ${checkpoint.name} created with id ${templateVastai}`,
       );
       // templates[checkpoint.id!].vastai[ui.id] = template.id;
       if (!templates[checkpoint.id!]) {
@@ -238,7 +238,7 @@ for (const ui of uis) {
       if (!templates[checkpoint.id!].vastai) {
         templates[checkpoint.id!].vastai = {};
       }
-      templates[checkpoint.id!].vastai[ui.id] = template;
+      templates[checkpoint.id!].vastai[ui.id] = templateVastai;
     } else {
       console.error(
         `Error creating template for ${ui.name}UI with ${checkpoint.name}`,
