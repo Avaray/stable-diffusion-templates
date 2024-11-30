@@ -1,7 +1,7 @@
 export interface UI {
   id: string;
   name: string;
-  image?: string;
+  image: string;
   repository: string;
   pvs: string;
   supports: string[];
