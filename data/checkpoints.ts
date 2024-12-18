@@ -51,7 +51,8 @@ export const ckpts: Checkpoint[] = [
   {
     name: "AlbedoBase",
     filename: "albedobaseXL_v31Large.safetensors",
-    homepage: "https://civitai.com/models/140737/albedobase-xl?modelVersionId=1041855",
+    homepage:
+      "https://civitai.com/models/140737/albedobase-xl?modelVersionId=1041855",
     base: "sdxl",
     version: "3.1-large",
     rating: "",
@@ -94,6 +95,15 @@ export const ckpts: Checkpoint[] = [
     rating: "a",
     comment:
       "One of my favorites when it comes to realism and artistic photography.",
+  },
+  {
+    name: "epiCRealism",
+    filename: "epicrealismXL_vxiAbeast.safetensors",
+    homepage: "https://civitai.com/models/277058?modelVersionId=1156226",
+    base: "sdxl",
+    version: "",
+    rating: "",
+    comment: "",
   },
   {
     name: "epiCRealism",
