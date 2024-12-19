@@ -6,49 +6,54 @@ export interface UI {
   pvs: string;
   supports: string[];
   flags?: string;
-};
+  diskSpace?: number;
+}
 
 const defaultPvsUrl = (repository: string) => {
-  const repo = repository.split('/').slice(-2).join('/');
+  const repo = repository.split("/").slice(-2).join("/");
   return `https://raw.githubusercontent.com/${repo}/refs/heads/main/config/provisioning/default.sh`;
 };
 
 const userInterfaces: UI[] = [
   {
-    id: 'forge',
-    name: 'Forge',
-    image: 'ghcr.io/ai-dock/stable-diffusion-webui-forge',
-    repository: 'https://github.com/ai-dock/stable-diffusion-webui-forge',
-    pvs: '',
-    supports: ['sdxl', 'pdxl'],
-    flags: '',
+    id: "forge",
+    name: "Forge",
+    image: "ghcr.io/ai-dock/stable-diffusion-webui-forge",
+    repository: "https://github.com/ai-dock/stable-diffusion-webui-forge",
+    pvs: "",
+    supports: ["sdxl", "pdxl"],
+    flags: "",
+    diskSpace: 40,
   },
   {
-    id: 'comfy',
-    name: 'Comfy',
-    image: 'ghcr.io/ai-dock/comfyui',
-    repository: 'https://github.com/ai-dock/comfyui',
-    pvs: '',
-    supports: ['sdxl', 'pdxl'],
-    flags: '',
+    id: "comfy",
+    name: "Comfy",
+    image: "ghcr.io/ai-dock/comfyui",
+    repository: "https://github.com/ai-dock/comfyui",
+    pvs: "",
+    supports: ["sdxl", "pdxl"],
+    flags: "",
+    diskSpace: 40,
   },
   {
-    id: 'invoke',
-    name: 'Invoke',
-    image: 'ghcr.io/ai-dock/invokeai',
-    repository: 'https://github.com/ai-dock/invokeai',
-    pvs: '',
-    supports: ['sdxl', 'pdxl'],
-    flags: '',
+    id: "invoke",
+    name: "Invoke",
+    image: "ghcr.io/ai-dock/invokeai",
+    repository: "https://github.com/ai-dock/invokeai",
+    pvs: "",
+    supports: ["sdxl", "pdxl"],
+    flags: "",
+    diskSpace: 40,
   },
   {
-    id: 'fooocus',
-    name: 'Fooocus',
-    image: 'ghcr.io/ai-dock/fooocus',
-    repository: 'https://github.com/ai-dock/fooocus',
-    pvs: '',
-    supports: ['sdxl', 'pdxl'],
-    flags: '',
+    id: "fooocus",
+    name: "Fooocus",
+    image: "ghcr.io/ai-dock/fooocus",
+    repository: "https://github.com/ai-dock/fooocus",
+    pvs: "",
+    supports: ["sdxl", "pdxl"],
+    flags: "",
+    diskSpace: 40,
   },
 ];
 
@@ -61,7 +66,7 @@ async function fetchPvsData(url: string): Promise<string> {
     return await response.text();
   } catch (error) {
     console.error(error);
-    return '';
+    return "";
   }
 }
 
