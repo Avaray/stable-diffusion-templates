@@ -1,4 +1,4 @@
-import { normalizeFilename } from "../utils";
+import { normalizeFilename } from "../utils.ts";
 
 export interface Checkpoint {
   id?: string;
@@ -51,8 +51,7 @@ export const ckpts: Checkpoint[] = [
   {
     name: "AlbedoBase",
     filename: "albedobaseXL_v31Large.safetensors",
-    homepage:
-      "https://civitai.com/models/140737/albedobase-xl?modelVersionId=1041855",
+    homepage: "https://civitai.com/models/140737/albedobase-xl?modelVersionId=1041855",
     base: "sdxl",
     version: "3.1-large",
     rating: "",
@@ -93,8 +92,7 @@ export const ckpts: Checkpoint[] = [
     base: "sdxl",
     version: "1",
     rating: "a",
-    comment:
-      "One of my favorites when it comes to realism and artistic photography.",
+    comment: "One of my favorites when it comes to realism and artistic photography.",
   },
   {
     name: "epiCRealism",
@@ -194,8 +192,7 @@ export const ckpts: Checkpoint[] = [
     base: "pdxl",
     version: "1",
     rating: "a",
-    comment:
-      "The best realistic checkpoint based on Pony Diffusion. Stable. Very flexible.",
+    comment: "The best realistic checkpoint based on Pony Diffusion. Stable. Very flexible.",
   },
   {
     name: "Pony Diffusion",
@@ -204,8 +201,7 @@ export const ckpts: Checkpoint[] = [
     base: "pdxl",
     version: "6",
     rating: "a",
-    comment:
-      "Checkpoint for Anime. Trained for NSFW. Very flexible. You can play with many styles.",
+    comment: "Checkpoint for Anime. Trained for NSFW. Very flexible. You can play with many styles.",
   },
   {
     name: "AutismMix",
@@ -214,14 +210,12 @@ export const ckpts: Checkpoint[] = [
     base: "pdxl",
     version: "1",
     rating: "a",
-    comment:
-      "NSFW checkpoint for Anime. Good alternative for Pony Diffusion V6.",
+    comment: "NSFW checkpoint for Anime. Good alternative for Pony Diffusion V6.",
   },
   {
     name: "AlchemistMix",
     filename: "alchemistmix_v10.safetensors",
-    homepage:
-      "https://civitai.com/models/916289/alchemistmixrealhentaiponyv1?modelVersionId=1025594",
+    homepage: "https://civitai.com/models/916289/alchemistmixrealhentaiponyv1?modelVersionId=1025594",
     base: "pdxl",
     version: "1",
     rating: "",
