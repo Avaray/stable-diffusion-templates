@@ -1,10 +1,12 @@
-import { repoOwner, repoName } from "./constants";
+import { repoName, repoOwner } from "./constants";
+
+const templateReadme = await Bun.file("src/TEMPLATE.md").text();
 
 export const runtime: "bun" | "deno" | undefined = typeof Bun !== "undefined"
   ? "bun"
   : typeof Deno !== "undefined"
-    ? "deno"
-    : undefined;
+  ? "deno"
+  : undefined;
 
 export async function saveFile(path: string, content: string) {
   switch (runtime) {
@@ -98,7 +100,10 @@ export function getId(data: string) {
 }
 
 export function normalizeFilename(filename: string) {
-  return filename.replace(/[^\w\.]+/g, "_").toLowerCase().replace('.safetensors', '');
+  return filename.replace(/[^\w\.]+/g, "_").toLowerCase().replace(
+    ".safetensors",
+    "",
+  );
 }
 
 // Get branch name
@@ -118,31 +123,46 @@ export async function createVastaiTemplate(
   image: string,
   flags: string,
 ) {
-  const createTemplate = await executeCommand("vastai", [
+  const createTemplate = await executeCommand("python", [
+    "vastai",
     "create",
     "template",
-    "--disk_space",
-    40.0,
     "--name",
     name,
+    "--desc",
+    "Awesome description",
+    "--disk_space",
+    40.0,
     "--image",
     image,
     "--image_tag",
     "latest",
-    // "--desc",
-    // "Awesome description", // this is not available in CLI yet, need to modify this later
-    // "--readme",
-    // "$(cat test.md)", // this is not available in CLI yet. Not sure if this command will work here properly.
+    "--href",
+    "https://github.com/Avaray/stable-diffusion-templates",
+    "--readme",
+    templateReadme,
     "--onstart-cmd",
     "env | grep _ >> /etc/environment; /opt/ai-dock/bin/init.sh;",
     "--env",
     `-e DATA_DIRECTORY=/workspace/ -e WORKSPACE=/workspace/ -e WORKSPACE_MOUNTED=force -e SYNCTHING_TRANSPORT_PORT_HOST=72299 -p 8384:8384 -p 72299:72299 -e JUPYTER_DIR=/ -e WEBUI_BRANCH=master -e WEBUI_FLAGS=\"${flags}\" -e JUPYTER_PASSWORD=password -e PROVISIONING_SCRIPT=\"${pvsUrl}\" -p 22:22 -p 1111:1111 -p 7860:7860 -p 8888:8888 -e OPEN_BUTTON_TOKEN=1 -e OPEN_BUTTON_PORT=1111`,
     "--jupyter",
     "--direct",
-    // "--public", // this is not available in CLI yet
+    "--public",
   ]);
 
   const id = getId(createTemplate.output);
 
+  console.log(createTemplate);
+
   return id;
+}
+
+export async function deleteVastaiTemplate(id: number) {
+  const deleteTemplate = await executeCommand("python", [
+    "vastai",
+    "delete",
+    "template",
+    `--template`,
+    id,
+  ]);
 }
