@@ -39,7 +39,7 @@ const userInterfaces: UI[] = [
     supports: ["sdxl", "pdxl"],
     flags: "",
     diskSpace: 40,
-    env: `${universalEnv}`,
+    env: `${universalEnv} -e COMFYUI_ARGS="" -e COMFYUI_PORT_HOST=8188 -p 8188:8188`,
   },
   {
     id: "invoke",
@@ -50,7 +50,7 @@ const userInterfaces: UI[] = [
     supports: ["sdxl", "pdxl"],
     flags: "",
     diskSpace: 40,
-    env: `${universalEnv}`,
+    env: `${universalEnv} -e INVOKEAI_PORT_HOST=9090 -p 9090:9090`,
   },
   {
     id: "fooocus",
