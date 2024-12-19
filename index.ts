@@ -34,7 +34,7 @@ console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
 
 const branch = await getBranchName();
 
-console.log(`Working on branch: ${branch.trim()}`);
+console.log(`Working on branch: ${branch}`);
 
 const vastaiCli = await fetch(
   // "https://raw.githubusercontent.com/vast-ai/vast-python/master/vast.py",
