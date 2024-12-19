@@ -152,11 +152,12 @@ export async function createVastaiTemplate(
     "--onstart-cmd",
     "env | grep _ >> /etc/environment; /opt/ai-dock/bin/init.sh;",
     "--env",
-    `${env} -e PROVISIONING_SCRIPT="${pvsUrl}"`,
+    `${env} -e PROVISIONING_SCRIPT="${pvsUrl}" -e TIMESTAMP="${Date.now()}"`,
     "--search_params",
     "disk_space>=40 reliability>89 inet_up>99 inet_down>299",
     "--jupyter",
     "--direct",
+    "--ssh",
     "--no-default",
     // "--public",
   ]);
