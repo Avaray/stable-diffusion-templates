@@ -2,11 +2,7 @@ import { repoName, repoOwner } from "./constants";
 
 const templateReadme = await Bun.file("src/TEMPLATE.md").text();
 
-export const runtime: "bun" | "deno" | undefined = typeof Bun !== "undefined"
-  ? "bun"
-  : typeof Deno !== "undefined"
-  ? "deno"
-  : undefined;
+export const runtime: "bun" | "deno" | undefined = typeof Bun !== "undefined" ? "bun" : typeof Deno !== "undefined" ? "deno" : undefined;
 
 export async function saveFile(path: string, content: string) {
   switch (runtime) {
