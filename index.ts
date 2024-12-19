@@ -1,3 +1,4 @@
+import process from "node:process";
 import { rm } from "node:fs/promises";
 
 import {
@@ -6,25 +7,24 @@ import {
   getBranchName,
   getEnvironmentVariable,
   pvsUrl,
+  readFile,
   runtime,
   saveFile,
-} from "./utils";
+} from "./utils.ts";
 
-import { uis } from "./data/uis";
-import { repositories } from "./data/repositories";
-import { type Checkpoint, checkpoints } from "./data/checkpoints";
-import { embeddings } from "./data/embeddings";
-import { loras } from "./data/loras";
-import { vaes } from "./data/vaes";
-import { controlnets } from "./data/controlnets";
-import { upscalers } from "./data/upscalers";
-import { extensions } from "./data/extensions";
+import { uis } from "./data/uis.ts";
+import { repositories } from "./data/repositories.ts";
+import { type Checkpoint, checkpoints } from "./data/checkpoints.ts";
+import { embeddings } from "./data/embeddings.ts";
+import { loras } from "./data/loras.ts";
+import { vaes } from "./data/vaes.ts";
+import { controlnets } from "./data/controlnets.ts";
+import { upscalers } from "./data/upscalers.ts";
+import { extensions } from "./data/extensions.ts";
 
 import t from "./data/templates.json" with { type: "json" };
 
 let templates = t as any;
-
-const branch = await getBranchName();
 
 await rm("scripts", { recursive: true, force: true });
 
@@ -32,19 +32,23 @@ const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, "/");
 
 console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
 
-// Install VastAI CLI
-const vastaiInstall = await executeCommand("pip", [
-  "install",
-  "--upgrade",
-  "vastai",
-]);
+const branch = await getBranchName();
 
-if (vastaiInstall.success) {
-  console.log(`VastAI CLI installed successfully`);
-} else {
-  console.error(`Error installing VastAI: ${vastaiInstall.error}`);
+console.log(`Working on branch: ${branch.trim()}`);
+
+const vastaiCli = await fetch(
+  // "https://raw.githubusercontent.com/vast-ai/vast-python/master/vast.py",
+  "https://raw.githubusercontent.com/Avaray/vast-cli/refs/heads/master/vast.py",
+);
+
+if (!vastaiCli.ok) {
+  console.error(`Error downloading VastAI CLI: ${vastaiCli.statusText}`);
   process.exit(1);
 }
+
+await saveFile("vastai", await vastaiCli.text());
+
+console.log(`VastAI CLI downloaded successfully`);
 
 const vastaiApiKey = await getEnvironmentVariable("VASTAI_KEY") || "";
 
@@ -54,16 +58,9 @@ if (!vastaiApiKey) {
 }
 
 // Add API key to VastAI CLI
-await executeCommand("vastai", ["set", "api-key", vastaiApiKey]);
+await executeCommand("python", ["vastai", "set", "api-key", vastaiApiKey]);
 
-async function deleteVastaiTemplate(id: number) {
-  const deleteTemplate = await executeCommand("vastai", [
-    "delete",
-    "template",
-    `--template`,
-    id,
-  ]);
-}
+console.log(`VastAI API key set successfully`);
 
 // Iterate over all UIs
 for (const ui of uis) {
@@ -105,9 +102,10 @@ for (const ui of uis) {
     // Replace CHECKPOINT_MODELS list
     pvs = pvs.replace(
       /CHECKPOINT_MODELS=\(.*?\)/gms,
-      `CHECKPOINT_MODELS=(\n    '${url(
-        `${repositories[checkpoint.base]}/CHECKPOINT/${checkpoint.filename}`,
-      )
+      `CHECKPOINT_MODELS=(\n    '${
+        url(
+          `${repositories[checkpoint.base]}/CHECKPOINT/${checkpoint.filename}`,
+        )
       }'\n)`,
     );
 
@@ -119,10 +117,7 @@ for (const ui of uis) {
     // Replace VAE_MODELS list
     pvs = pvs.replace(
       /VAE_MODELS=\(.*?\)/gms,
-      `VAE_MODELS=(\n${vaeModels.map((x) =>
-        `    '${url(`${repositories[checkpoint.base]}/VAE/${x}`)}'`
-      ).join("\n")
-      }\n)`,
+      `VAE_MODELS=(\n${vaeModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/VAE/${x}`)}'`).join("\n")}\n)`,
     );
 
     // Find all Lora models where base is checkpoint base
@@ -133,10 +128,7 @@ for (const ui of uis) {
     // Replace LORA_MODELS with all Lora models
     pvs = pvs.replace(
       /LORA_MODELS=\(.*?\)/gms,
-      `LORA_MODELS=(\n${loraModels.map((x) =>
-        `    '${url(`${repositories[checkpoint.base]}/LORA/${x}`)}'`
-      ).join("\n")
-      }\n)`,
+      `LORA_MODELS=(\n${loraModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/LORA/${x}`)}'`).join("\n")}\n)`,
     );
 
     // Find all ControlNet models where base is checkpoint base
@@ -147,9 +139,8 @@ for (const ui of uis) {
     // Replace CONTROLNET_MODELS with all ControlNet models
     pvs = pvs.replace(
       /CONTROLNET_MODELS=\(.*?\)/gms,
-      `CONTROLNET_MODELS=(\n${controlnetModels.map((x) =>
-        `    '${url(`${repositories[checkpoint.base]}/CONTROLNET/${x}`)}'`
-      ).join("\n")
+      `CONTROLNET_MODELS=(\n${
+        controlnetModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/CONTROLNET/${x}`)}'`).join("\n")
       }\n)`,
     );
 
@@ -161,10 +152,7 @@ for (const ui of uis) {
     // Replace ESRGAN_MODELS (upscalers) with all Upscaler models
     pvs = pvs.replace(
       /ESRGAN_MODELS=\(.*?\)/gms,
-      `ESRGAN_MODELS=(\n${upscalerModels.map((x) =>
-        `    '${url(`${repositories[checkpoint.base]}/ESRGAN/${x}`)}'`
-      ).join("\n")
-      }\n)`,
+      `ESRGAN_MODELS=(\n${upscalerModels.map((x) => `    '${url(`${repositories[checkpoint.base]}/ESRGAN/${x}`)}'`).join("\n")}\n)`,
     );
 
     // List all Embeddings that are compatible with the checkpoint and type === 'positive'
@@ -186,18 +174,14 @@ for (const ui of uis) {
     if (ui.id === "forge" || ui.id === "comfy") {
       pvs = pvs.replace(
         /^function provisioning_start/m,
-        `EMBEDDINGS_POSITIVE=(\n${embeddingsPositive.map((x) =>
-          `    '${url(`${repositories[checkpoint.base]}/EMBEDDINGS/pos/${x}`)
-          }'`
-        ).join("\n")
+        `EMBEDDINGS_POSITIVE=(\n${
+          embeddingsPositive.map((x) => `    '${url(`${repositories[checkpoint.base]}/EMBEDDINGS/pos/${x}`)}'`).join("\n")
         }\n)\n\nfunction provisioning_start`,
       );
       pvs = pvs.replace(
         /^function provisioning_start/m,
-        `EMBEDDINGS_NEGATIVE=(\n${embeddingsNegative.map((x) =>
-          `    '${url(`${repositories[checkpoint.base]}/EMBEDDINGS/neg/${x}`)
-          }'`
-        ).join("\n")
+        `EMBEDDINGS_NEGATIVE=(\n${
+          embeddingsNegative.map((x) => `    '${url(`${repositories[checkpoint.base]}/EMBEDDINGS/neg/${x}`)}'`).join("\n")
         }\n)\n\nfunction provisioning_start`,
       );
     }
@@ -205,12 +189,14 @@ for (const ui of uis) {
     if (ui.id === "comfy" || ui.id === "forge") {
       pvs = pvs.replace(
         /provisioning_get_models \\/m,
-        `provisioning_get_models \\\n        "\${WORKSPACE}/storage/stable_diffusion/${ui.id === "comfy" ? "models/" : ""
+        `provisioning_get_models \\\n        "\${WORKSPACE}/storage/stable_diffusion/${
+          ui.id === "comfy" ? "models/" : ""
         }embeddings/positive" \\\n        "\${EMBEDDINGS_POSITIVE[@]}"\n    provisioning_get_models \\`,
       );
       pvs = pvs.replace(
         /provisioning_get_models \\/m,
-        `provisioning_get_models \\\n        "\${WORKSPACE}/storage/stable_diffusion/${ui.id === "comfy" ? "models/" : ""
+        `provisioning_get_models \\\n        "\${WORKSPACE}/storage/stable_diffusion/${
+          ui.id === "comfy" ? "models/" : ""
         }embeddings/negative" \\\n        "\${EMBEDDINGS_NEGATIVE[@]}"\n    provisioning_get_models \\`,
       );
     }
@@ -221,11 +207,13 @@ for (const ui of uis) {
     await saveFile(`scripts/${ui.id}/${checkpoint.id}.sh`, pvs);
 
     const templateVastai = await createVastaiTemplate(
-      `${ui.name}UI - ${checkpoint.name} ${checkpoint.version.toUpperCase()} - ${checkpoint.base.toUpperCase()}`,
-      pvsUrl(ui, branch, checkpoint.id!),
+      `${ui.name}UI - ${checkpoint.name} V${checkpoint.version.toUpperCase()} - Stable Diffusion Quickstart (${checkpoint.base.toUpperCase()})`,
       ui.image,
-      ui.flags!,
+      ui.env,
+      pvsUrl(ui, branch, checkpoint.id!),
     );
+
+    console.log(templateVastai);
 
     if (templateVastai) {
       console.log(
