@@ -1,186 +1,140 @@
 {
   "realvisxlv50_v50bakedvae": {
     "vastai": {
-      "forge": "211238",
-      "comfy": "211261",
-      "invoke": "211284",
-      "fooocus": "211307"
+      "forge": "212011",
+      "comfy": "212034"
     }
   },
   "realvisxlv40_v40bakedvae": {
     "vastai": {
-      "forge": "211239",
-      "comfy": "211262",
-      "invoke": "211285",
-      "fooocus": "211308"
+      "forge": "212012",
+      "comfy": "212035"
     }
   },
   "wildcardxxl_v4rundiffusion": {
     "vastai": {
-      "forge": "211240",
-      "comfy": "211263",
-      "invoke": "211286",
-      "fooocus": "211309"
+      "forge": "212013",
+      "comfy": "212036"
     }
   },
   "albedobasexl_v3mini": {
     "vastai": {
-      "forge": "211241",
-      "comfy": "211264",
-      "invoke": "211287",
-      "fooocus": "211310"
+      "forge": "212014",
+      "comfy": "212037"
     }
   },
   "albedobasexl_v31large": {
     "vastai": {
-      "forge": "211242",
-      "comfy": "211265",
-      "invoke": "211288",
-      "fooocus": "211311"
+      "forge": "212015",
+      "comfy": "212038"
     }
   },
   "zavychromaxl_v100": {
     "vastai": {
-      "forge": "211243",
-      "comfy": "211266",
-      "invoke": "211289",
-      "fooocus": "211312"
+      "forge": "212016",
+      "comfy": "212039"
     }
   },
   "zavychromaxl_v90": {
     "vastai": {
-      "forge": "211244",
-      "comfy": "211267",
-      "invoke": "211290",
-      "fooocus": "211313"
+      "forge": "212017",
+      "comfy": "212040"
     }
   },
   "zavychromaxl_v70": {
     "vastai": {
-      "forge": "211245",
-      "comfy": "211268",
-      "invoke": "211291",
-      "fooocus": "211314"
+      "forge": "212018",
+      "comfy": "212041"
     }
   },
   "chinook_v10": {
     "vastai": {
-      "forge": "211246",
-      "comfy": "211269",
-      "invoke": "211292",
-      "fooocus": "211315"
+      "forge": "212019",
+      "comfy": "212042"
     }
   },
   "epicrealismxl_vxiabeast": {
     "vastai": {
-      "forge": "211247",
-      "comfy": "211270",
-      "invoke": "211293",
-      "fooocus": "211316"
+      "forge": "212020",
+      "comfy": "212043"
     }
   },
   "epicrealismxl_v10kiss2": {
     "vastai": {
-      "forge": "211248",
-      "comfy": "211271",
-      "invoke": "211294",
-      "fooocus": "211317"
+      "forge": "212021",
+      "comfy": "212044"
     }
   },
   "epicrealismxl_v9unflux": {
     "vastai": {
-      "forge": "211249",
-      "comfy": "211272",
-      "invoke": "211295",
-      "fooocus": "211318"
+      "forge": "212022",
+      "comfy": "212045"
     }
   },
   "epicrealismxl_v8kiss": {
     "vastai": {
-      "forge": "211250",
-      "comfy": "211273",
-      "invoke": "211296",
-      "fooocus": "211319"
+      "forge": "212023",
+      "comfy": "212046"
     }
   },
   "leosamshelloworldxl_helloworldxl70": {
     "vastai": {
-      "forge": "211251",
-      "comfy": "211274",
-      "invoke": "211297",
-      "fooocus": "211320"
+      "forge": "212024",
+      "comfy": "212047"
     }
   },
   "juggernautxl_juggxibyrundiffusion": {
     "vastai": {
-      "forge": "211252",
-      "comfy": "211275",
-      "invoke": "211298",
-      "fooocus": "211321"
+      "forge": "212025",
+      "comfy": "212048"
     }
   },
   "juggernaut_x_rundiffusion": {
     "vastai": {
-      "forge": "211253",
-      "comfy": "211276",
-      "invoke": "211299",
-      "fooocus": "211322"
+      "forge": "212026",
+      "comfy": "212049"
     }
   },
   "dreamshaperxl_alpha2xl10": {
     "vastai": {
-      "forge": "211254",
-      "comfy": "211277",
-      "invoke": "211300",
-      "fooocus": "211323"
+      "forge": "212027",
+      "comfy": "212050"
     }
   },
   "copaxtimelessxlsdxl1_v12": {
     "vastai": {
-      "forge": "211255",
-      "comfy": "211278",
-      "invoke": "211301",
-      "fooocus": "211324"
+      "forge": "212028",
+      "comfy": "212051"
     }
   },
   "halcyonsdxl_v18": {
     "vastai": {
-      "forge": "211256",
-      "comfy": "211279",
-      "invoke": "211302",
-      "fooocus": "211325"
+      "forge": "212029",
+      "comfy": "212052"
     }
   },
   "goddessofrealism_gorponyv10": {
     "vastai": {
-      "forge": "211257",
-      "comfy": "211280",
-      "invoke": "211303",
-      "fooocus": "211326"
+      "forge": "212030",
+      "comfy": "212053"
     }
   },
   "ponydiffusionv6xl_v6startwiththisone": {
     "vastai": {
-      "forge": "211258",
-      "comfy": "211281",
-      "invoke": "211304",
-      "fooocus": "211327"
+      "forge": "212031",
+      "comfy": "212054"
     }
   },
   "autismmixsdxl_autismmixpony": {
     "vastai": {
-      "forge": "211259",
-      "comfy": "211282",
-      "invoke": "211305",
-      "fooocus": "211328"
+      "forge": "212032",
+      "comfy": "212055"
     }
   },
   "alchemistmix_v10": {
     "vastai": {
-      "forge": "211260",
-      "comfy": "211283",
-      "invoke": "211306",
-      "fooocus": "211329"
+      "forge": "212033",
+      "comfy": "212056"
     }
   }
 }
