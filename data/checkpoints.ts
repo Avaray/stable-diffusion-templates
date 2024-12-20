@@ -186,6 +186,15 @@ export const ckpts: Checkpoint[] = [
       "Generated faces are too shiny in my opinion. This checkpoint is not good for photorealism. There are much better checkpoints in this list.",
   },
   {
+    name: "Real Dream",
+    filename: "realDream_sdxlSFW1.safetensors",
+    homepage: "https://civitai.com/models/153568/real-dream?modelVersionId=1104996",
+    base: "sdxl",
+    version: "1-SFW",
+    rating: "",
+    comment: "",
+  },
+  {
     name: "GODDESS of Realism",
     filename: "goddessOfRealism_gorPONYV10.safetensors",
     homepage: "https://civitai.com/models/212737?modelVersionId=573082",
