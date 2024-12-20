@@ -19,17 +19,17 @@ const universalEnv =
   `-e WEB_ENABLE_HTTPS=true -e WEB_ENABLE_AUTH=true -e DATA_DIRECTORY=/workspace/ -e WORKSPACE=/workspace/ -e WORKSPACE_MOUNTED=force -e JUPYTER_DIR=/ -e SYNCTHING_TRANSPORT_PORT_HOST=72299 -e OPEN_BUTTON_TOKEN=1 -e OPEN_BUTTON_PORT=1111 -p 22:22 -p 1111:1111 -p 8384:8384 -p 8888:8888 -p 72299:72299`;
 
 const userInterfaces: UI[] = [
-  // {
-  //   id: "forge",
-  //   name: "Forge",
-  //   image: "ghcr.io/ai-dock/stable-diffusion-webui-forge",
-  //   repository: "https://github.com/ai-dock/stable-diffusion-webui-forge",
-  //   pvs: "",
-  //   supports: ["sdxl", "pdxl"],
-  //   flags: "",
-  //   diskSpace: 40,
-  //   env: `${universalEnv} -e FORGE_PORT_HOST=7860 -p 7860:7860`,
-  // },
+  {
+    id: "forge",
+    name: "Forge",
+    image: "ghcr.io/ai-dock/stable-diffusion-webui-forge",
+    repository: "https://github.com/ai-dock/stable-diffusion-webui-forge",
+    pvs: "",
+    supports: ["sdxl", "pdxl"],
+    flags: "",
+    diskSpace: 40,
+    env: `${universalEnv} -p 7860:7860`,
+  },
   {
     id: "comfy",
     name: "Comfy",
