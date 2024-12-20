@@ -159,7 +159,7 @@ export async function createVastaiTemplate(
     "--direct",
     "--ssh",
     "--no-default",
-    // "--public",
+    "--public",
   ]);
 
   const id = getId(createTemplate.output);
