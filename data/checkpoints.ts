@@ -204,6 +204,15 @@ export const ckpts: Checkpoint[] = [
     comment: "",
   },
   {
+    name: "NightVision",
+    filename: "nightvisionxl_V900.safetensors",
+    homepage: "https://civitai.com/models/128607?modelVersionId=577919",
+    base: "sdxl",
+    version: "9",
+    rating: "",
+    comment: "",
+  },
+  {
     name: "GODDESS of Realism",
     filename: "goddessOfRealism_gorPONYV10.safetensors",
     homepage: "https://civitai.com/models/212737?modelVersionId=573082",
