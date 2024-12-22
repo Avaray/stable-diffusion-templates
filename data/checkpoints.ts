@@ -257,6 +257,15 @@ export const ckpts: Checkpoint[] = [
     rating: "",
     comment: "",
   },
+  {
+    name: "CyberRealistic Pony",
+    filename: "cyberrealisticPony_v7.safetensors",
+    homepage: "https://civitai.com/models/443821?modelVersionId=1177183",
+    base: "pdxl",
+    version: "7",
+    rating: "",
+    comment: "",
+  },
 ];
 
 export const checkpoints = ckpts.map((ckpt) => ({
