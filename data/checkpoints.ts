@@ -247,7 +247,7 @@ export const ckpts: Checkpoint[] = [
     version: "3",
     rating: "",
     comment: "",
-  }
+  },
   {
     name: "AlchemistMix Real Hentai",
     filename: "alchemistMixRealHentai_v40Platinum.safetensors",
@@ -256,7 +256,7 @@ export const ckpts: Checkpoint[] = [
     version: "4",
     rating: "",
     comment: "",
-  }
+  },
   {
     name: "AlchemistMix Real Hentai",
     filename: "alchemistmix_v10.safetensors",
@@ -301,7 +301,7 @@ export const ckpts: Checkpoint[] = [
     version: "2.2",
     rating: "",
     comment: "",
-  }
+  },
 ];
 
 export const checkpoints = ckpts.map((ckpt) => ({
