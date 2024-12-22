@@ -293,6 +293,15 @@ export const ckpts: Checkpoint[] = [
     rating: "",
     comment: "",
   },
+  {
+    name: "Pony Realism",
+    filename: "ponyRealism_V22MainVAE.safetensors",
+    homepage: "https://civitai.com/models/372465?modelVersionId=914390",
+    base: "pdxl",
+    version: "2.2",
+    rating: "",
+    comment: "",
+  }
 ];
 
 export const checkpoints = ckpts.map((ckpt) => ({
