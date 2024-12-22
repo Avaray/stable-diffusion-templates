@@ -231,7 +231,25 @@ export const ckpts: Checkpoint[] = [
     comment: "NSFW checkpoint for Anime. Good alternative for Pony Diffusion V6.",
   },
   {
-    name: "AlchemistMix",
+    name: "AlchemistMix Photoreal",
+    filename: "alchemistMixPhotoreal_v30.safetensors",
+    homepage: "https://civitai.com/models/1035832/alchemist-mix-photoreal-pony?modelVersionId=1178617",
+    base: "pdxl",
+    version: "3",
+    rating: "",
+    comment: "",
+  }
+  {
+    name: "AlchemistMix Real Hentai",
+    filename: "alchemistMixRealHentai_v40Platinum.safetensors",
+    homepage: "https://civitai.com/models/916289?modelVersionId=1102977",
+    base: "pdxl",
+    version: "4",
+    rating: "",
+    comment: "",
+  }
+  {
+    name: "AlchemistMix Real Hentai",
     filename: "alchemistmix_v10.safetensors",
     homepage: "https://civitai.com/models/916289/alchemistmixrealhentaiponyv1?modelVersionId=1025594",
     base: "pdxl",
