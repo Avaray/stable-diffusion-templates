@@ -1,140 +1,194 @@
 {
   "realvisxlv50_v50bakedvae": {
     "vastai": {
-      "forge": "212011",
-      "comfy": "212034"
+      "forge": "212994",
+      "comfy": "213030"
     }
   },
   "realvisxlv40_v40bakedvae": {
     "vastai": {
-      "forge": "212012",
-      "comfy": "212035"
+      "forge": "212995",
+      "comfy": "213031"
     }
   },
   "wildcardxxl_v4rundiffusion": {
     "vastai": {
-      "forge": "212013",
-      "comfy": "212036"
+      "forge": "212996",
+      "comfy": "213032"
     }
   },
   "albedobasexl_v3mini": {
     "vastai": {
-      "forge": "212014",
-      "comfy": "212037"
+      "forge": "212997",
+      "comfy": "213033"
     }
   },
   "albedobasexl_v31large": {
     "vastai": {
-      "forge": "212015",
-      "comfy": "212038"
+      "forge": "212998",
+      "comfy": "213034"
     }
   },
   "zavychromaxl_v100": {
     "vastai": {
-      "forge": "212016",
-      "comfy": "212039"
+      "forge": "212999",
+      "comfy": "213035"
     }
   },
   "zavychromaxl_v90": {
     "vastai": {
-      "forge": "212017",
-      "comfy": "212040"
+      "forge": "213000",
+      "comfy": "213036"
     }
   },
   "zavychromaxl_v70": {
     "vastai": {
-      "forge": "212018",
-      "comfy": "212041"
+      "forge": "213005",
+      "comfy": "213037"
     }
   },
   "chinook_v10": {
     "vastai": {
-      "forge": "212019",
-      "comfy": "212042"
+      "forge": "213006",
+      "comfy": "213038"
     }
   },
   "epicrealismxl_vxiabeast": {
     "vastai": {
-      "forge": "212020",
-      "comfy": "212043"
+      "forge": "213007",
+      "comfy": "213039"
     }
   },
   "epicrealismxl_v10kiss2": {
     "vastai": {
-      "forge": "212021",
-      "comfy": "212044"
+      "forge": "213008",
+      "comfy": "213040"
     }
   },
   "epicrealismxl_v9unflux": {
     "vastai": {
-      "forge": "212022",
-      "comfy": "212045"
+      "forge": "213009",
+      "comfy": "213041"
     }
   },
   "epicrealismxl_v8kiss": {
     "vastai": {
-      "forge": "212023",
-      "comfy": "212046"
+      "forge": "213010",
+      "comfy": "213042"
     }
   },
   "leosamshelloworldxl_helloworldxl70": {
     "vastai": {
-      "forge": "212024",
-      "comfy": "212047"
+      "forge": "213011",
+      "comfy": "213043"
     }
   },
   "juggernautxl_juggxibyrundiffusion": {
     "vastai": {
-      "forge": "212025",
-      "comfy": "212048"
+      "forge": "213012",
+      "comfy": "213044"
     }
   },
   "juggernaut_x_rundiffusion": {
     "vastai": {
-      "forge": "212026",
-      "comfy": "212049"
+      "forge": "213013",
+      "comfy": "213045"
     }
   },
   "dreamshaperxl_alpha2xl10": {
     "vastai": {
-      "forge": "212027",
-      "comfy": "212050"
+      "forge": "213014",
+      "comfy": "213046"
     }
   },
   "copaxtimelessxlsdxl1_v12": {
     "vastai": {
-      "forge": "212028",
-      "comfy": "212051"
+      "forge": "213015",
+      "comfy": "213047"
     }
   },
   "halcyonsdxl_v18": {
     "vastai": {
-      "forge": "212029",
-      "comfy": "212052"
+      "forge": "213016",
+      "comfy": "213048"
+    }
+  },
+  "realdream_sdxlsfw1": {
+    "vastai": {
+      "forge": "213017",
+      "comfy": "213049"
+    }
+  },
+  "stepdadsstash_v10": {
+    "vastai": {
+      "forge": "213018",
+      "comfy": "213050"
+    }
+  },
+  "nightvisionxl_v900": {
+    "vastai": {
+      "forge": "213019",
+      "comfy": "213051"
     }
   },
   "goddessofrealism_gorponyv10": {
     "vastai": {
-      "forge": "212030",
-      "comfy": "212053"
+      "forge": "213020",
+      "comfy": "213052"
     }
   },
   "ponydiffusionv6xl_v6startwiththisone": {
     "vastai": {
-      "forge": "212031",
-      "comfy": "212054"
+      "forge": "213021",
+      "comfy": "213053"
     }
   },
   "autismmixsdxl_autismmixpony": {
     "vastai": {
-      "forge": "212032",
-      "comfy": "212055"
+      "forge": "213022",
+      "comfy": "213054"
+    }
+  },
+  "alchemistmixphotoreal_v30": {
+    "vastai": {
+      "forge": "213023",
+      "comfy": "213055"
+    }
+  },
+  "alchemistmixrealhentai_v40platinum": {
+    "vastai": {
+      "forge": "213024",
+      "comfy": "213056"
     }
   },
   "alchemistmix_v10": {
     "vastai": {
-      "forge": "212033",
-      "comfy": "212056"
+      "forge": "213025",
+      "comfy": "213057"
+    }
+  },
+  "realij_v20vae": {
+    "vastai": {
+      "forge": "213026",
+      "comfy": "213058"
+    }
+  },
+  "oneforallponyfantasy_v20dpo": {
+    "vastai": {
+      "forge": "213027",
+      "comfy": "213059"
+    }
+  },
+  "cyberrealisticpony_v7": {
+    "vastai": {
+      "forge": "213028",
+      "comfy": "213060"
+    }
+  },
+  "ponyrealism_v22mainvae": {
+    "vastai": {
+      "forge": "213029",
+      "comfy": "213061"
     }
   }
 }
