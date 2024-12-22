@@ -248,6 +248,15 @@ export const ckpts: Checkpoint[] = [
     rating: "",
     comment: "",
   },
+  {
+    name: "Pony Fantasy",
+    filename: "oneFORALLPonyFantasy_v20DPO.safetensors",
+    homepage: "https://civitai.com/models/349062/one-for-all-pony-fantasy-dpovae?modelVersionId=494387",
+    base: "pdxl",
+    version: "2",
+    rating: "",
+    comment: "",
+  },
 ];
 
 export const checkpoints = ckpts.map((ckpt) => ({
