@@ -67,4 +67,4 @@ To see what is included in each script, you can check sripts in
 `A` Probably not. I'm only adding the ones I think are good. If you believe a checkpoint should be included, please
 [start a discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). Just remember that the model
 needs to be battle-tested on CivitAI or another platform, and it shouldn't already be on the
-[blacklist]((https://github.com/Avaray/stable-diffusion-templates/blob/main/blacklist.ts)).
+[blacklist](https://github.com/Avaray/stable-diffusion-templates/blob/main/blacklist.ts).
