@@ -1,11 +1,8 @@
-import { readFile, saveFile } from "./utils.ts";
 import process from "node:process";
 import { ratings, readFile, saveFile } from "./utils.ts";
 import { services } from "./data/services.ts";
-import { uis } from "./data/uis.ts";
 import { type UI, uis } from "./data/uis.ts";
 import { type Checkpoint, checkpoints } from "./data/checkpoints.ts";
-import t from "./data/templates.json" with { type: "json" };
 import templatesData from "./data/templates.json" with { type: "json" };
 
 // Check if templatesData contains at least one key
