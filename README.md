@@ -1,97 +1,100 @@
 # 🗃 Collection of Stable Diffusion Templates
 
-This is curated collection of templates for [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) and [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) services.  
-Their main purpose is to simplify the process of getting started with Stable Diffusion.  
-These templates gives ready to use [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) thanks to [AI-Dock](https://github.com/ai-dock/stable-diffusion-webui).  
-Plus they have some nice Lora's and useful Extensions preinstalled.
-
-### Start generating graphics in minutes with just few clicks 😎
+This is curated collection of templates for [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878). These templates gives you access to best
+Stable Diffusion UIs and Checkpoints. You can start generating graphics in minutes with just few clicks 😎
 
 # 🦓 SDXL
 
 Templates with checkpoints based on [Stable Diffusion XL](https://en.wikipedia.org/wiki/Stable_Diffusion).
 
-|      Rating      | Checkpoint<br>Name | Version | Vast.ai | Runpod.io |
-| :--------------: | :----------------: | :-----: | :-----: | :-------: |
-| 🔥 | [RealVis](https://civitai.com/models/139562?modelVersionId=344487) | `V4` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=1214857c19b792218238c1635de44857"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=o32e68lf4f"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 🔥 | [RealVis](https://civitai.com/models/139562?modelVersionId=789646) | `V5` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=a13746f00e1ebb6084880dc48e79f157"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=agfapnhy4g"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| - | [ZavyChroma](https://civitai.com/models/119229?modelVersionId=916744) | `V10` | todo | todo |
-| 🔥 | [ZavyChroma](https://civitai.com/models/119229?modelVersionId=641087) | `V9` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=de0f26247c1ccf592b624b233c6a7531"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=1osvczwrdm"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [ZavyChroma](https://civitai.com/models/119229?modelVersionId=490254) | `V7` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=c664cf5f1a6b8b5ddc521baa1cdbf05e"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=5mv7x9lk0p"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 🔥 | [WildCardX](https://civitai.com/models/239561?modelVersionId=308455) | `V4` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=c87381d3de507cfa88ccf05f8fd990c0"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=9qr1azjcad"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 🔥 | [CHINOOK](https://civitai.com/models/400589?modelVersionId=495482) | `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=d06d11acd907913b24b6a345852d39e3"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=vu1meyunmp"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [LEOSAM's HelloWorld](https://civitai.com/models/400589?modelVersionId=495482) | `V7` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=133b29d546034a67c65c497f76802cb0"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=44x5bc9wrs"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| - | [Juggernaut](https://civitai.com/models/133005?modelVersionId=782002) | `V11` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=16a3bd322b0fde6c71e249a574e300be"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=8g5h4fazmw"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [Juggernaut](https://civitai.com/models/133005?modelVersionId=456194) | `V10` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=1d78196b4adc4ea29246a1e58a598a03"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=ypt3pl6coj"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [DreamShaper](https://civitai.com/models/112902?modelVersionId=126688) | `V2a` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=5dfa95dbd5e2659add8787c422d94df8"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=mgbjraphld"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| - | [Copax TimeLess](https://civitai.com/models/118111?modelVersionId=445348) | `V12` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=2e797e615f9f5d46c2fd5a3fa2beb295"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=a4hwnbsphp"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| - | [epiCRealism](https://civitai.com/models/277058?modelVersionId=931522) | `V9-UnFlux` | todo | todo |
-| 👍 | [epiCRealism](https://civitai.com/models/277058?modelVersionId=646523) | `V8` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=1f7ef35a703ad5a28932680e573eb6cf"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=2cn8li8tof"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [Halcyon](https://civitai.com/models/299933?modelVersionId=655762) | `V1.8` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=cc77d7bda1afe46ca2b23628c1d0ac14"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=2fy5lo1o5q"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| - | [PhotoPedia](https://civitai.com/models/189109?modelVersionId=259323) | `V4.5` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=395a34f5188daccc14dc12aa1435c105"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=g6suw85qqm"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [AlbedoBase](https://civitai.com/models/140737?modelVersionId=892880) | `V3-mini` | todo | todo |
+| Checkpoint<br>Name | Checkpoint<br>Version |     |     |
+| :----------------: | :-------------------: | :-: | :-: |
+| <a href="https://civitai.com/models/139562?modelVersionId=789646">RealVis</a> | v5 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=212994">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213030">Comfy</a> |
+| <a href="https://civitai.com/models/139562?modelVersionId=344487">RealVis</a> | v4 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=212995">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213031">Comfy</a> |
+| <a href="https://civitai.com/models/239561?modelVersionId=308455">WildCardX</a> | v4 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=212996">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213032">Comfy</a> |
+| <a href="https://civitai.com/models/140737?modelVersionId=892880">AlbedoBase</a> | v3-mini | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=212997">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213033">Comfy</a> |
+| <a href="https://civitai.com/models/140737/albedobase-xl?modelVersionId=1041855">AlbedoBase</a> | v3.1-large | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=212998">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213034">Comfy</a> |
+| <a href="https://civitai.com/models/119229?modelVersionId=916744">ZavyChroma</a> | v10 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=212999">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213035">Comfy</a> |
+| <a href="https://civitai.com/models/119229?modelVersionId=641087">ZavyChroma</a> | v9 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213000">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213036">Comfy</a> |
+| <a href="https://civitai.com/models/119229?modelVersionId=490254">ZavyChroma</a> | v7 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213005">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213037">Comfy</a> |
+| <a href="https://civitai.com/models/400589?modelVersionId=495482">CHINOOK</a> | v1 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213006">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213038">Comfy</a> |
+| <a href="https://civitai.com/models/277058?modelVersionId=1156226">epiCRealism</a> | v | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213007">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213039">Comfy</a> |
+| <a href="https://civitai.com/models/277058?modelVersionId=1013306">epiCRealism</a> | v10-KiSS2 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213008">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213040">Comfy</a> |
+| <a href="https://civitai.com/models/277058?modelVersionId=931522">epiCRealism</a> | v9-UnFlux | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213009">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213041">Comfy</a> |
+| <a href="https://civitai.com/models/277058?modelVersionId=646523">epiCRealism</a> | v8 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213010">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213042">Comfy</a> |
+| <a href="https://civitai.com/models/400589?modelVersionId=495482">LEOSAM's HelloWorld</a> | v7 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213011">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213043">Comfy</a> |
+| <a href="https://civitai.com/models/133005?modelVersionId=782002">Juggernaut</a> | v11 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213012">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213044">Comfy</a> |
+| <a href="https://civitai.com/models/133005?modelVersionId=456194">Juggernaut</a> | v10 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213013">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213045">Comfy</a> |
+| <a href="https://civitai.com/models/112902?modelVersionId=126688">DreamShaper</a> | v2a | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213014">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213046">Comfy</a> |
+| <a href="https://civitai.com/models/118111?modelVersionId=445348">Copax TimeLess</a> | v12 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213015">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213047">Comfy</a> |
+| <a href="https://civitai.com/models/299933?modelVersionId=655762">Halcyon</a> | v1.8 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213016">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213048">Comfy</a> |
+| <a href="https://civitai.com/models/153568/real-dream?modelVersionId=1104996">Real Dream</a> | v1-SFW | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213017">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213049">Comfy</a> |
+| <a href="https://civitai.com/models/1021388/step-dads-stash">Step Dads Stash</a> | v1 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213018">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213050">Comfy</a> |
+| <a href="https://civitai.com/models/128607?modelVersionId=577919">NightVision</a> | v9 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213019">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213051">Comfy</a> |
 
 # 🦄 PDXL
 
 Templates with checkpoints based on Pony Diffusion XL.
 
-|      Rating      | Checkpoint<br>Name | Version | Vast.ai | Runpod.io |
-| :--------------: | :----------------: | :-----: | :-----: | :-------: |
-| 🔥 | [GODDESS of Realism](https://civitai.com/models/212737?modelVersionId=573082) | `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=12ebd3285bd64e7d225dc6d70a5e05bb"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=t43cv2upw0"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 🔥 | [Pony Diffusion](https://civitai.com/models/257749?modelVersionId=290640) | `V6` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=dedb7495b1bc8caea7bdbbb5ce002794"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=mgosofhzoc"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [AutismMix](https://civitai.com/models/288584?modelVersionId=324619) | `V1` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=a4b369ebca71a4b53e01037239fbd76a"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=os43pc1362"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| - | [fennfoto](https://civitai.com/models/503537?modelVersionId=702110) | `V4` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=bb0f421f5bfd32cdd8214884ba8c5f07"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=g2p855h333"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
-| 👍 | [fennfoto](https://civitai.com/models/503537?modelVersionId=676770) | `V3` | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=46f4a5f0eb3a6355aa58acfc66cb95db"><img src="images/vastai.svg" alt="Vast.ai" width="42" height="42"></a> | <a href="https://runpod.io/console/deploy?ref=gzvzzzv9&template=rncvdgx8kj"><img src="images/runpodio.svg" alt="Runpod.io" width="42" height="42"></a> |
+| Checkpoint<br>Name | Checkpoint<br>Version |     |     |
+| :----------------: | :-------------------: | :-: | :-: |
+| <a href="https://civitai.com/models/212737?modelVersionId=573082">GODDESS of Realism</a> | v1 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213020">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213052">Comfy</a> |
+| <a href="https://civitai.com/models/257749?modelVersionId=290640">Pony Diffusion</a> | v6 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213021">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213053">Comfy</a> |
+| <a href="https://civitai.com/models/288584?modelVersionId=324619">AutismMix</a> | v1 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213022">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213054">Comfy</a> |
+| <a href="https://civitai.com/models/1035832/alchemist-mix-photoreal-pony?modelVersionId=1178617">AlchemistMix Photoreal</a> | v3 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213023">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213055">Comfy</a> |
+| <a href="https://civitai.com/models/916289?modelVersionId=1102977">AlchemistMix Real Hentai</a> | v4 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213024">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213056">Comfy</a> |
+| <a href="https://civitai.com/models/916289/alchemistmixrealhentaiponyv1?modelVersionId=1025594">AlchemistMix Real Hentai</a> | v1 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213025">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213057">Comfy</a> |
+| <a href="https://civitai.com/models/978427/realij?modelVersionId=1126765">REALij</a> | v2 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213026">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213058">Comfy</a> |
+| <a href="https://civitai.com/models/349062/one-for-all-pony-fantasy-dpovae?modelVersionId=494387">Pony Fantasy</a> | v2 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213027">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213059">Comfy</a> |
+| <a href="https://civitai.com/models/443821?modelVersionId=1177183">CyberRealistic Pony</a> | v7 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213028">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213060">Comfy</a> |
+| <a href="https://civitai.com/models/372465?modelVersionId=914390">Pony Realism</a> | v2.2 | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213029">Forge</a> | <a href="https://cloud.vast.ai/create/?ref_id=62878&template_id=213061">Comfy</a> |
 
-# 🙊 What is [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) and [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) ?
+# 🙊 What is [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) ?
 
-These are services that gives you access to powerful [GPUs](https://en.wikipedia.org/wiki/Graphics_processing_unit) like [RTX4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) at low cost.  
-They let you run [Docker images](https://docs.docker.com/guides/docker-overview/#what-can-i-use-docker-for) on their servers.
+[Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) gives you access to powerful
+[GPUs](https://en.wikipedia.org/wiki/Graphics_processing_unit) like
+[RTX4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) at low cost.
 
-If you can't afford to buy a powerful Graphics Card (that is mandatory in graphics generation), these services are for you. In my opinion, services like these are the best way to get started with Stable Diffusion when you have weak graphics card and you don't have money to buy a powerful one. Btw. You can read [my old article](https://dav.one/the-ways-and-costs-of-generating-graphics-using-stable-diffusion) about _"the ways and costs of generating graphics"_.
+This service offers a lot of different machines with different hardware. There is machine browser where you can find the best machine for
+your needs. You just need to select [Template](https://cloud.vast.ai/templates/), select [machine](https://cloud.vast.ai/create/) and you
+are ready to go.
 
-These two services offer a lot of different machines with different hardware. There are also community machines that are cheaper. Both services have machine browsers where you can find the best machine for your needs. Currently renting community machine with RTX4090 on [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) costs about $0.3 per hour. On [Runpod.io](https://runpod.io/console/deploy?ref=gzvzzzv9) it's a little bit more expensive. Prices are generally lower on weekends. Global economy and events influence the prices.
+If you can't afford to buy a powerful Graphics Card (that is mandatory in graphics generation), this service is for you. In my opinion,
+services like these are the best way to get started with Stable Diffusion when you have weak graphics card and you don't have money to buy a
+powerful one.
 
-When you are registered on these services and logged in, you can use the links above to rent a machine with selected template. **It's super easy.**
+You can also read [my old article](https://dav.one/the-ways-and-costs-of-generating-graphics-using-stable-diffusion) about _"the ways and
+costs of generating graphics"_.
 
-# 🙉 What is [AI-Dock](https://github.com/ai-dock/stable-diffusion-webui) and [Provisioning Script](https://github.com/ai-dock/base-image/wiki/4.0-Running-the-Image#provisioning-script) ?
+# 🙉 What is [AI-Dock](https://github.com/ai-dock) and [Provisioning Script](https://github.com/ai-dock/base-image/wiki/4.0-Running-the-Image#provisioning-script) ?
 
-[AI-Dock](https://github.com/ai-dock/stable-diffusion-webui) allows users to run _Stable Diffusion_ with latest version of [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) in a [Docker container](https://docs.docker.com/guides/docker-concepts/the-basics/what-is-a-container/). In my opinion the biggest advantage of this solution is that it starts quickly and you are able to connect to machine before all the checkpoints are downloaded. Because of that you can know at the beginning if docker image will work on machine you rented. Without AI-Dock you might waste few minutes waiting for checkpoints to download and then you will find out that something is wrong and you need to rent another machine. Except that AI-Dock comes with [Provisioning Script](https://github.com/ai-dock/base-image/wiki/4.0-Running-the-Image#provisioning-script), which is a script that installs all the necessary dependencies and downloads the checkpoints before starting the WebUI. So you don't need to do things manually.
+[AI-Dock](https://github.com/ai-dock) provides
+[Docker images](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) with ready to use UIs for Stable
+Diffusion. This makes it super easy to get started. The biggest advantage of these images is that you can use
+[Provisioning Scripts](https://github.com/ai-dock/base-image/wiki/4.0-Running-the-Image#provisioning-script) to install all the necessary
+dependencies and download models before starting the UI.
 
-Except [Automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui), AI-Dock supports also other popular WebUIs like [ComfyUI](https://github.com/comfyanonymous/ComfyUI), [InvokeAI](https://github.com/invoke-ai/InvokeAI) and [Foooocus](https://github.com/lllyasviel/Fooocus). But all templates in this repository are based on Auto1111 - because it's my favorite WebUI.
+# 🙈 Provisioning scripts in this collection
 
-# 🙈 Provisioning scripts in my Templates
+Provisioning Scripts in this Collection are based on official provisioning scripts. In process of modifying provisioning scripts I'm
+replacing all models, adding function to download Embeddings and removing unnecessary comments.
 
-Provisioning scripts in this Collection are based on official [Provisioning Script](https://github.com/ai-dock/stable-diffusion-webui/blob/main/config/provisioning/default.sh).  
-In process of creating my provisioning scripts I'm replacing some parts of original script with my own stuff.  
-Currently it includes:
+- Each script has just one specific checkpoint.
+- Each script has just one [ControlNet](https://wiki.civitai.com/wiki/ControlNet) model -
+  [Xinsir's Union](https://huggingface.co/xinsir/controlnet-union-sdxl-1.0).
+- Each script has some useful [Lora's](https://wiki.civitai.com/wiki/Low-Rank_Adaptation) and
+  [Embeddings](https://wiki.civitai.com/wiki/Embedding) that will work with that checkpoint.
+- UI's based on [AUTO1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui), like
+  [ForgeUI](https://github.com/lllyasviel/stable-diffusion-webui-forge), might have some useful Extensions like
+  [ADetailer](https://github.com/Bing-su/adetailer).
 
-- Each script has just one specific checkpoint. Does not include stock checkpoints.
-- Each script has some useful Lora's that will work with that checkpoint. Basically there are two lists of Lora's - one for checkpoints based on [SDXL](https://github.com/Avaray/stable-diffusion-templates?tab=readme-ov-file#-sdxl) and one for checkpoints based on [PDXL](https://github.com/Avaray/stable-diffusion-templates?tab=readme-ov-file#-pdxl).
-- Each script has some useful Extensions. Basically the same for all scripts. Except `taggers`.
-
-To see what is included in each script, you can check sripts in [scripts directory](https://github.com/Avaray/stable-diffusion-templates/tree/main/scripts).  
-In near future I will also add some useful Embeddings (Textual Inversions).
-
-# 📋 TODO's
-
-- [ ] Reorganize the file structure in the repository.
-- [ ] Remove some Loras and categorize them.
-- [ ] Add links to scripts in README file.
-- [ ] Add Embeddings to templates.
-- [ ] Add lists of Embeddings to README file.
-- [ ] Add automatic tests.
-- [ ] Add links to Lora models on CivitAI.
-- [ ] Create Lite versions (without Loras).
-- [ ] Find a way to automate the creation and modification of templates so that Playwright isn't needed.
+To see what is included in each script, you can check sripts in
+[scripts directory](https://github.com/Avaray/stable-diffusion-templates/tree/main/scripts).
 
 # ♻️ FAQ
 
-`Q` Will you add model X?  
-`A` Probably not. I'm adding only the good ones (in my opinion). If you think that some checkpoint should be included, please [open an discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). But keep in mind that model must be battle tested on [CivitAI](https://civitai.com/models) or on another platform. Also it needs to be tested by me. Also check if it's not already included in [Blacklist](https://github.com/Avaray/stable-diffusion-templates/blob/main/blacklist.ts).
-
-`Q` Will you add more Loras and Extensions?  
-`A` Maybe. I'm still looking for useful ones.
-
-`Q` Will you add other services than Vast.ai and Runpod.io?  
-`A` Maybe. Currently I don't know any better or at least as good as current ones.
+`Q` Will you add model X?\
+`A` Probably not. I'm only adding the ones I think are good. If you believe a checkpoint should be included, please
+[start a discussion](https://github.com/Avaray/stable-diffusion-templates/discussions/new?category=ideas). Just remember that the model
+needs to be battle-tested on CivitAI or another platform, and it shouldn't already be on the
+[blacklist](https://github.com/Avaray/stable-diffusion-templates/blob/main/blacklist.ts).
