@@ -1,15 +1,19 @@
-import process from "node:process";
 import { readFile, saveFile } from "./utils.ts";
 import { services } from "./data/services.ts";
-import { type UI, uis } from "./data/uis.ts";
+import { uis } from "./data/uis.ts";
 import { type Checkpoint, checkpoints } from "./data/checkpoints.ts";
 import t from "./data/templates.json" with { type: "json" };
 
-interface Template {
-  [key: string]: {
-    vastai: {
-      forge: string;
-      comfy: string;
+export interface Template {
+  // checkpoint ID
+  [key: typeof checkpoints[number]["id"]]: {
+    // service ID
+    [key: keyof typeof services]: {
+      // UI ID
+      [key: typeof uis[number]["id"]]: {
+        id: string;
+        hash: string;
+      };
     };
   };
 }
