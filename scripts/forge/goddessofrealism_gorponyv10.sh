@@ -27,6 +27,7 @@ LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GLSHS_Style_V2_4.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GLSHS_Style_V3_N.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/retro-neon-style-pony.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Retro_60s_Decarlo_V1_PDXL.safetensors'
 )
 
 VAE_MODELS=(

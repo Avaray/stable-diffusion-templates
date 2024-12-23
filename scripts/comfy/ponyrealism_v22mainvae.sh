@@ -10,7 +10,7 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/autismmixSDXL_autismmixPony.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/ponyRealism_V22MainVAE.safetensors'
 )
 
 UNET_MODELS=()

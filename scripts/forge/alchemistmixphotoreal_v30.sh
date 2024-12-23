@@ -1,19 +1,23 @@
 #!/bin/bash
 
+DISK_GB_REQUIRED=40
+
 APT_PACKAGES=()
 
-PIP_PACKAGES=()
+PIP_PACKAGES=(
+    "onnxruntime-gpu"
+)
 
-NODES=(
-    "https://github.com/ltdrdata/ComfyUI-Manager"
-    "https://github.com/cubiq/ComfyUI_essentials"
+EXTENSIONS=(
+    'https://github.com/adieyal/sd-dynamic-prompts'
+    'https://github.com/Bing-su/adetailer'
+    'https://github.com/Avaray/lora-keywords-finder'
+    'https://github.com/picobyte/stable-diffusion-webui-wd14-tagger'
 )
 
 CHECKPOINT_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/autismmixSDXL_autismmixPony.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/alchemistMixPhotoreal_v30.safetensors'
 )
-
-UNET_MODELS=()
 
 LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/MS_Milf_Style_V2_Pony.safetensors'
@@ -54,28 +58,29 @@ EMBEDDINGS_NEGATIVE=(
 )
 
 function provisioning_start() {
+
     if [[ ! -d /opt/environments/python ]]; then 
         export MAMBA_BASE=true
     fi
     source /opt/ai-dock/etc/environment.sh
-    source /opt/ai-dock/bin/venv-set.sh comfyui
+    source /opt/ai-dock/bin/venv-set.sh webui
 
+    DISK_GB_AVAILABLE=$(($(df --output=avail -m "${WORKSPACE}" | tail -n1) / 1000))
+    DISK_GB_USED=$(($(df --output=used -m "${WORKSPACE}" | tail -n1) / 1000))
+    DISK_GB_ALLOCATED=$(($DISK_GB_AVAILABLE + $DISK_GB_USED))
     provisioning_print_header
     provisioning_get_apt_packages
-    provisioning_get_nodes
     provisioning_get_pip_packages
+    provisioning_get_extensions
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/embeddings/negative" \
+        "${WORKSPACE}/storage/stable_diffusion/embeddings/negative" \
         "${EMBEDDINGS_NEGATIVE[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/embeddings/positive" \
+        "${WORKSPACE}/storage/stable_diffusion/embeddings/positive" \
         "${EMBEDDINGS_POSITIVE[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/unet" \
-        "${UNET_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/lora" \
         "${LORA_MODELS[@]}"
@@ -88,15 +93,25 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+     
+    PLATFORM_ARGS=""
+    if [[ $XPU_TARGET = "CPU" ]]; then
+        PLATFORM_ARGS="--use-cpu all --skip-torch-cuda-test --no-half"
+    fi
+    PROVISIONING_ARGS="--skip-python-version-check --no-download-sd-model --do-not-download-clip --port 11404 --exit"
+    ARGS_COMBINED="${PLATFORM_ARGS} $(cat /etc/forge_args.conf) ${PROVISIONING_ARGS}"
+
+    cd /opt/stable-diffusion-webui-forge
+        source "$FORGE_VENV/bin/activate"
+        LD_PRELOAD=libtcmalloc.so python launch.py \
+            ${ARGS_COMBINED}
+        deactivate
+
     provisioning_print_end
 }
 
 function pip_install() {
-    if [[ -z $MAMBA_BASE ]]; then
-            "$COMFYUI_VENV_PIP" install --no-cache-dir "$@"
-        else
-            micromamba run -n comfyui pip install --no-cache-dir "$@"
-        fi
+    "$FORGE_VENV_PIP" install --no-cache-dir "$@"
 }
 
 function provisioning_get_apt_packages() {
@@ -111,45 +126,35 @@ function provisioning_get_pip_packages() {
     fi
 }
 
-function provisioning_get_nodes() {
-    for repo in "${NODES[@]}"; do
+function provisioning_get_extensions() {
+    for repo in "${EXTENSIONS[@]}"; do
         dir="${repo##*/}"
-        path="/opt/ComfyUI/custom_nodes/${dir}"
-        requirements="${path}/requirements.txt"
+        path="/opt/stable-diffusion-webui-forge/extensions/${dir}"
         if [[ -d $path ]]; then
-            if [[ ${AUTO_UPDATE,,} != "false" ]]; then
-                printf "Updating node: %s...\n" "${repo}"
+
+            if [[ ${AUTO_UPDATE,,} == "true" ]]; then
+                printf "Updating extension: %s...\n" "${repo}"
                 ( cd "$path" && git pull )
-                if [[ -e $requirements ]]; then
-                   pip_install -r "$requirements"
-                fi
             fi
         else
-            printf "Downloading node: %s...\n" "${repo}"
+            printf "Downloading extension: %s...\n" "${repo}"
             git clone "${repo}" "${path}" --recursive
-            if [[ -e $requirements ]]; then
-                pip_install -r "${requirements}"
-            fi
         fi
     done
 }
 
-function provisioning_get_default_workflow() {
-    if [[ -n $DEFAULT_WORKFLOW ]]; then
-        workflow_json=$(curl -s "$DEFAULT_WORKFLOW")
-        if [[ -n $workflow_json ]]; then
-            echo "export const defaultGraph = $workflow_json;" > /opt/ComfyUI/web/scripts/defaultGraph.js
-        fi
-    fi
-}
-
 function provisioning_get_models() {
     if [[ -z $2 ]]; then return 1; fi
-    
     dir="$1"
     mkdir -p "$dir"
     shift
-    arr=("$@")
+    if [[ $DISK_GB_ALLOCATED -ge $DISK_GB_REQUIRED ]]; then
+        arr=("$@")
+    else
+        printf "WARNING: Low disk space allocation - Only the first model will be downloaded!\n"
+        arr=("$1")
+    fi
+    
     printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
     for url in "${arr[@]}"; do
         printf "Downloading: %s\n" "${url}"
@@ -167,36 +172,6 @@ function provisioning_print_header() {
 
 function provisioning_print_end() {
     printf "\nProvisioning complete:  Web UI will start now\n\n"
-}
-
-function provisioning_has_valid_hf_token() {
-    [[ -n "$HF_TOKEN" ]] || return 1
-    url="https://huggingface.co/api/whoami-v2"
-
-    response=$(curl -o /dev/null -s -w "%{http_code}" -X GET "$url" \
-        -H "Authorization: Bearer $HF_TOKEN" \
-        -H "Content-Type: application/json")
-
-    if [ "$response" -eq 200 ]; then
-        return 0
-    else
-        return 1
-    fi
-}
-
-function provisioning_has_valid_civitai_token() {
-    [[ -n "$CIVITAI_TOKEN" ]] || return 1
-    url="https://civitai.com/api/v1/models?hidden=1&limit=1"
-
-    response=$(curl -o /dev/null -s -w "%{http_code}" -X GET "$url" \
-        -H "Authorization: Bearer $CIVITAI_TOKEN" \
-        -H "Content-Type: application/json")
-
-    if [ "$response" -eq 200 ]; then
-        return 0
-    else
-        return 1
-    fi
 }
 
 function provisioning_download() {

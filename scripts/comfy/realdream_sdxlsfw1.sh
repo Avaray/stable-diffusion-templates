@@ -10,47 +10,43 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CHECKPOINT/autismmixSDXL_autismmixPony.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/CHECKPOINT/realDream_sdxlSFW1.safetensors'
 )
 
 UNET_MODELS=()
 
 LORA_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/MS_Milf_Style_V2_Pony.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/MS_Milf_Style_V3_Pony.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Thigh_Size_Slider_V2_alpha1.0_rank4_noxattn_last.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/EnvyPonyPrettyEyes01.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GLSHS_Style_V2_4.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GLSHS_Style_V3_N.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/retro-neon-style-pony.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Retro_60s_Decarlo_V1_PDXL.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/looking_at_viewer.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/weight_slider-sdxl.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/MS_Milf_Style_V2_Pony.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/LORA/age_slider-sdxl.safetensors'
 )
 
 VAE_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/VAE/sdxl_vae.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/VAE/sdxl_vae.safetensors'
 )
 
 ESRGAN_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/ESRGAN/4x-UltraSharp.pth'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/ESRGAN/2xHFA2kOmniSR.pth'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/ESRGAN/4x-UltraSharp.pth'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/ESRGAN/8x_NMKD-Superscale_150000_G.pth'
 )
 
 CONTROLNET_MODELS=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/CONTROLNET/xinsir_union.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/CONTROLNET/xinsir_union.safetensors'
 )
 
 EMBEDDINGS_POSITIVE=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/EMBEDDINGS/pos/zPDXL3.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/EMBEDDINGS/pos/zPDXLpg.pt'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/EMBEDDINGS/pos/zPDXLxxx.pt'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/EMBEDDINGS/pos/GlamorShots_PDXL.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/EMBEDDINGS/pos/SK_ANALOGFILM.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/EMBEDDINGS/pos/SK_CINEMATIC.safetensors'
 )
 
 EMBEDDINGS_NEGATIVE=(
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/EMBEDDINGS/neg/EZNegPONYXL-neg.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/EMBEDDINGS/neg/VDiffPDXL_Neg-neg.safetensors'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/EMBEDDINGS/neg/zPDXLpg-neg.pt'
-    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/EMBEDDINGS/neg/zPDXLxxx-neg.pt'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/EMBEDDINGS/neg/DeepNegative_xl_v1.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/EMBEDDINGS/neg/NDXL.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/EMBEDDINGS/neg/NEG-fixl-2.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/EMBEDDINGS/neg/ac_neg1.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/EMBEDDINGS/neg/ac_neg2.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-1-0-models-backup/resolve/main/EMBEDDINGS/neg/ziprealism_neg.safetensors'
 )
 
 function provisioning_start() {
