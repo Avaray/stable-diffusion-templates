@@ -1,8 +1,18 @@
 import { readFile, saveFile } from "./utils.ts";
+import process from "node:process";
+import { ratings, readFile, saveFile } from "./utils.ts";
 import { services } from "./data/services.ts";
 import { uis } from "./data/uis.ts";
+import { type UI, uis } from "./data/uis.ts";
 import { type Checkpoint, checkpoints } from "./data/checkpoints.ts";
 import t from "./data/templates.json" with { type: "json" };
+import templatesData from "./data/templates.json" with { type: "json" };
+
+// Check if templatesData contains at least one key
+if (!Object.keys(templatesData).length) {
+  console.error("No templates found");
+  process.exit(1);
+}
 
 export interface Template {
   // checkpoint ID
@@ -18,7 +28,7 @@ export interface Template {
   };
 }
 
-const templates = t as Template;
+const templates = templatesData as Template;
 
 let readme = await readFile("src/README.md");
 
@@ -28,8 +38,8 @@ const link = (service: string, templateId: string, uiId: string) => {
   return `<a href="${url}${templateId}">${_ui?.name}</a>`;
 };
 
-const sdxlTemplates = checkpoints.filter((ckpt) => ckpt.base === "sdxl").map((ckpt) => ckpt.id);
-const pdxlTemplates = checkpoints.filter((ckpt) => ckpt.base === "pdxl").map((ckpt) => ckpt.id);
+// const sdxlTemplates = checkpoints.filter((ckpt) => ckpt.base === "sdxl").map((ckpt) => ckpt.id);
+// const pdxlTemplates = checkpoints.filter((ckpt) => ckpt.base === "pdxl").map((ckpt) => ckpt.id);
 
 console.log(sdxlTemplates);
 console.log(pdxlTemplates);
