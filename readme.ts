@@ -38,16 +38,6 @@ const link = (service: string, templateId: string, uiId: string) => {
 // const sdxlTemplates = checkpoints.filter((ckpt) => ckpt.base === "sdxl").map((ckpt) => ckpt.id);
 // const pdxlTemplates = checkpoints.filter((ckpt) => ckpt.base === "pdxl").map((ckpt) => ckpt.id);
 
-console.log(sdxlTemplates);
-console.log(pdxlTemplates);
-
-const tableRow = (ckpt: Checkpoint) => {
-  const template = templates[ckpt.id!];
-  return `| <a href="${ckpt.homepage}">${ckpt.name}</a> | v${ckpt.version} | ${link("vastai", template.vastai.forge, "forge")} | ${
-    link("vastai", template.vastai.comfy, "comfy")
-  } |`;
-};
-
 readme = readme.replace(
   /^.+{{sdxlStarters}}.*$/gm,
   `${
