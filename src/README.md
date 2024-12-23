@@ -7,17 +7,17 @@ Stable Diffusion UIs and Checkpoints. You can start generating graphics in minut
 
 Templates with checkpoints based on [Stable Diffusion XL](https://en.wikipedia.org/wiki/Stable_Diffusion).
 
-| Checkpoint<br>Name | Checkpoint<br>Version |     |     |     |     |
-| :----------------: | :-------------------: | :-: | :-: | :-: | :-: |
-|  {{sdxlStarters}}  |                       |     |     |     |     |
+| Checkpoint<br>Name | Checkpoint<br>Version |     |     |
+| :----------------: | :-------------------: | :-: | :-: |
+|  {{sdxlStarters}}  |                       |     |     |
 
 # 🦄 PDXL
 
 Templates with checkpoints based on Pony Diffusion XL.
 
-| Checkpoint<br>Name | Checkpoint<br>Version |     |     |     |     |
-| :----------------: | :-------------------: | :-: | :-: | :-: | :-: |
-|  {{pdxlStarters}}  |                       |     |     |     |     |
+| Checkpoint<br>Name | Checkpoint<br>Version |     |     |
+| :----------------: | :-------------------: | :-: | :-: |
+|  {{pdxlStarters}}  |                       |     |     |
 
 # 🙊 What is [Vast.ai](https://cloud.vast.ai/create/?ref_id=62878) ?
 
