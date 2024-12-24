@@ -4,19 +4,34 @@ export interface Service {
 
 export const services: Service = {
   vastai: {
-    name: 'Vast.ai',
-    ref: '62878',
+    name: "Vast.ai",
+    ref: "62878",
     get url() {
       return `https://cloud.vast.ai/create/?ref_id=${this.ref}&template_id=`;
     },
-    logo: 'images/vastai.svg',
+    logo: "images/vastai.svg",
   },
   runpodio: {
-    name: 'Runpod.io',
-    ref: 'gzvzzzv9',
+    name: "Runpod.io",
+    ref: "gzvzzzv9",
     get url() {
       return `https://runpod.io/console/deploy?ref=${this.ref}&template=`;
     },
-    logo: 'images/runpodio.svg',
+    logo: "images/runpodio.svg",
   },
+};
+
+//
+export const vastai = {
+  createTemplate: () => {},
+  deleteTemplate: () => {},
+  updateTemplate: () => {},
+  getTemplate: (id?: string, hash?: string) => {},
+};
+
+export const runpodio = {
+  createTemplate: () => {},
+  deleteTemplate: () => {},
+  updateTemplate: () => {},
+  getTemplate: (id?: string, hash?: string) => {},
 };
