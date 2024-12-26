@@ -4,6 +4,7 @@ export interface Lora {
   homepage: string;
   base: string[];
   triggerwords: string[];
+  comment: string;
 }
 
 export const loras = [
@@ -13,6 +14,7 @@ export const loras = [
     homepage: "https://civitai.com/models/229962/looking-at-viewer-sliders-ntcaixyz",
     base: ["sdxl"],
     triggerwords: ["looking at viewer"],
+    comment: "",
   },
   {
     name: "Weight Slider",
@@ -20,6 +22,7 @@ export const loras = [
     homepage: "https://civitai.com/models/443279?modelVersionId=493678",
     base: ["sdxl"],
     triggerwords: ["weight"],
+    comment: "",
   },
   {
     name: "Milf Style",
@@ -27,6 +30,7 @@ export const loras = [
     homepage: "https://civitai.com/models/681666/milf-style-for-pony",
     base: ["sdxl", "pdxl"],
     triggerWords: ["milf"],
+    comment: "",
   },
   {
     name: "Milf Style",
@@ -34,6 +38,7 @@ export const loras = [
     homepage: "https://civitai.com/models/681666?modelVersionId=999073",
     base: ["pdxl"],
     triggerWords: ["milf"],
+    comment: "",
   },
   {
     name: "Age Slider",
@@ -41,6 +46,16 @@ export const loras = [
     homepage: "https://civitai.com/models/443279?modelVersionId=493670",
     base: ["sdxl"],
     triggerWords: [],
+    comment: "",
+  },
+  {
+    name: "Maybe Better Pose",
+    filename: "hinaMaybeBetterPoseXL_v5-NoobAI.safetensors",
+    homepage: "",
+    // Might work with PDXL too. But not tested yet
+    base: ["sdxl"],
+    triggerWords: [],
+    comment: "",
   },
   {
     name: "Tight Slider",
@@ -48,6 +63,7 @@ export const loras = [
     homepage: "https://civitai.com/models/481421?modelVersionId=625365",
     base: ["pdxl"],
     triggerwords: [],
+    comment: "",
   },
   {
     name: "Envy Pony Pretty Eyes",
@@ -55,6 +71,7 @@ export const loras = [
     homepage: "https://civitai.com/models/393101/envy-pony-pretty-eyes-01-pretty-anime-eyes",
     base: ["pdxl"],
     triggerwords: [],
+    comment: "",
   },
   {
     name: "GLSHS Style v2.4",
@@ -62,6 +79,7 @@ export const loras = [
     homepage: "https://civitai.com/models/550871?modelVersionId=669776",
     base: ["pdxl"],
     triggerwords: ["GLSHS", "partially illuminated"],
+    comment: "",
   },
   {
     name: "GLSHS Style v3N",
@@ -69,6 +87,7 @@ export const loras = [
     homepage: "https://civitai.com/models/550871?modelVersionId=950053",
     base: ["pdxl"],
     triggerwords: ["GLSHS"],
+    comment: "",
   },
   {
     name: "Retro Neon Style",
@@ -76,6 +95,7 @@ export const loras = [
     homepage: "https://civitai.com/models/569937?modelVersionId=635256",
     base: ["pdxl"],
     triggerwords: ["retro_neon"],
+    comment: "",
   },
   {
     name: "Retro 60s Style (Dan Decarlo)",
@@ -83,5 +103,6 @@ export const loras = [
     homepage: "https://civitai.com/models/553267?modelVersionId=615701",
     base: ["pdxl"],
     triggerwords: ["decarloxl", "retro colors", "60s"],
+    comment: "",
   },
 ];
