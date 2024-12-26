@@ -51,7 +51,7 @@ export const loras = [
   {
     name: "Maybe Better Pose",
     filename: "hinaMaybeBetterPoseXL_v5-NoobAI.safetensors",
-    homepage: "",
+    homepage: "https://civitai.com/models/339001?modelVersionId=1110783",
     // Might work with PDXL too. But not tested yet
     base: ["sdxl"],
     triggerWords: [],
