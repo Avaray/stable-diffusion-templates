@@ -213,6 +213,15 @@ export const ckpts: Checkpoint[] = [
     comment: "",
   },
   {
+    name: "The Araminta Experiment",
+    filename: "theAramintaExperiment_gv2.safetensors",
+    homepage: "https://civitai.com/models/463163?modelVersionId=1192070",
+    base: "sdxl",
+    version: "Gv2",
+    rating: "",
+    comment: "",
+  },
+  {
     name: "GODDESS of Realism",
     filename: "goddessOfRealism_gorPONYV10.safetensors",
     homepage: "https://civitai.com/models/212737?modelVersionId=573082",
