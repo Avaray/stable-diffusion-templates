@@ -57,6 +57,14 @@ export const loras = [
     comment: "",
   },
   {
+    name: "Cleavage Slider",
+    filename: "Cleavage_Slider_alpha1.0_rank4_noxattn_last.safetensors",
+    homepage: "https://civitai.com/models/487321?modelVersionId=541905",
+    base: ["pdxl"],
+    triggerwords: [],
+    comment: "",
+  },
+  {
     name: "Tight Slider",
     filename: "Thigh_Size_Slider_V2_alpha1.0_rank4_noxattn_last.safetensors",
     homepage: "https://civitai.com/models/481421?modelVersionId=625365",
