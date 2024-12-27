@@ -7,8 +7,6 @@ Plus they have some nice Lora's and useful Extensions preinstalled.
 
 ### Start generating graphics in minutes with just few clicks 😎
 
-## WARNING! CURRENTLY TEMPLATES DOES NOT LOAD PROPERLY ON VAST.AI! WE ARE WAITING FOR FIX.
-
 # 🦓 SDXL
 
 Templates with checkpoints based on [Stable Diffusion XL](https://en.wikipedia.org/wiki/Stable_Diffusion).
