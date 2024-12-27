@@ -1,3 +1,5 @@
+import process from "node:process";
+
 export interface Service {
   [key: string]: { name: string; ref: string; url: string; logo: string };
 }
@@ -23,15 +25,17 @@ export const services: Service = {
 
 //
 export const vastai = {
+  key: process.env.VASTAI_KEY,
   createTemplate: () => {},
   deleteTemplate: () => {},
   updateTemplate: () => {},
-  getTemplate: (id?: string, hash?: string) => {},
+  getTemplate: (id: string) => {},
 };
 
 export const runpodio = {
+  key: process.env.RUNPOD_KEY,
   createTemplate: () => {},
   deleteTemplate: () => {},
   updateTemplate: () => {},
-  getTemplate: (id?: string, hash?: string) => {},
+  getTemplate: (id: string) => {},
 };
