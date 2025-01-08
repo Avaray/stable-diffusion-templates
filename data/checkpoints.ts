@@ -218,7 +218,7 @@ export const ckpts: Checkpoint[] = [
     homepage: "https://civitai.com/models/463163?modelVersionId=1192070",
     base: "sdxl",
     version: "Gv2",
-    rating: "",
+    rating: "a",
     comment: "",
   },
   {
