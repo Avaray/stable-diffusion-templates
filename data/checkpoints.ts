@@ -320,6 +320,15 @@ export const ckpts: Checkpoint[] = [
     rating: "",
     comment: "",
   },
+  {
+    name: "Realism By Stable Yogi",
+    filename: "realismByStableYogi_ponyV3VAE.safetensors",
+    homepage: "https://civitai.com/models/166609/realismbystableyogi?modelVersionId=992946",
+    base: "pdxl",
+    version: "3",
+    rating: "",
+    comment: "",
+  }
 ];
 
 export const checkpoints = ckpts.map((ckpt) => ({
