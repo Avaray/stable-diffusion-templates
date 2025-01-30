@@ -231,6 +231,15 @@ export const ckpts: Checkpoint[] = [
     comment: "",
   },
   {
+    name: "Animagine",
+    filename: "animagine-xl-4.0.safetensors",
+    homepage: "https://huggingface.co/cagliostrolab/animagine-xl-4.0",
+    base: "sdxl",
+    version: "4",
+    rating: "",
+    comment: "",
+  },
+  {
     name: "GODDESS of Realism",
     filename: "goddessOfRealism_gorPONYV10.safetensors",
     homepage: "https://civitai.com/models/212737?modelVersionId=573082",
@@ -328,7 +337,7 @@ export const ckpts: Checkpoint[] = [
     version: "3",
     rating: "",
     comment: "",
-  }
+  },
 ];
 
 export const checkpoints = ckpts.map((ckpt) => ({
