@@ -321,6 +321,15 @@ export const ckpts: Checkpoint[] = [
     comment: "",
   },
   {
+    name: "Cyber Realistic Pony",
+    filename: "cyberrealisticPony_v8.safetensors",
+    homepage: "https://civitai.com/models/443821?modelVersionId=1346181",
+    base: "pdxl",
+    version: "8",
+    rating: "",
+    comment: "",
+  },
+  {
     name: "Pony Realism",
     filename: "ponyRealism_V22MainVAE.safetensors",
     homepage: "https://civitai.com/models/372465?modelVersionId=914390",
