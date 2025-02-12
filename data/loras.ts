@@ -25,7 +25,7 @@ export const loras = [
     comment: "",
   },
   {
-    name: "Milf Style",
+    name: "Milf Style V2",
     filename: "MS_Milf_Style_V2_Pony.safetensors",
     homepage: "https://civitai.com/models/681666/milf-style-for-pony",
     base: ["sdxl", "pdxl"],
@@ -33,7 +33,7 @@ export const loras = [
     comment: "",
   },
   {
-    name: "Milf Style",
+    name: "Milf Style V3",
     filename: "MS_Milf_Style_V3_Pony.safetensors",
     homepage: "https://civitai.com/models/681666?modelVersionId=999073",
     base: ["pdxl"],
@@ -110,6 +110,30 @@ export const loras = [
     homepage: "https://civitai.com/models/553267?modelVersionId=615701",
     base: ["pdxl"],
     triggerwords: ["decarloxl", "retro colors", "60s"],
+    comment: "",
+  },
+  {
+    name: "Flat Colour Anime",
+    filename: "flat_colour_anime_style_v2.1_pony.safetensors",
+    homepage: "https://civitai.com/models/180891?modelVersionId=848421",
+    base: ["pdxl"],
+    triggerwords: ["fca_style"],
+    comment: "",
+  },
+  {
+    name: "Mangamaster [Artist Style]",
+    filename: "Mangamaster_Artist_Style.safetensors",
+    homepage: "https://civitai.com/models/725922?modelVersionId=811736",
+    base: ["pdxl"],
+    triggerwords: ["Manmast"],
+    comment: "",
+  },
+  {
+    name: "Mangamaster V2 [Artist Style]",
+    filename: "Mangamaster_Artist_Style_v2.safetensors",
+    homepage: "https://civitai.com/models/725922?modelVersionId=1111421",
+    base: ["pdxl"],
+    triggerwords: ["mangamaster"],
     comment: "",
   },
 ];

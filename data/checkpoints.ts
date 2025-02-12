@@ -96,6 +96,15 @@ export const ckpts: Checkpoint[] = [
   },
   {
     name: "epiCRealism",
+    filename: "epicrealismXL_vxivEyecandyRealism.safetensors",
+    homepage: "https://civitai.com/models/277058?modelVersionId=1405120",
+    base: "sdxl",
+    version: "11",
+    rating: "",
+    comment: "",
+  }
+  {
+    name: "epiCRealism",
     filename: "epicrealismXL_vxiAbeast.safetensors",
     homepage: "https://civitai.com/models/277058?modelVersionId=1156226",
     base: "sdxl",
