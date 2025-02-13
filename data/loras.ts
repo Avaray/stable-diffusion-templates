@@ -25,8 +25,8 @@ export const loras = [
     comment: "",
   },
   {
-    "name": "Maybe Better Pose Lora XL",
-    "hinaMaybeBetterPoseXL_v5-NoobAI.safetensors",
+    name: "Maybe Better Pose Lora XL",
+    filename: "hinaMaybeBetterPoseXL_v5-NoobAI.safetensors",
     homepage: "https://civitai.com/models/339001?modelVersionId=1110783",
     base: ["sdxl"],
     triggerwords: [],
