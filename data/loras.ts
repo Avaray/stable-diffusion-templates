@@ -25,6 +25,14 @@ export const loras = [
     comment: "",
   },
   {
+    "name": "Maybe Better Pose Lora XL",
+    "hinaMaybeBetterPoseXL_v5-NoobAI.safetensors",
+    homepage: "https://civitai.com/models/339001?modelVersionId=1110783",
+    base: ["sdxl"],
+    triggerwords: [],
+    comment: "Gives some randomness to the poses",
+  }
+  {
     name: "Milf Style V2",
     filename: "MS_Milf_Style_V2_Pony.safetensors",
     homepage: "https://civitai.com/models/681666/milf-style-for-pony",
