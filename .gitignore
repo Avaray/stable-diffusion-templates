@@ -179,5 +179,6 @@ images/*.ai
 IDEA*
 TODO*
 vast*
+runpod*
 gpu*
 scripts/
