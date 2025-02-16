@@ -1,0 +1,26 @@
+[
+  {
+    "name": "LUSTIFY! [SDXL NSFW & SFW checkpoint]",
+    "homepage": "https://civitai.com/models/573152?modelVersionId=638929",
+    "version": "1",
+    "comment": "Unstable. Trained on bad quality data. Generates blurry and low-quality faces sometimes. Generates long bodies above 1024px"
+  },
+  {
+    "name": "NatViS: Natural Vision",
+    "homepage": "https://civitai.com/models/617652?modelVersionId=690475",
+    "version": "1",
+    "comment": "Creates deformed bodies. Does not work well above 1024px."
+  },
+  {
+    "name": "TAME",
+    "homepage": "https://civitai.com/models/722045/tame-pony-the-authenticity-machine?modelVersionId=807386",
+    "version": "1",
+    "comment": "Terrible results. Bad quality. Not recommended."
+  },
+  {
+    "name": "fennfoto",
+    "homepage": "https://civitai.com/models/503537?modelVersionId=702110",
+    "version": "4",
+    "comment": "Produces terrible faces. Ugly, to be honest."
+  }
+]
