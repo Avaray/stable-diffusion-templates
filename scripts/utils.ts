@@ -6,6 +6,7 @@ const templateReadme = Deno.readTextFileSync("src/TEMPLATE.md");
 export const getNormalizedUrl = (url: string) => {
   try {
     const normalizedUrl = new URL(url);
+    normalizedUrl.pathname = normalizedUrl.pathname.replace(/\/\/+/g, "/");
     return normalizedUrl.href;
   } catch (_error) {
     console.error(`Error normalizing URL: ${url}`);
