@@ -1,4 +1,9 @@
 {
+  "tasks": {
+    "dev": {
+      "run": "deno run --allow-net --allow-read --allow-write --watch scripts/index.ts"
+    }
+  },
   "fmt": {
     "options": {
       "lineWidth": 120
