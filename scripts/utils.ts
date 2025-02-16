@@ -39,8 +39,9 @@ export function normalizeFilename(filename: string) {
 }
 
 export async function getBranchName() {
-  const branchName = await executeCommand("git", ["branch", "--show-current"]);
-  return branchName.output;
+  const command = new Deno.Command("git", { args: ["branch", "--show-current"] });
+  const { stdout } = await command.output();
+  return new TextDecoder().decode(stdout).trim();
 }
 
 export function pvsUrl(ui: any, branch: string, filename: string) {
