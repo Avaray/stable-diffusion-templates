@@ -12,20 +12,20 @@ export const upscalers: Upscaler[] = [
     filename: "4x-UltraSharp.pth",
     homepage: "",
     base: ["sdxl", "pdxl"],
-    comment: "",
+    comment: "For illustrations, manga, and anime",
   },
   {
     name: "8x NMKD Superscale 150000 G",
     filename: "8x_NMKD-Superscale_150000_G.pth",
     homepage: "",
     base: ["sdxl"],
-    comment: "",
+    comment: "Good for realistic photography",
   },
   {
     name: "2xHFA2kOmniSR",
     filename: "2xHFA2kOmniSR.pth",
     homepage: "https://huggingface.co/Phips/2xHFA2kOmniSR",
     base: ["pdxl"],
-    comment: "",
+    comment: "For illustrations, manga, and anime",
   },
 ];
