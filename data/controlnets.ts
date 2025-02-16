@@ -7,9 +7,9 @@ export interface Controlnet {
 
 export const controlnets = [
   {
-    name: 'Union',
-    filename: 'xinsir_union.safetensors',
-    homepage: 'https://huggingface.co/xinsir/controlnet-union-sdxl-1.0',
-    base: ['sdxl', 'pdxl'],
+    name: "Union",
+    filename: "xinsir_union.safetensors",
+    homepage: "https://huggingface.co/xinsir/controlnet-union-sdxl-1.0",
+    base: ["sdxl", "pdxl"],
   },
 ];
