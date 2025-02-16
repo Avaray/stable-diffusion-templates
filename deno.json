@@ -1,8 +1,6 @@
 {
   "tasks": {
-    "dev": {
-      "run": "deno run --allow-net --allow-read --allow-write --watch scripts/index.ts"
-    }
+    "dev": "deno run --allow-net --allow-read --allow-write --allow-run --watch scripts/index.ts"
   },
   "fmt": {
     "options": {
