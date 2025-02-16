@@ -1,3 +1,9 @@
+// I created this file spontaneously and I think it does not work properly
+// I will work on it at the last stage of the project
+// The idea is to get the list of files in the huggingface datasets
+// It will be used in script generation time to make sure that remote files exist
+// That's because I don't want to create scripts with broken links
+
 const filesList = async (url: string) => {
   try {
     const response = await fetch(url);
@@ -32,9 +38,11 @@ const data: Dataset = {
   },
 };
 
-export default function getFilesList() {
+export function getFilesList() {
+  console.log("Fetching files lists from Huggingface");
   Object.keys(data).forEach(async (key) => {
     const list = await filesList(data[key].datasetUrl);
+    console.log(`Fetched ${list.length} files for ${key}`);
     data[key].files = list;
   });
 }
