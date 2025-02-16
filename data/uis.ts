@@ -4,7 +4,7 @@ export interface UI {
   image: string;
   repository: string;
   pvs: string;
-  pvsUrl: string;
+  pvsUrl?: string;
   supports: string[];
   flags?: string;
   diskSpace?: number;
@@ -52,15 +52,16 @@ const userInterfaces: UI[] = [
   },
 ];
 
-async function fetchPvsData(url: string): Promise<string> {
+async function fetchPvsData(url: string, id: string): Promise<string> {
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
     }
+    console.log(`Successfully fetched provisioning script for ${id}`);
     return await response.text();
   } catch (error) {
-    console.error(error);
+    console.error(`Error fetching provisioning script for ${id}:`, error);
     return "";
   }
 }
@@ -68,8 +69,12 @@ async function fetchPvsData(url: string): Promise<string> {
 async function getUisWithPvs(): Promise<UI[]> {
   const uisWithPvs = await Promise.all(
     userInterfaces.map(async (ui) => {
-      const pvs = await fetchPvsData(ui.pvsUrl);
-      return { ...ui, pvs };
+      if (ui.pvsUrl) {
+        const pvs = await fetchPvsData(ui.pvsUrl, ui.id);
+        return { ...ui, pvs };
+      } else {
+        return ui;
+      }
     }),
   );
   return uisWithPvs;
