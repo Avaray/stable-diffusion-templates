@@ -1,7 +1,11 @@
 import { repoName, repoOwner } from "./constants.ts";
 import process from "node:process";
 
-export const runtime: "bun" | "deno" | undefined = typeof Bun !== "undefined" ? "bun" : typeof Deno !== "undefined" ? "deno" : undefined;
+export const runtime: "bun" | "deno" | undefined = typeof Bun !== "undefined"
+  ? "bun"
+  : typeof Deno !== "undefined"
+  ? "deno"
+  : undefined;
 
 export async function saveFile(path: string, content: string) {
   switch (runtime) {
