@@ -51,8 +51,7 @@ scripts I'm replacing all models, adding function to download Embeddings and rem
   [Xinsir's Union](https://huggingface.co/xinsir/controlnet-union-sdxl-1.0).
 - Each script has some useful [Lora's](https://wiki.civitai.com/wiki/Low-Rank_Adaptation) and
   [Embeddings](https://wiki.civitai.com/wiki/Embedding) that will work with that checkpoint.
-- UI's based on [AUTO1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui), like
-  [ForgeUI](https://github.com/lllyasviel/stable-diffusion-webui-forge), might have some useful Extensions like
+- [ForgeUI](https://github.com/lllyasviel/stable-diffusion-webui-forge) might have some useful Extensions like
   [ADetailer](https://github.com/Bing-su/adetailer).
 
 To see what is included in each script, you can check sripts in
