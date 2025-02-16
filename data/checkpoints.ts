@@ -102,7 +102,7 @@ export const ckpts: Checkpoint[] = [
     version: "11",
     rating: "",
     comment: "",
-  }
+  },
   {
     name: "epiCRealism",
     filename: "epicrealismXL_vxiAbeast.safetensors",

@@ -31,7 +31,7 @@ export const loras = [
     base: ["sdxl"],
     triggerwords: [],
     comment: "Gives some randomness to the poses",
-  }
+  },
   {
     name: "Milf Style V2",
     filename: "MS_Milf_Style_V2_Pony.safetensors",
