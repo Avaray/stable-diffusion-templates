@@ -4,25 +4,12 @@ import { services } from "./data/services.ts";
 import { type UI, uis } from "./data/uis.ts";
 import { type Checkpoint, checkpoints } from "./data/checkpoints.ts";
 import templatesData from "./data/templates.json" with { type: "json" };
+import type { Template } from "./index.ts";
 
 // Check if templatesData contains at least one key
 if (!Object.keys(templatesData).length) {
   console.error("No templates found");
   process.exit(1);
-}
-
-export interface Template {
-  // checkpoint ID
-  [key: typeof checkpoints[number]["id"]]: {
-    // service ID
-    [key: keyof typeof services]: {
-      // UI ID
-      [key: typeof uis[number]["id"]]: {
-        id: string;
-        hash: string;
-      };
-    };
-  };
 }
 
 const templates = templatesData as Template;
@@ -38,24 +25,39 @@ const link = (service: string, templateId: string, uiId: string) => {
 // const sdxlTemplates = checkpoints.filter((ckpt) => ckpt.base === "sdxl").map((ckpt) => ckpt.id);
 // const pdxlTemplates = checkpoints.filter((ckpt) => ckpt.base === "pdxl").map((ckpt) => ckpt.id);
 
+const table = (templates: Template) => {
+  return `| Rating | Checkpoint<br>Name | Version | ${uis.map((x) => "").join(" | ")} |
+          | :-: | :-: | :-: | ${uis.map(() => ":-:").join(" | ")} |
+          ${
+    checkpoints
+      .map((ckpt) => {
+        return `| ${ckpt.rating ? ratings[ckpt.rating][0] : ""} | ${ckpt.name} | ${ckpt.version} | ${
+          uis
+            .map((ui) => {
+              const hash = templates[ckpt.id]["vastai"][ui.id].hash;
+              console.log(hash);
+              return link("vastai", hash, ui.id);
+            })
+            .join(" | ")
+        } |`;
+      })
+      .join("\n")
+  }`.replace(/^\s+/gm, "");
+};
+
 readme = readme.replace(
-  /^.+{{sdxlStarters}}.*$/gm,
+  /^.*{{sdxlTemplates}}.*$/gm,
   `${
     checkpoints
-      .filter((x) => x.base === "sdxl")
-      .map((x) => tableRow(x))
-      .join("\n")
+      .filter((ckpt) => ckpt.base === "sdxl")
+      .map((ckpt) => templates[ckpt.id])
+      .map(() => table(templates))
+      .join("\n\n")
   }`,
 );
 
-readme = readme.replace(
-  /^.+{{pdxlStarters}}.*$/gm,
-  `${
-    checkpoints
-      .filter((x) => x.base === "pdxl")
-      .map((x) => tableRow(x))
-      .join("\n")
-  }`,
-);
+// console.log(readme);
+
+// process.exit(0);
 
 await saveFile("README.md", readme);
