@@ -176,10 +176,7 @@ dist
 
 # Unwanted
 gpu*
-IDEA*
 images/*.ai
 output/
-runpod*
 TEST/
 TODO*
-vast*
