@@ -1,4 +1,4 @@
-import { normalizeFilename } from "../utils.ts";
+import { normalizeFilename } from "../scripts/utils.ts";
 
 export interface Checkpoint {
   id?: string;
