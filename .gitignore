@@ -175,12 +175,11 @@ dist
 .DS_Store
 
 # Unwanted
-images/*.ai
+gpu*
 IDEA*
+images/*.ai
+output/
+runpod*
+TEST/
 TODO*
 vast*
-runpod*
-gpu*
-scripts/
-TEST/
-output/
