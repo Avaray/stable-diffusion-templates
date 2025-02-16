@@ -1,4 +1,4 @@
-import { executeCommand, saveFile } from "./utils";
+import { executeCommand, saveFile } from "./utils.ts";
 
 import templates from "./data/templates.json" with { type: "json" };
 
