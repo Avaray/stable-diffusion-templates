@@ -56,8 +56,6 @@ readme = readme.replace(
   }`,
 );
 
-// console.log(readme);
-
 // process.exit(0);
 
 await saveFile("README.md", readme);
