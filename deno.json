@@ -3,5 +3,7 @@
     "options": {
       "lineWidth": 120
     }
-  }
+  },
+  "lint": {},
+  "exclude": ["TEST"]
 }
