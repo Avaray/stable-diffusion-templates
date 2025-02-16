@@ -3,14 +3,6 @@ import process from "node:process";
 
 const templateReadme = Deno.readTextFileSync("src/TEMPLATE.md");
 
-export const ratings: { [key: string]: [string, string] } = {
-  u: ["⏳", "Needs more testing."],
-  a: ["🔥", "It's fire!"],
-  b: ["👍", "It's OK."],
-  c: ["👎", "It's bad. Will be deleted probably."],
-  d: ["💩", "It's crap"],
-};
-
 export const getNormalizedUrl = (url: string) => {
   try {
     const normalizedUrl = new URL(url);
