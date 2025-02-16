@@ -21,13 +21,27 @@ import { vaes } from "./data/vaes.ts";
 import { controlnets } from "./data/controlnets.ts";
 import { upscalers } from "./data/upscalers.ts";
 import { extensions } from "./data/extensions.ts";
+import { services } from "./data/services.ts";
 
 import t from "./data/templates.json" with { type: "json" };
 
-let templates = t as any;
+export interface Template {
+  // checkpoint ID
+  [key: typeof checkpoints[number]["id"]]: {
+    // service ID
+    [key: keyof typeof services]: {
+      // UI ID
+      [key: typeof uis[number]["id"]]: string;
+    };
+  };
+}
 
+let templates = t as Template;
+
+// Clean up old scripts
 await rm("scripts", { recursive: true, force: true });
 
+// Remove double slashes in URLs
 const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, "/");
 
 console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
@@ -87,13 +101,12 @@ for (const ui of uis) {
   for (const checkpoint of checkpoints as Checkpoint[]) {
     let pvs = ui.pvs;
 
-    // Find all extensions where base is checkpoint base
+    // Find all extensions for the checkpoint
     const extensionUrls = extensions
       .filter((extension) => extension.base.includes(checkpoint.base))
       .map((extension) => extension.url);
 
     // Replace EXTENSIONS list
-    // TODO: Need to change logic here, look at extensions list, it contains uis array
     pvs = pvs.replace(
       /EXTENSIONS=\(.*?\)/gms,
       `EXTENSIONS=(\n${extensionUrls.map((x) => `    '${x}'`).join("\n")}\n)`,
@@ -109,7 +122,7 @@ for (const ui of uis) {
       }'\n)`,
     );
 
-    // Find all VAE models where base is checkpoint base
+    // Find all VAE models for the checkpoint
     const vaeModels = vaes
       .filter((vae) => vae.base.includes(checkpoint.base))
       .map((vae) => vae.filename);
@@ -171,7 +184,7 @@ for (const ui of uis) {
       )
       .map((embedding) => embedding.filename);
 
-    if (ui.id === "forge" || ui.id === "comfy") {
+    if (["forge", "comfy"].includes(ui.id)) {
       pvs = pvs.replace(
         /^function provisioning_start/m,
         `EMBEDDINGS_POSITIVE=(\n${
@@ -186,7 +199,7 @@ for (const ui of uis) {
       );
     }
 
-    if (ui.id === "comfy" || ui.id === "forge") {
+    if (["comfy", "forge"].includes(ui.id)) {
       pvs = pvs.replace(
         /provisioning_get_models \\/m,
         `provisioning_get_models \\\n        "\${WORKSPACE}/storage/stable_diffusion/${
@@ -226,7 +239,7 @@ for (const ui of uis) {
       if (!templates[checkpoint.id!].vastai) {
         templates[checkpoint.id!].vastai = {};
       }
-      templates[checkpoint.id!].vastai[ui.id] = templateVastai;
+      templates[checkpoint.id!].vastai.id = templateVastai;
     } else {
       console.error(
         `Error creating template for ${ui.name}UI with ${checkpoint.name}`,
