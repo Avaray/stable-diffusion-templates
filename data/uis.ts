@@ -12,7 +12,7 @@ export interface UI {
 
 const defaultPvsUrl = (repository: string) => {
   const repo = repository.split("/").slice(-2).join("/");
-  return `https://raw.githubusercontent.com/${repo}/refs/heads/main/config/provisioning/default.sh`;
+  return `https://raw.githubusercontent.com/${repo}/refs/heads/main/derivatives/pytorch/derivatives/comfyui/provisioning_scripts/default.sh`;
 };
 
 const universalEnv =
@@ -22,30 +22,31 @@ const userInterfaces: UI[] = [
   {
     id: "forge",
     name: "Forge",
-    image: "ghcr.io/ai-dock/stable-diffusion-webui-forge",
-    repository: "https://github.com/ai-dock/stable-diffusion-webui-forge",
+    image: "vastai/sd-forge",
+    repository: "https://github.com/vast-ai/base-image",
     pvs: "",
     supports: ["sdxl", "pdxl"],
     flags: "",
     diskSpace: 40,
     env: `${universalEnv} -p 7860:7860`,
   },
-  {
-    id: "comfy",
-    name: "Comfy",
-    image: "ghcr.io/ai-dock/comfyui",
-    repository: "https://github.com/ai-dock/comfyui",
-    pvs: "",
-    supports: ["sdxl", "pdxl"],
-    flags: "",
-    diskSpace: 40,
-    env: `${universalEnv} -p 8188:8188`,
-  },
   // {
+  //   id: "comfy",
+  //   name: "Comfy",
+  //   image: "vastai/comfy",
+  //   repository: "https://github.com/vast-ai/base-image",
+  //   pvs: "",
+  //   supports: ["sdxl", "pdxl"],
+  //   flags: "",
+  //   diskSpace: 40,
+  //   env: `${universalEnv} -p 8188:8188`,
+  // },
+  // {
+  // THERE IS NO IMAGE FOR INVOKEAI AT THE MOMENT!
   //   id: "invoke",
   //   name: "Invoke",
   //   image: "ghcr.io/ai-dock/invokeai",
-  //   repository: "https://github.com/ai-dock/invokeai",
+  //   repository: "https://github.com/vast-ai/base-image",
   //   pvs: "",
   //   supports: ["sdxl", "pdxl"],
   //   flags: "",
@@ -55,13 +56,14 @@ const userInterfaces: UI[] = [
   // {
   //   id: "fooocus",
   //   name: "Fooocus",
-  //   image: "ghcr.io/ai-dock/fooocus",
-  //   repository: "https://github.com/ai-dock/fooocus",
+  //   image: "vastai/fooocus",
+  //   repository: "https://github.com/vast-ai/base-image",
   //   pvs: "",
   //   supports: ["sdxl", "pdxl"],
   //   flags: "",
   //   diskSpace: 40,
-  //   env: `${universalEnv} -e FOOOCUS_ARGS="--disable-preset-download --disable-analytics" -e FOOOCUS_PORT_HOST=7865 -p 7865:7865`,
+  //   env:
+  //     `${universalEnv} -e FOOOCUS_ARGS="--disable-preset-download --disable-analytics" -e FOOOCUS_PORT_HOST=7865 -p 7865:7865`,
   // },
 ];
 
