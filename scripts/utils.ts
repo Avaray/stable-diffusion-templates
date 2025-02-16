@@ -1,8 +1,6 @@
 import { repoName, repoOwner } from "../scripts/constants.ts";
 import process from "node:process";
 
-const templateReadme = Deno.readTextFileSync("src/TEMPLATE.md");
-
 export const getNormalizedUrl = (url: string) => {
   try {
     const normalizedUrl = new URL(url);
@@ -66,7 +64,7 @@ export async function createVastaiTemplate(
     "--href",
     "https://github.com/Avaray/stable-diffusion-templates",
     "--readme",
-    templateReadme,
+    Deno.readTextFileSync("src/TEMPLATE.md"),
     "--onstart-cmd",
     "env | grep _ >> /etc/environment; /opt/ai-dock/bin/init.sh;",
     "--env",
