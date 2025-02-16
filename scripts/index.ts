@@ -1,54 +1,49 @@
-import process from "node:process";
-import { rm } from "node:fs/promises";
+import { getBranchName, getNormalizedUrl } from "./utils.ts";
 
-import {
-  createVastaiTemplate,
-  executeCommand,
-  getBranchName,
-  getEnvironmentVariable,
-  pvsUrl,
-  readFile,
-  runtime,
-  saveFile,
-} from "./utils.ts";
+import { controlnets } from "../data/controlnets.ts";
+import { embeddings } from "../data/embeddings.ts";
+import { extensions } from "../data/extensions.ts";
+import { loras } from "../data/loras.ts";
+import { repositories } from "../data/repositories.ts";
+import { services } from "../data/services.ts";
+import { type Checkpoint, checkpoints } from "../data/checkpoints.ts";
+import { uis } from "../data/uis.ts";
+import { upscalers } from "../data/upscalers.ts";
+import { vaes } from "../data/vaes.ts";
 
-import { uis } from "./data/uis.ts";
-import { repositories } from "./data/repositories.ts";
-import { type Checkpoint, checkpoints } from "./data/checkpoints.ts";
-import { embeddings } from "./data/embeddings.ts";
-import { loras } from "./data/loras.ts";
-import { vaes } from "./data/vaes.ts";
-import { controlnets } from "./data/controlnets.ts";
-import { upscalers } from "./data/upscalers.ts";
-import { extensions } from "./data/extensions.ts";
-import { services } from "./data/services.ts";
+import t from "../data/templates.json" with { type: "json" };
 
-import t from "./data/templates.json" with { type: "json" };
+// Let's count the time it takes to run the entire script
+const startTime = Date.now();
 
+// I'm not sure if this works as I think
 export interface Template {
   // checkpoint ID
   [key: typeof checkpoints[number]["id"]]: {
-    // service ID
+    // service ID (ex: vastai/runpodio)
     [key: keyof typeof services]: {
-      // UI ID
+      // UI ID (ex: forge/comfy)
       [key: typeof uis[number]["id"]]: string;
     };
   };
 }
 
+// IDs of existing templates will be overwritten with new ones
 let templates = t as Template;
 
-// Clean up old scripts
-await rm("scripts", { recursive: true, force: true });
+// Clean up scripts directory first to prevent keeping old files
+try {
+  Deno.removeSync("provisioning", { recursive: true });
+} catch (_error) {
+  // Ignore
+}
 
-// Remove double slashes in URLs
-const url = (url: string) => new URL(url).href.replace(/(?<!:)(\/\/)/g, "/");
-
-console.log(`Detected runtime: ${runtime?.toLocaleUpperCase()}`);
-
+// Get current branch
+// I'm not sure yet if I will use it later
 const branch = await getBranchName();
-
 console.log(`Working on branch: ${branch}`);
+
+Deno.exit(0);
 
 const vastaiCli = await fetch(
   // "https://raw.githubusercontent.com/vast-ai/vast-python/master/vast.py",
