@@ -13,7 +13,7 @@ export interface UI {
 
 const universalPorts = [22, 1111, 8080, 8384, 72299].map((port) => `-p ${port}:${port}`).join(" ");
 
-const universalEnv = `OPEN_BUTTON_PORT=1111 -e OPEN_BUTTON_TOKEN=1 -e JUPYTER_DIR=/ -e DATA_DIRECTORY=/workspace/`;
+const universalEnv = `-e OPEN_BUTTON_PORT=1111 -e OPEN_BUTTON_TOKEN=1 -e JUPYTER_DIR=/ -e DATA_DIRECTORY=/workspace/`;
 
 const userInterfaces: UI[] = [
   {
