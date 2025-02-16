@@ -45,32 +45,6 @@ console.log(`Working on branch: ${branch}`);
 
 Deno.exit(0);
 
-const vastaiCli = await fetch(
-  // "https://raw.githubusercontent.com/vast-ai/vast-python/master/vast.py",
-  "https://raw.githubusercontent.com/Avaray/vast-cli/refs/heads/master/vast.py",
-);
-
-if (!vastaiCli.ok) {
-  console.error(`Error downloading VastAI CLI: ${vastaiCli.statusText}`);
-  process.exit(1);
-}
-
-await saveFile("vastai", await vastaiCli.text());
-
-console.log(`VastAI CLI downloaded successfully`);
-
-const vastaiApiKey = await getEnvironmentVariable("VASTAI_KEY") || "";
-
-if (!vastaiApiKey) {
-  console.error("VASTAI_KEY environment variable is not set");
-  process.exit(1);
-}
-
-// Add API key to VastAI CLI
-await executeCommand("python", ["vastai", "set", "api-key", vastaiApiKey]);
-
-console.log(`VastAI API key set successfully`);
-
 // Iterate over all UIs
 for (const ui of uis) {
   console.log(`Processing UI: ${ui.name}`);
