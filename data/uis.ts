@@ -11,8 +11,9 @@ export interface UI {
   env: string;
 }
 
-const universalEnv =
-  `-e WEB_ENABLE_HTTPS=true -e WEB_ENABLE_AUTH=true -e DATA_DIRECTORY=/workspace/ -e WORKSPACE=/workspace/ -e WORKSPACE_MOUNTED=force -e JUPYTER_DIR=/ -e SYNCTHING_TRANSPORT_PORT_HOST=72299 -e OPEN_BUTTON_TOKEN=1 -e OPEN_BUTTON_PORT=1111 -p 22:22 -p 1111:1111 -p 8384:8384 -p 8888:8888 -p 72299:72299`;
+const universalPorts = [22, 1111, 8080, 8384, 72299].map((port) => `-p ${port}:${port}`).join(" ");
+
+const universalEnv = `OPEN_BUTTON_PORT=1111 -e OPEN_BUTTON_TOKEN=1 -e JUPYTER_DIR=/ -e DATA_DIRECTORY=/workspace/`;
 
 const userInterfaces: UI[] = [
   {
@@ -26,7 +27,11 @@ const userInterfaces: UI[] = [
     supports: ["sdxl", "pdxl"],
     flags: "",
     diskSpace: 40,
-    env: `${universalEnv} -p 7860:7860`,
+    env: [
+      universalPorts,
+      universalEnv,
+      `-p 7860:7860 -e PORTAL_CONFIG="localhost:1111:11111:/:Instance Portal|localhost:7860:17860:/:WebUI Forge|localhost:8080:18080:/:Jupyter|localhost:8080:18080:/terminals/1:Jupyter Terminal|localhost:8384:18384:/:Syncthing" -e FORGE_ARGS="--xformers --api --cuda-malloc --cuda-stream --pin-shared-memory --port 17860`,
+    ].join(" "),
   },
   {
     id: "comfy",
@@ -39,7 +44,11 @@ const userInterfaces: UI[] = [
     supports: ["sdxl", "pdxl"],
     flags: "",
     diskSpace: 40,
-    env: `${universalEnv} -p 8188:8188`,
+    env: [
+      universalPorts,
+      universalEnv,
+      `-p 8188:8188 -e PORTAL_CONFIG="localhost:1111:11111:/:Instance Portal|localhost:8188:18188:/:ComfyUI|localhost:8080:18080:/:Jupyter|localhost:8080:18080:/terminals/1:Jupyter Terminal|localhost:8384:18384:/:Syncthing" -e COMFYUI_ARGS="--disable-auto-launch --port 18188 --enable-cors-header`,
+    ].join(" "),
   },
 ];
 
