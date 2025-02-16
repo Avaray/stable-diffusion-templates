@@ -39,6 +39,7 @@ export function normalizeFilename(filename: string) {
 }
 
 export async function getBranchName() {
+  // https://docs.deno.com/examples/subprocess_tutorial/
   const command = new Deno.Command("git", { args: ["branch", "--show-current"] });
   const { stdout } = await command.output();
   return new TextDecoder().decode(stdout).trim();
