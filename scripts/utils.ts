@@ -11,6 +11,17 @@ export const ratings: { [key: string]: [string, string] } = {
   d: ["💩", "It's crap"],
 };
 
+export const getNormalizedUrl = (url: string) => {
+  try {
+    const normalizedUrl = new URL(url);
+    return normalizedUrl.href;
+  } catch (_error) {
+    console.error(`Error normalizing URL: ${url}`);
+    // Return the original URL if normalization fails
+    return url;
+  }
+};
+
 // Use regex to get ID and Hash from the output
 // Can't parse JSON just like that because it contains single quotes in it
 export function getId(data: string) {
