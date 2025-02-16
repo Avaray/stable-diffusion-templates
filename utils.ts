@@ -181,6 +181,58 @@ export async function deleteVastaiTemplate(id: number) {
   ]);
 }
 
+export async function createRunpodTemplate(
+  name: string,
+  image: string,
+  env: string,
+  pvsUrl: string,
+  description: string = "Created by Avaray",
+  ports: string,
+  readme: string,
+) {
+  const url = `https://api.runpod.io/graphql?api_key=${process.env.RUNPOD_KEY}`;
+  const query = `
+    mutation {
+      saveTemplate(input: {
+        containerDiskInGb: 40,
+        dockerArgs: "",
+        env: [
+          { key: "key1", value: "value1" },
+          { key: "key2", value: "value2" }
+        ],
+        imageName: "${image}:latest",
+        name: "${name}",
+        ports: "${ports}",
+        readme: "${readme}",
+        volumeInGb: 15,
+        volumeMountPath: "/workspace"
+      }) {
+        containerDiskInGb
+        dockerArgs
+        env { key value }
+        id
+        imageName
+        name
+        ports
+        readme
+        volumeInGb
+        volumeMountPath
+      }
+    }
+    `;
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query }),
+  });
+  const data = await response.json();
+  console.log(data);
+  return data;
+}
+
 export const ratings: { [key: string]: [string, string] } = {
   u: ["⏳", "Needs more testing."],
   a: ["🔥", "It's fire!"],
