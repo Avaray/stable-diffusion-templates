@@ -21,16 +21,20 @@ CHECKPOINT_MODELS=(
 LORA_MODELS=(
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/ALICESOFT_Dohna_Dohna_Game_Artstyle_PonyXL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/ALICESOFT_Dohna_Dohna_Game_Artstyle_Revised_PonyXL.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/AkaburV2.5_PDXL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Cleavage_Slider_alpha1.0_rank4_noxattn_last.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/EnvyPonyPrettyEyes01.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GLSHS_Style_V2_4.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/GLSHS_Style_V3_N.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/MS_Milf_Style_V2_Pony.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/MS_Milf_Style_V3_Pony.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Mangamaster_Artist_Style.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Mangamaster_Artist_Style_v2.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Retro_60s_Decarlo_V1_PDXL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Retro_60s_Decarlo_V2_PDXL.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Sitting_Upskirt_Foot_focus-000008.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/Thigh_Size_Slider_V2_alpha1.0_rank4_noxattn_last.safetensors'
+    'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/flat_colour_anime_style_v2.1_pony.safetensors'
     'https://huggingface.co/datasets/AddictiveFuture/sdxl-pony-models-backup/resolve/main/LORA/retro-neon-style-pony.safetensors'
 )
 
