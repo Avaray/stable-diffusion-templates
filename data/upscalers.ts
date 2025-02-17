@@ -28,4 +28,11 @@ export const upscalers: Upscaler[] = [
     base: ["pdxl"],
     comment: "For illustrations, manga, and anime",
   },
+  {
+    name: "4xNomosWebPhoto RealPLKSR",
+    filename: "4xNomosWebPhoto_RealPLKSR.pth",
+    homepage: "https://openmodeldb.info/models/4x-NomosWebPhoto-RealPLKSR",
+    base: ["sdxl"],
+    comment: "Good for realistic photography",
+  },
 ];
