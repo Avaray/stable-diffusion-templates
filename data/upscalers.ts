@@ -49,4 +49,18 @@ export const upscalers: Upscaler[] = [
     base: ["pdxl"],
     comment: "For illustrations, manga, and anime",
   },
+  {
+    name: "SmolFace",
+    filename: "4x_SmolFace_clean.pth",
+    homepage: "https://openmodeldb.info/models/4x-SmolFace",
+    base: ["pdxl"],
+    comment: "For illustrations, manga, and anime",
+  },
+  {
+    name: "4xReal SSDIR DAT GAN",
+    filename: "4xReal_SSDIR_DAT_GAN.pth",
+    homepage: "https://openmodeldb.info/models/4x-Real-SSDIR-DAT-GAN",
+    base: ["pdxl"],
+    comment: "For illustrations, manga, and anime. Gives really nice details, but is slower than other upscalers",
+  },
 ];
