@@ -29,6 +29,13 @@ export const upscalers: Upscaler[] = [
     comment: "Good for realistic photography",
   },
   {
+    name: "4xNomosWebPhoto ATD",
+    filename: "4xNomosWebPhoto_atd.pth",
+    homepage: "https://openmodeldb.info/models/4x-NomosWebPhoto-atd",
+    base: ["sdxl"],
+    comment: "Good for realistic photography",
+  },
+  {
     name: "4x AnimeSharp Lite",
     filename: "4x-AnimeSharp-lite.pth",
     homepage: "https://openmodeldb.info/models/4x-AnimeSharp-lite",
