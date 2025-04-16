@@ -57,6 +57,14 @@ export const loras = [
     comment: "",
   },
   {
+    name: "Amateur Trigger",
+    filename: "AmateurTrigger_XL_v1.2.safetensors",
+    homepage: "https://civitai.com/models/1456048/amateurtriggerxl?modelVersionId=1646443",
+    base: ["sdxl"],
+    triggerWords: [],
+    comment: "Use strength about 0.4-0.8",
+  },
+  {
     name: "Maybe Better Pose",
     filename: "hinaMaybeBetterPoseXL_v5-NoobAI.safetensors",
     homepage: "https://civitai.com/models/339001?modelVersionId=1110783",
