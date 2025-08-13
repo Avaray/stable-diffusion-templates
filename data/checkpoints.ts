@@ -258,6 +258,15 @@ export const ckpts: Checkpoint[] = [
     comment: "",
   },
   {
+    name: "The Araminta Experiment",
+    filename: "theAramintaExperiment_fv6.safetensors",
+    homepage: "https://civitai.com/models/463163?modelVersionId=2094233",
+    base: "sdxl",
+    version: "Fv6",
+    rating: "",
+    comment: "",
+  },
+  {
     name: "Animagine",
     filename: "animagine-xl-4.0.safetensors",
     homepage: "https://huggingface.co/cagliostrolab/animagine-xl-4.0",
